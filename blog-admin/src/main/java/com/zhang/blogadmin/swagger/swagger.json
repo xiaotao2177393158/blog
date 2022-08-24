@@ -1,0 +1,7392 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "description": "微服务工程代码生成器,生成Dao、Service、Controller、Pojo、Feign、Swagger的JSON脚本",
+    "version": "1.0.0",
+    "title": "代码生成器",
+    "termsOfService": "https://github.com/shenkunlin/code-template.git",
+    "contact": {
+      "email": "shenkunlin@itcast.cn"
+    },
+    "license": {
+      "name": "Apache 2.0",
+      "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+    }
+  },
+  "host": "petstore.swagger.io",
+  "basePath": "/v2",
+  "tags": [
+        {
+      "name": "WpCommentmetaController",
+      "description": "WpCommentmetaController"
+    },
+    {
+      "name": "WpCommentmetaController",
+      "description": "WpCommentmetaController"
+    },
+    {
+      "name": "WpCommentmetaController",
+      "description": "WpCommentmetaController"
+    },
+    {
+      "name": "WpCommentmetaController",
+      "description": "WpCommentmetaController"
+    },
+    {
+      "name": "WpCommentsController",
+      "description": "WpCommentsController"
+    },
+    {
+      "name": "WpCommentsController",
+      "description": "WpCommentsController"
+    },
+    {
+      "name": "WpCommentsController",
+      "description": "WpCommentsController"
+    },
+    {
+      "name": "WpCommentsController",
+      "description": "WpCommentsController"
+    },
+    {
+      "name": "WpLinksController",
+      "description": "WpLinksController"
+    },
+    {
+      "name": "WpLinksController",
+      "description": "WpLinksController"
+    },
+    {
+      "name": "WpLinksController",
+      "description": "WpLinksController"
+    },
+    {
+      "name": "WpLinksController",
+      "description": "WpLinksController"
+    },
+    {
+      "name": "WpOptionsController",
+      "description": "WpOptionsController"
+    },
+    {
+      "name": "WpOptionsController",
+      "description": "WpOptionsController"
+    },
+    {
+      "name": "WpOptionsController",
+      "description": "WpOptionsController"
+    },
+    {
+      "name": "WpOptionsController",
+      "description": "WpOptionsController"
+    },
+    {
+      "name": "WpPostmetaController",
+      "description": "WpPostmetaController"
+    },
+    {
+      "name": "WpPostmetaController",
+      "description": "WpPostmetaController"
+    },
+    {
+      "name": "WpPostmetaController",
+      "description": "WpPostmetaController"
+    },
+    {
+      "name": "WpPostmetaController",
+      "description": "WpPostmetaController"
+    },
+    {
+      "name": "WpPostsController",
+      "description": "WpPostsController"
+    },
+    {
+      "name": "WpPostsController",
+      "description": "WpPostsController"
+    },
+    {
+      "name": "WpPostsController",
+      "description": "WpPostsController"
+    },
+    {
+      "name": "WpPostsController",
+      "description": "WpPostsController"
+    },
+    {
+      "name": "WpSakuraController",
+      "description": "WpSakuraController"
+    },
+    {
+      "name": "WpSakuraController",
+      "description": "WpSakuraController"
+    },
+    {
+      "name": "WpSakuraController",
+      "description": "WpSakuraController"
+    },
+    {
+      "name": "WpSakuraController",
+      "description": "WpSakuraController"
+    },
+    {
+      "name": "WpSakurairoController",
+      "description": "WpSakurairoController"
+    },
+    {
+      "name": "WpSakurairoController",
+      "description": "WpSakurairoController"
+    },
+    {
+      "name": "WpSakurairoController",
+      "description": "WpSakurairoController"
+    },
+    {
+      "name": "WpSakurairoController",
+      "description": "WpSakurairoController"
+    },
+    {
+      "name": "WpTermRelationshipsController",
+      "description": "WpTermRelationshipsController"
+    },
+    {
+      "name": "WpTermRelationshipsController",
+      "description": "WpTermRelationshipsController"
+    },
+    {
+      "name": "WpTermRelationshipsController",
+      "description": "WpTermRelationshipsController"
+    },
+    {
+      "name": "WpTermRelationshipsController",
+      "description": "WpTermRelationshipsController"
+    },
+    {
+      "name": "WpTermTaxonomyController",
+      "description": "WpTermTaxonomyController"
+    },
+    {
+      "name": "WpTermTaxonomyController",
+      "description": "WpTermTaxonomyController"
+    },
+    {
+      "name": "WpTermTaxonomyController",
+      "description": "WpTermTaxonomyController"
+    },
+    {
+      "name": "WpTermTaxonomyController",
+      "description": "WpTermTaxonomyController"
+    },
+    {
+      "name": "WpTermmetaController",
+      "description": "WpTermmetaController"
+    },
+    {
+      "name": "WpTermmetaController",
+      "description": "WpTermmetaController"
+    },
+    {
+      "name": "WpTermmetaController",
+      "description": "WpTermmetaController"
+    },
+    {
+      "name": "WpTermmetaController",
+      "description": "WpTermmetaController"
+    },
+    {
+      "name": "WpTermsController",
+      "description": "WpTermsController"
+    },
+    {
+      "name": "WpTermsController",
+      "description": "WpTermsController"
+    },
+    {
+      "name": "WpTermsController",
+      "description": "WpTermsController"
+    },
+    {
+      "name": "WpTermsController",
+      "description": "WpTermsController"
+    },
+    {
+      "name": "WpUsermetaController",
+      "description": "WpUsermetaController"
+    },
+    {
+      "name": "WpUsermetaController",
+      "description": "WpUsermetaController"
+    },
+    {
+      "name": "WpUsermetaController",
+      "description": "WpUsermetaController"
+    },
+    {
+      "name": "WpUsermetaController",
+      "description": "WpUsermetaController"
+    },
+    {
+      "name": "WpUsersController",
+      "description": "WpUsersController"
+    },
+    {
+      "name": "WpUsersController",
+      "description": "WpUsersController"
+    },
+    {
+      "name": "WpUsersController",
+      "description": "WpUsersController"
+    },
+    {
+      "name": "WpUsersController",
+      "description": "WpUsersController"
+    }
+  ],
+  "schemes": [
+    "http"
+  ],
+  "paths": {
+    "/wpCommentmeta": {
+      "get": {
+        "tags": [
+          "WpCommentmetaController"
+        ],
+        "summary": "查询所有WpCommentmeta",
+        "description": "查询所有WpCommentmeta方法详情",
+        "operationId": "findAllUsingGET",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+        ],
+        "responses": {
+          "400": {
+            "description": "Invalid status value(无效的状态值)"
+                      },
+          "403": {
+            "description": "403 Forbidden(请求被拒绝)"
+                      },
+          "404": {
+            "description": "not found(没有找到相关资源)"
+                      },
+          "405": {
+            "description": "Invalid input(无效的输入)"
+                      },
+          "500": {
+            "description": "服务器内部错误"
+                      },
+          "200": {
+            "description": "查询所有WpCommentmeta"
+            ,
+            "schema": {
+              "$ref": "#/definitions/Result«List«WpCommentmeta»»"
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "WpCommentmetaController"
+        ],
+        "summary": "添加WpCommentmeta",
+        "description": "添加WpCommentmeta方法详情",
+        "operationId": "addUsingPOST",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "添加WpCommentmeta方法详情",
+            "required": true
+              ,
+              "schema": {
+                "$ref": "#/definitions/WpCommentmeta"
+              }
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Invalid status value(无效的状态值)"
+                      },
+          "403": {
+            "description": "403 Forbidden(请求被拒绝)"
+                      },
+          "404": {
+            "description": "not found(没有找到相关资源)"
+                      },
+          "405": {
+            "description": "Invalid input(无效的输入)"
+                      },
+          "500": {
+            "description": "服务器内部错误"
+                      },
+          "200": {
+            "description": "添加WpCommentmeta"
+            ,
+            "schema": {
+              "$ref": "#/definitions/Result"
+            }
+          }
+        }
+      }
+    },
+    "/wpCommentmeta/{id}": {
+      "delete": {
+        "tags": [
+          "WpCommentmetaController"
+        ],
+        "summary": "根据ID删除WpCommentmeta",
+        "description": "根据ID删除WpCommentmeta方法详情",
+        "operationId": "deleteUsingDELETE",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "description": "根据ID删除WpCommentmeta方法详情",
+            "required": true
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Invalid status value(无效的状态值)"
+                      },
+          "403": {
+            "description": "403 Forbidden(请求被拒绝)"
+                      },
+          "404": {
+            "description": "not found(没有找到相关资源)"
+                      },
+          "405": {
+            "description": "Invalid input(无效的输入)"
+                      },
+          "500": {
+            "description": "服务器内部错误"
+                      },
+          "200": {
+            "description": "根据ID删除WpCommentmeta"
+            ,
+            "schema": {
+              "$ref": "#/definitions/Result"
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "WpCommentmetaController"
+        ],
+        "summary": "根据ID修改WpCommentmeta",
+        "description": "根据ID修改WpCommentmeta方法详情",
+        "operationId": "updateUsingPUT",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "description": "根据ID修改WpCommentmeta方法详情",
+            "required": true
+          },
+          {
+            "in": "body",
+            "name": "WpCommentmeta",
+            "description": "传入WpCommentmeta的JSON对象",
+            "required": false
+              ,
+              "schema": {
+                "$ref": "#/definitions/WpCommentmeta"
+              }
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Invalid status value(无效的状态值)"
+                      },
+          "403": {
+            "description": "403 Forbidden(请求被拒绝)"
+                      },
+          "404": {
+            "description": "not found(没有找到相关资源)"
+                      },
+          "405": {
+            "description": "Invalid input(无效的输入)"
+                      },
+          "500": {
+            "description": "服务器内部错误"
+                      },
+          "200": {
+            "description": "根据ID修改WpCommentmeta"
+            ,
+            "schema": {
+              "$ref": "#/definitions/Result"
+            }
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "WpCommentmetaController"
+        ],
+        "summary": "根据ID查询WpCommentmeta",
+        "description": "根据ID查询WpCommentmeta方法详情",
+        "operationId": "findByIdUsingGET",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "description": "根据ID修改WpCommentmeta方法详情",
+            "required": true
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Invalid status value(无效的状态值)"
+                      },
+          "403": {
+            "description": "403 Forbidden(请求被拒绝)"
+                      },
+          "404": {
+            "description": "not found(没有找到相关资源)"
+                      },
+          "405": {
+            "description": "Invalid input(无效的输入)"
+                      },
+          "500": {
+            "description": "服务器内部错误"
+                      },
+          "200": {
+            "description": "根据ID修改WpCommentmeta"
+            ,
+            "schema": {
+              "$ref": "#/definitions/Result«WpCommentmeta»"
+            }
+          }
+        }
+      }
+    },
+    "/wpCommentmeta/search": {
+      "post": {
+        "tags": [
+          "WpCommentmetaController"
+        ],
+        "summary": "不带分页条件搜索WpCommentmeta",
+        "description": "不带分页条件搜索WpCommentmeta方法详情",
+        "operationId": "findListUsingPOST",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "WpCommentmeta",
+            "description": "传入WpCommentmeta的JSON对象",
+            "required": false
+              ,
+              "schema": {
+                "$ref": "#/definitions/WpCommentmeta"
+              }
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Invalid status value(无效的状态值)"
+                      },
+          "403": {
+            "description": "403 Forbidden(请求被拒绝)"
+                      },
+          "404": {
+            "description": "not found(没有找到相关资源)"
+                      },
+          "405": {
+            "description": "Invalid input(无效的输入)"
+                      },
+          "500": {
+            "description": "服务器内部错误"
+                      },
+          "200": {
+            "description": "不带分页搜索WpCommentmeta"
+            ,
+            "schema": {
+              "$ref": "#/definitions/Result«List«WpCommentmeta»»"
+            }
+          }
+        }
+      }
+    },
+    "/wpCommentmeta/search/{page}/{size}": {
+      "get": {
+        "tags": [
+          "WpCommentmetaController"
+        ],
+        "summary": "分页列表查询WpCommentmeta",
+        "description": "分页列表查询WpCommentmeta方法详情",
+        "operationId": "findPageUsingGET",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "page",
+            "description": "当前页",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "size",
+            "description": "每页显示条数",
+            "required": true
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Invalid status value(无效的状态值)"
+                      },
+          "403": {
+            "description": "403 Forbidden(请求被拒绝)"
+                      },
+          "404": {
+            "description": "not found(没有找到相关资源)"
+                      },
+          "405": {
+            "description": "Invalid input(无效的输入)"
+                      },
+          "500": {
+            "description": "服务器内部错误"
+                      },
+          "200": {
+            "description": "不带分页搜索WpCommentmeta"
+            ,
+            "schema": {
+              "$ref": "#/definitions/Result«List«WpCommentmeta»»"
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "WpCommentmetaController"
+        ],
+        "summary": "分页条件搜索WpCommentmeta",
+        "description": "分页条件搜索WpCommentmeta方法详情",
+        "operationId": "findPageUsingPOST",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "page",
+            "description": "当前页",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "size",
+            "description": "每页显示条数",
+            "required": true
+          },
+          {
+            "in": "body",
+            "name": "WpCommentmeta",
+            "description": "传入WpCommentmeta的JSON对象",
+            "required": false
+              ,
+              "schema": {
+                "$ref": "#/definitions/WpCommentmeta"
+              }
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Invalid status value(无效的状态值)"
+                      },
+          "403": {
+            "description": "403 Forbidden(请求被拒绝)"
+                      },
+          "404": {
+            "description": "not found(没有找到相关资源)"
+                      },
+          "405": {
+            "description": "Invalid input(无效的输入)"
+                      },
+          "500": {
+            "description": "服务器内部错误"
+                      },
+          "200": {
+            "description": "分页条件搜索WpCommentmeta"
+            ,
+            "schema": {
+              "$ref": "#/definitions/Result«List«WpCommentmeta»»"
+            }
+          }
+        }
+      }
+    },
+    "/wpComments": {
+      "get": {
+        "tags": [
+          "WpCommentsController"
+        ],
+        "summary": "查询所有WpComments",
+        "description": "查询所有WpComments方法详情",
+        "operationId": "findAllUsingGET",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+        ],
+        "responses": {
+          "400": {
+            "description": "Invalid status value(无效的状态值)"
+                      },
+          "403": {
+            "description": "403 Forbidden(请求被拒绝)"
+                      },
+          "404": {
+            "description": "not found(没有找到相关资源)"
+                      },
+          "405": {
+            "description": "Invalid input(无效的输入)"
+                      },
+          "500": {
+            "description": "服务器内部错误"
+                      },
+          "200": {
+            "description": "查询所有WpComments"
+            ,
+            "schema": {
+              "$ref": "#/definitions/Result«List«WpComments»»"
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "WpCommentsController"
+        ],
+        "summary": "添加WpComments",
+        "description": "添加WpComments方法详情",
+        "operationId": "addUsingPOST",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "添加WpComments方法详情",
+            "required": true
+              ,
+              "schema": {
+                "$ref": "#/definitions/WpComments"
+              }
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Invalid status value(无效的状态值)"
+                      },
+          "403": {
+            "description": "403 Forbidden(请求被拒绝)"
+                      },
+          "404": {
+            "description": "not found(没有找到相关资源)"
+                      },
+          "405": {
+            "description": "Invalid input(无效的输入)"
+                      },
+          "500": {
+            "description": "服务器内部错误"
+                      },
+          "200": {
+            "description": "添加WpComments"
+            ,
+            "schema": {
+              "$ref": "#/definitions/Result"
+            }
+          }
+        }
+      }
+    },
+    "/wpComments/{id}": {
+      "delete": {
+        "tags": [
+          "WpCommentsController"
+        ],
+        "summary": "根据ID删除WpComments",
+        "description": "根据ID删除WpComments方法详情",
+        "operationId": "deleteUsingDELETE",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "description": "根据ID删除WpComments方法详情",
+            "required": true
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Invalid status value(无效的状态值)"
+                      },
+          "403": {
+            "description": "403 Forbidden(请求被拒绝)"
+                      },
+          "404": {
+            "description": "not found(没有找到相关资源)"
+                      },
+          "405": {
+            "description": "Invalid input(无效的输入)"
+                      },
+          "500": {
+            "description": "服务器内部错误"
+                      },
+          "200": {
+            "description": "根据ID删除WpComments"
+            ,
+            "schema": {
+              "$ref": "#/definitions/Result"
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "WpCommentsController"
+        ],
+        "summary": "根据ID修改WpComments",
+        "description": "根据ID修改WpComments方法详情",
+        "operationId": "updateUsingPUT",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "description": "根据ID修改WpComments方法详情",
+            "required": true
+          },
+          {
+            "in": "body",
+            "name": "WpComments",
+            "description": "传入WpComments的JSON对象",
+            "required": false
+              ,
+              "schema": {
+                "$ref": "#/definitions/WpComments"
+              }
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Invalid status value(无效的状态值)"
+                      },
+          "403": {
+            "description": "403 Forbidden(请求被拒绝)"
+                      },
+          "404": {
+            "description": "not found(没有找到相关资源)"
+                      },
+          "405": {
+            "description": "Invalid input(无效的输入)"
+                      },
+          "500": {
+            "description": "服务器内部错误"
+                      },
+          "200": {
+            "description": "根据ID修改WpComments"
+            ,
+            "schema": {
+              "$ref": "#/definitions/Result"
+            }
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "WpCommentsController"
+        ],
+        "summary": "根据ID查询WpComments",
+        "description": "根据ID查询WpComments方法详情",
+        "operationId": "findByIdUsingGET",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "description": "根据ID修改WpComments方法详情",
+            "required": true
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Invalid status value(无效的状态值)"
+                      },
+          "403": {
+            "description": "403 Forbidden(请求被拒绝)"
+                      },
+          "404": {
+            "description": "not found(没有找到相关资源)"
+                      },
+          "405": {
+            "description": "Invalid input(无效的输入)"
+                      },
+          "500": {
+            "description": "服务器内部错误"
+                      },
+          "200": {
+            "description": "根据ID修改WpComments"
+            ,
+            "schema": {
+              "$ref": "#/definitions/Result«WpComments»"
+            }
+          }
+        }
+      }
+    },
+    "/wpComments/search": {
+      "post": {
+        "tags": [
+          "WpCommentsController"
+        ],
+        "summary": "不带分页条件搜索WpComments",
+        "description": "不带分页条件搜索WpComments方法详情",
+        "operationId": "findListUsingPOST",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "WpComments",
+            "description": "传入WpComments的JSON对象",
+            "required": false
+              ,
+              "schema": {
+                "$ref": "#/definitions/WpComments"
+              }
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Invalid status value(无效的状态值)"
+                      },
+          "403": {
+            "description": "403 Forbidden(请求被拒绝)"
+                      },
+          "404": {
+            "description": "not found(没有找到相关资源)"
+                      },
+          "405": {
+            "description": "Invalid input(无效的输入)"
+                      },
+          "500": {
+            "description": "服务器内部错误"
+                      },
+          "200": {
+            "description": "不带分页搜索WpComments"
+            ,
+            "schema": {
+              "$ref": "#/definitions/Result«List«WpComments»»"
+            }
+          }
+        }
+      }
+    },
+    "/wpComments/search/{page}/{size}": {
+      "get": {
+        "tags": [
+          "WpCommentsController"
+        ],
+        "summary": "分页列表查询WpComments",
+        "description": "分页列表查询WpComments方法详情",
+        "operationId": "findPageUsingGET",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "page",
+            "description": "当前页",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "size",
+            "description": "每页显示条数",
+            "required": true
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Invalid status value(无效的状态值)"
+                      },
+          "403": {
+            "description": "403 Forbidden(请求被拒绝)"
+                      },
+          "404": {
+            "description": "not found(没有找到相关资源)"
+                      },
+          "405": {
+            "description": "Invalid input(无效的输入)"
+                      },
+          "500": {
+            "description": "服务器内部错误"
+                      },
+          "200": {
+            "description": "不带分页搜索WpComments"
+            ,
+            "schema": {
+              "$ref": "#/definitions/Result«List«WpComments»»"
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "WpCommentsController"
+        ],
+        "summary": "分页条件搜索WpComments",
+        "description": "分页条件搜索WpComments方法详情",
+        "operationId": "findPageUsingPOST",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "page",
+            "description": "当前页",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "size",
+            "description": "每页显示条数",
+            "required": true
+          },
+          {
+            "in": "body",
+            "name": "WpComments",
+            "description": "传入WpComments的JSON对象",
+            "required": false
+              ,
+              "schema": {
+                "$ref": "#/definitions/WpComments"
+              }
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Invalid status value(无效的状态值)"
+                      },
+          "403": {
+            "description": "403 Forbidden(请求被拒绝)"
+                      },
+          "404": {
+            "description": "not found(没有找到相关资源)"
+                      },
+          "405": {
+            "description": "Invalid input(无效的输入)"
+                      },
+          "500": {
+            "description": "服务器内部错误"
+                      },
+          "200": {
+            "description": "分页条件搜索WpComments"
+            ,
+            "schema": {
+              "$ref": "#/definitions/Result«List«WpComments»»"
+            }
+          }
+        }
+      }
+    },
+    "/wpLinks": {
+      "get": {
+        "tags": [
+          "WpLinksController"
+        ],
+        "summary": "查询所有WpLinks",
+        "description": "查询所有WpLinks方法详情",
+        "operationId": "findAllUsingGET",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+        ],
+        "responses": {
+          "400": {
+            "description": "Invalid status value(无效的状态值)"
+                      },
+          "403": {
+            "description": "403 Forbidden(请求被拒绝)"
+                      },
+          "404": {
+            "description": "not found(没有找到相关资源)"
+                      },
+          "405": {
+            "description": "Invalid input(无效的输入)"
+                      },
+          "500": {
+            "description": "服务器内部错误"
+                      },
+          "200": {
+            "description": "查询所有WpLinks"
+            ,
+            "schema": {
+              "$ref": "#/definitions/Result«List«WpLinks»»"
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "WpLinksController"
+        ],
+        "summary": "添加WpLinks",
+        "description": "添加WpLinks方法详情",
+        "operationId": "addUsingPOST",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "添加WpLinks方法详情",
+            "required": true
+              ,
+              "schema": {
+                "$ref": "#/definitions/WpLinks"
+              }
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Invalid status value(无效的状态值)"
+                      },
+          "403": {
+            "description": "403 Forbidden(请求被拒绝)"
+                      },
+          "404": {
+            "description": "not found(没有找到相关资源)"
+                      },
+          "405": {
+            "description": "Invalid input(无效的输入)"
+                      },
+          "500": {
+            "description": "服务器内部错误"
+                      },
+          "200": {
+            "description": "添加WpLinks"
+            ,
+            "schema": {
+              "$ref": "#/definitions/Result"
+            }
+          }
+        }
+      }
+    },
+    "/wpLinks/{id}": {
+      "delete": {
+        "tags": [
+          "WpLinksController"
+        ],
+        "summary": "根据ID删除WpLinks",
+        "description": "根据ID删除WpLinks方法详情",
+        "operationId": "deleteUsingDELETE",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "description": "根据ID删除WpLinks方法详情",
+            "required": true
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Invalid status value(无效的状态值)"
+                      },
+          "403": {
+            "description": "403 Forbidden(请求被拒绝)"
+                      },
+          "404": {
+            "description": "not found(没有找到相关资源)"
+                      },
+          "405": {
+            "description": "Invalid input(无效的输入)"
+                      },
+          "500": {
+            "description": "服务器内部错误"
+                      },
+          "200": {
+            "description": "根据ID删除WpLinks"
+            ,
+            "schema": {
+              "$ref": "#/definitions/Result"
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "WpLinksController"
+        ],
+        "summary": "根据ID修改WpLinks",
+        "description": "根据ID修改WpLinks方法详情",
+        "operationId": "updateUsingPUT",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "description": "根据ID修改WpLinks方法详情",
+            "required": true
+          },
+          {
+            "in": "body",
+            "name": "WpLinks",
+            "description": "传入WpLinks的JSON对象",
+            "required": false
+              ,
+              "schema": {
+                "$ref": "#/definitions/WpLinks"
+              }
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Invalid status value(无效的状态值)"
+                      },
+          "403": {
+            "description": "403 Forbidden(请求被拒绝)"
+                      },
+          "404": {
+            "description": "not found(没有找到相关资源)"
+                      },
+          "405": {
+            "description": "Invalid input(无效的输入)"
+                      },
+          "500": {
+            "description": "服务器内部错误"
+                      },
+          "200": {
+            "description": "根据ID修改WpLinks"
+            ,
+            "schema": {
+              "$ref": "#/definitions/Result"
+            }
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "WpLinksController"
+        ],
+        "summary": "根据ID查询WpLinks",
+        "description": "根据ID查询WpLinks方法详情",
+        "operationId": "findByIdUsingGET",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "description": "根据ID修改WpLinks方法详情",
+            "required": true
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Invalid status value(无效的状态值)"
+                      },
+          "403": {
+            "description": "403 Forbidden(请求被拒绝)"
+                      },
+          "404": {
+            "description": "not found(没有找到相关资源)"
+                      },
+          "405": {
+            "description": "Invalid input(无效的输入)"
+                      },
+          "500": {
+            "description": "服务器内部错误"
+                      },
+          "200": {
+            "description": "根据ID修改WpLinks"
+            ,
+            "schema": {
+              "$ref": "#/definitions/Result«WpLinks»"
+            }
+          }
+        }
+      }
+    },
+    "/wpLinks/search": {
+      "post": {
+        "tags": [
+          "WpLinksController"
+        ],
+        "summary": "不带分页条件搜索WpLinks",
+        "description": "不带分页条件搜索WpLinks方法详情",
+        "operationId": "findListUsingPOST",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "WpLinks",
+            "description": "传入WpLinks的JSON对象",
+            "required": false
+              ,
+              "schema": {
+                "$ref": "#/definitions/WpLinks"
+              }
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Invalid status value(无效的状态值)"
+                      },
+          "403": {
+            "description": "403 Forbidden(请求被拒绝)"
+                      },
+          "404": {
+            "description": "not found(没有找到相关资源)"
+                      },
+          "405": {
+            "description": "Invalid input(无效的输入)"
+                      },
+          "500": {
+            "description": "服务器内部错误"
+                      },
+          "200": {
+            "description": "不带分页搜索WpLinks"
+            ,
+            "schema": {
+              "$ref": "#/definitions/Result«List«WpLinks»»"
+            }
+          }
+        }
+      }
+    },
+    "/wpLinks/search/{page}/{size}": {
+      "get": {
+        "tags": [
+          "WpLinksController"
+        ],
+        "summary": "分页列表查询WpLinks",
+        "description": "分页列表查询WpLinks方法详情",
+        "operationId": "findPageUsingGET",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "page",
+            "description": "当前页",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "size",
+            "description": "每页显示条数",
+            "required": true
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Invalid status value(无效的状态值)"
+                      },
+          "403": {
+            "description": "403 Forbidden(请求被拒绝)"
+                      },
+          "404": {
+            "description": "not found(没有找到相关资源)"
+                      },
+          "405": {
+            "description": "Invalid input(无效的输入)"
+                      },
+          "500": {
+            "description": "服务器内部错误"
+                      },
+          "200": {
+            "description": "不带分页搜索WpLinks"
+            ,
+            "schema": {
+              "$ref": "#/definitions/Result«List«WpLinks»»"
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "WpLinksController"
+        ],
+        "summary": "分页条件搜索WpLinks",
+        "description": "分页条件搜索WpLinks方法详情",
+        "operationId": "findPageUsingPOST",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "page",
+            "description": "当前页",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "size",
+            "description": "每页显示条数",
+            "required": true
+          },
+          {
+            "in": "body",
+            "name": "WpLinks",
+            "description": "传入WpLinks的JSON对象",
+            "required": false
+              ,
+              "schema": {
+                "$ref": "#/definitions/WpLinks"
+              }
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Invalid status value(无效的状态值)"
+                      },
+          "403": {
+            "description": "403 Forbidden(请求被拒绝)"
+                      },
+          "404": {
+            "description": "not found(没有找到相关资源)"
+                      },
+          "405": {
+            "description": "Invalid input(无效的输入)"
+                      },
+          "500": {
+            "description": "服务器内部错误"
+                      },
+          "200": {
+            "description": "分页条件搜索WpLinks"
+            ,
+            "schema": {
+              "$ref": "#/definitions/Result«List«WpLinks»»"
+            }
+          }
+        }
+      }
+    },
+    "/wpOptions": {
+      "get": {
+        "tags": [
+          "WpOptionsController"
+        ],
+        "summary": "查询所有WpOptions",
+        "description": "查询所有WpOptions方法详情",
+        "operationId": "findAllUsingGET",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+        ],
+        "responses": {
+          "400": {
+            "description": "Invalid status value(无效的状态值)"
+                      },
+          "403": {
+            "description": "403 Forbidden(请求被拒绝)"
+                      },
+          "404": {
+            "description": "not found(没有找到相关资源)"
+                      },
+          "405": {
+            "description": "Invalid input(无效的输入)"
+                      },
+          "500": {
+            "description": "服务器内部错误"
+                      },
+          "200": {
+            "description": "查询所有WpOptions"
+            ,
+            "schema": {
+              "$ref": "#/definitions/Result«List«WpOptions»»"
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "WpOptionsController"
+        ],
+        "summary": "添加WpOptions",
+        "description": "添加WpOptions方法详情",
+        "operationId": "addUsingPOST",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "添加WpOptions方法详情",
+            "required": true
+              ,
+              "schema": {
+                "$ref": "#/definitions/WpOptions"
+              }
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Invalid status value(无效的状态值)"
+                      },
+          "403": {
+            "description": "403 Forbidden(请求被拒绝)"
+                      },
+          "404": {
+            "description": "not found(没有找到相关资源)"
+                      },
+          "405": {
+            "description": "Invalid input(无效的输入)"
+                      },
+          "500": {
+            "description": "服务器内部错误"
+                      },
+          "200": {
+            "description": "添加WpOptions"
+            ,
+            "schema": {
+              "$ref": "#/definitions/Result"
+            }
+          }
+        }
+      }
+    },
+    "/wpOptions/{id}": {
+      "delete": {
+        "tags": [
+          "WpOptionsController"
+        ],
+        "summary": "根据ID删除WpOptions",
+        "description": "根据ID删除WpOptions方法详情",
+        "operationId": "deleteUsingDELETE",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "description": "根据ID删除WpOptions方法详情",
+            "required": true
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Invalid status value(无效的状态值)"
+                      },
+          "403": {
+            "description": "403 Forbidden(请求被拒绝)"
+                      },
+          "404": {
+            "description": "not found(没有找到相关资源)"
+                      },
+          "405": {
+            "description": "Invalid input(无效的输入)"
+                      },
+          "500": {
+            "description": "服务器内部错误"
+                      },
+          "200": {
+            "description": "根据ID删除WpOptions"
+            ,
+            "schema": {
+              "$ref": "#/definitions/Result"
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "WpOptionsController"
+        ],
+        "summary": "根据ID修改WpOptions",
+        "description": "根据ID修改WpOptions方法详情",
+        "operationId": "updateUsingPUT",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "description": "根据ID修改WpOptions方法详情",
+            "required": true
+          },
+          {
+            "in": "body",
+            "name": "WpOptions",
+            "description": "传入WpOptions的JSON对象",
+            "required": false
+              ,
+              "schema": {
+                "$ref": "#/definitions/WpOptions"
+              }
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Invalid status value(无效的状态值)"
+                      },
+          "403": {
+            "description": "403 Forbidden(请求被拒绝)"
+                      },
+          "404": {
+            "description": "not found(没有找到相关资源)"
+                      },
+          "405": {
+            "description": "Invalid input(无效的输入)"
+                      },
+          "500": {
+            "description": "服务器内部错误"
+                      },
+          "200": {
+            "description": "根据ID修改WpOptions"
+            ,
+            "schema": {
+              "$ref": "#/definitions/Result"
+            }
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "WpOptionsController"
+        ],
+        "summary": "根据ID查询WpOptions",
+        "description": "根据ID查询WpOptions方法详情",
+        "operationId": "findByIdUsingGET",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "description": "根据ID修改WpOptions方法详情",
+            "required": true
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Invalid status value(无效的状态值)"
+                      },
+          "403": {
+            "description": "403 Forbidden(请求被拒绝)"
+                      },
+          "404": {
+            "description": "not found(没有找到相关资源)"
+                      },
+          "405": {
+            "description": "Invalid input(无效的输入)"
+                      },
+          "500": {
+            "description": "服务器内部错误"
+                      },
+          "200": {
+            "description": "根据ID修改WpOptions"
+            ,
+            "schema": {
+              "$ref": "#/definitions/Result«WpOptions»"
+            }
+          }
+        }
+      }
+    },
+    "/wpOptions/search": {
+      "post": {
+        "tags": [
+          "WpOptionsController"
+        ],
+        "summary": "不带分页条件搜索WpOptions",
+        "description": "不带分页条件搜索WpOptions方法详情",
+        "operationId": "findListUsingPOST",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "WpOptions",
+            "description": "传入WpOptions的JSON对象",
+            "required": false
+              ,
+              "schema": {
+                "$ref": "#/definitions/WpOptions"
+              }
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Invalid status value(无效的状态值)"
+                      },
+          "403": {
+            "description": "403 Forbidden(请求被拒绝)"
+                      },
+          "404": {
+            "description": "not found(没有找到相关资源)"
+                      },
+          "405": {
+            "description": "Invalid input(无效的输入)"
+                      },
+          "500": {
+            "description": "服务器内部错误"
+                      },
+          "200": {
+            "description": "不带分页搜索WpOptions"
+            ,
+            "schema": {
+              "$ref": "#/definitions/Result«List«WpOptions»»"
+            }
+          }
+        }
+      }
+    },
+    "/wpOptions/search/{page}/{size}": {
+      "get": {
+        "tags": [
+          "WpOptionsController"
+        ],
+        "summary": "分页列表查询WpOptions",
+        "description": "分页列表查询WpOptions方法详情",
+        "operationId": "findPageUsingGET",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "page",
+            "description": "当前页",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "size",
+            "description": "每页显示条数",
+            "required": true
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Invalid status value(无效的状态值)"
+                      },
+          "403": {
+            "description": "403 Forbidden(请求被拒绝)"
+                      },
+          "404": {
+            "description": "not found(没有找到相关资源)"
+                      },
+          "405": {
+            "description": "Invalid input(无效的输入)"
+                      },
+          "500": {
+            "description": "服务器内部错误"
+                      },
+          "200": {
+            "description": "不带分页搜索WpOptions"
+            ,
+            "schema": {
+              "$ref": "#/definitions/Result«List«WpOptions»»"
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "WpOptionsController"
+        ],
+        "summary": "分页条件搜索WpOptions",
+        "description": "分页条件搜索WpOptions方法详情",
+        "operationId": "findPageUsingPOST",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "page",
+            "description": "当前页",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "size",
+            "description": "每页显示条数",
+            "required": true
+          },
+          {
+            "in": "body",
+            "name": "WpOptions",
+            "description": "传入WpOptions的JSON对象",
+            "required": false
+              ,
+              "schema": {
+                "$ref": "#/definitions/WpOptions"
+              }
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Invalid status value(无效的状态值)"
+                      },
+          "403": {
+            "description": "403 Forbidden(请求被拒绝)"
+                      },
+          "404": {
+            "description": "not found(没有找到相关资源)"
+                      },
+          "405": {
+            "description": "Invalid input(无效的输入)"
+                      },
+          "500": {
+            "description": "服务器内部错误"
+                      },
+          "200": {
+            "description": "分页条件搜索WpOptions"
+            ,
+            "schema": {
+              "$ref": "#/definitions/Result«List«WpOptions»»"
+            }
+          }
+        }
+      }
+    },
+    "/wpPostmeta": {
+      "get": {
+        "tags": [
+          "WpPostmetaController"
+        ],
+        "summary": "查询所有WpPostmeta",
+        "description": "查询所有WpPostmeta方法详情",
+        "operationId": "findAllUsingGET",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+        ],
+        "responses": {
+          "400": {
+            "description": "Invalid status value(无效的状态值)"
+                      },
+          "403": {
+            "description": "403 Forbidden(请求被拒绝)"
+                      },
+          "404": {
+            "description": "not found(没有找到相关资源)"
+                      },
+          "405": {
+            "description": "Invalid input(无效的输入)"
+                      },
+          "500": {
+            "description": "服务器内部错误"
+                      },
+          "200": {
+            "description": "查询所有WpPostmeta"
+            ,
+            "schema": {
+              "$ref": "#/definitions/Result«List«WpPostmeta»»"
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "WpPostmetaController"
+        ],
+        "summary": "添加WpPostmeta",
+        "description": "添加WpPostmeta方法详情",
+        "operationId": "addUsingPOST",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "添加WpPostmeta方法详情",
+            "required": true
+              ,
+              "schema": {
+                "$ref": "#/definitions/WpPostmeta"
+              }
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Invalid status value(无效的状态值)"
+                      },
+          "403": {
+            "description": "403 Forbidden(请求被拒绝)"
+                      },
+          "404": {
+            "description": "not found(没有找到相关资源)"
+                      },
+          "405": {
+            "description": "Invalid input(无效的输入)"
+                      },
+          "500": {
+            "description": "服务器内部错误"
+                      },
+          "200": {
+            "description": "添加WpPostmeta"
+            ,
+            "schema": {
+              "$ref": "#/definitions/Result"
+            }
+          }
+        }
+      }
+    },
+    "/wpPostmeta/{id}": {
+      "delete": {
+        "tags": [
+          "WpPostmetaController"
+        ],
+        "summary": "根据ID删除WpPostmeta",
+        "description": "根据ID删除WpPostmeta方法详情",
+        "operationId": "deleteUsingDELETE",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "description": "根据ID删除WpPostmeta方法详情",
+            "required": true
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Invalid status value(无效的状态值)"
+                      },
+          "403": {
+            "description": "403 Forbidden(请求被拒绝)"
+                      },
+          "404": {
+            "description": "not found(没有找到相关资源)"
+                      },
+          "405": {
+            "description": "Invalid input(无效的输入)"
+                      },
+          "500": {
+            "description": "服务器内部错误"
+                      },
+          "200": {
+            "description": "根据ID删除WpPostmeta"
+            ,
+            "schema": {
+              "$ref": "#/definitions/Result"
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "WpPostmetaController"
+        ],
+        "summary": "根据ID修改WpPostmeta",
+        "description": "根据ID修改WpPostmeta方法详情",
+        "operationId": "updateUsingPUT",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "description": "根据ID修改WpPostmeta方法详情",
+            "required": true
+          },
+          {
+            "in": "body",
+            "name": "WpPostmeta",
+            "description": "传入WpPostmeta的JSON对象",
+            "required": false
+              ,
+              "schema": {
+                "$ref": "#/definitions/WpPostmeta"
+              }
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Invalid status value(无效的状态值)"
+                      },
+          "403": {
+            "description": "403 Forbidden(请求被拒绝)"
+                      },
+          "404": {
+            "description": "not found(没有找到相关资源)"
+                      },
+          "405": {
+            "description": "Invalid input(无效的输入)"
+                      },
+          "500": {
+            "description": "服务器内部错误"
+                      },
+          "200": {
+            "description": "根据ID修改WpPostmeta"
+            ,
+            "schema": {
+              "$ref": "#/definitions/Result"
+            }
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "WpPostmetaController"
+        ],
+        "summary": "根据ID查询WpPostmeta",
+        "description": "根据ID查询WpPostmeta方法详情",
+        "operationId": "findByIdUsingGET",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "description": "根据ID修改WpPostmeta方法详情",
+            "required": true
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Invalid status value(无效的状态值)"
+                      },
+          "403": {
+            "description": "403 Forbidden(请求被拒绝)"
+                      },
+          "404": {
+            "description": "not found(没有找到相关资源)"
+                      },
+          "405": {
+            "description": "Invalid input(无效的输入)"
+                      },
+          "500": {
+            "description": "服务器内部错误"
+                      },
+          "200": {
+            "description": "根据ID修改WpPostmeta"
+            ,
+            "schema": {
+              "$ref": "#/definitions/Result«WpPostmeta»"
+            }
+          }
+        }
+      }
+    },
+    "/wpPostmeta/search": {
+      "post": {
+        "tags": [
+          "WpPostmetaController"
+        ],
+        "summary": "不带分页条件搜索WpPostmeta",
+        "description": "不带分页条件搜索WpPostmeta方法详情",
+        "operationId": "findListUsingPOST",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "WpPostmeta",
+            "description": "传入WpPostmeta的JSON对象",
+            "required": false
+              ,
+              "schema": {
+                "$ref": "#/definitions/WpPostmeta"
+              }
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Invalid status value(无效的状态值)"
+                      },
+          "403": {
+            "description": "403 Forbidden(请求被拒绝)"
+                      },
+          "404": {
+            "description": "not found(没有找到相关资源)"
+                      },
+          "405": {
+            "description": "Invalid input(无效的输入)"
+                      },
+          "500": {
+            "description": "服务器内部错误"
+                      },
+          "200": {
+            "description": "不带分页搜索WpPostmeta"
+            ,
+            "schema": {
+              "$ref": "#/definitions/Result«List«WpPostmeta»»"
+            }
+          }
+        }
+      }
+    },
+    "/wpPostmeta/search/{page}/{size}": {
+      "get": {
+        "tags": [
+          "WpPostmetaController"
+        ],
+        "summary": "分页列表查询WpPostmeta",
+        "description": "分页列表查询WpPostmeta方法详情",
+        "operationId": "findPageUsingGET",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "page",
+            "description": "当前页",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "size",
+            "description": "每页显示条数",
+            "required": true
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Invalid status value(无效的状态值)"
+                      },
+          "403": {
+            "description": "403 Forbidden(请求被拒绝)"
+                      },
+          "404": {
+            "description": "not found(没有找到相关资源)"
+                      },
+          "405": {
+            "description": "Invalid input(无效的输入)"
+                      },
+          "500": {
+            "description": "服务器内部错误"
+                      },
+          "200": {
+            "description": "不带分页搜索WpPostmeta"
+            ,
+            "schema": {
+              "$ref": "#/definitions/Result«List«WpPostmeta»»"
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "WpPostmetaController"
+        ],
+        "summary": "分页条件搜索WpPostmeta",
+        "description": "分页条件搜索WpPostmeta方法详情",
+        "operationId": "findPageUsingPOST",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "page",
+            "description": "当前页",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "size",
+            "description": "每页显示条数",
+            "required": true
+          },
+          {
+            "in": "body",
+            "name": "WpPostmeta",
+            "description": "传入WpPostmeta的JSON对象",
+            "required": false
+              ,
+              "schema": {
+                "$ref": "#/definitions/WpPostmeta"
+              }
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Invalid status value(无效的状态值)"
+                      },
+          "403": {
+            "description": "403 Forbidden(请求被拒绝)"
+                      },
+          "404": {
+            "description": "not found(没有找到相关资源)"
+                      },
+          "405": {
+            "description": "Invalid input(无效的输入)"
+                      },
+          "500": {
+            "description": "服务器内部错误"
+                      },
+          "200": {
+            "description": "分页条件搜索WpPostmeta"
+            ,
+            "schema": {
+              "$ref": "#/definitions/Result«List«WpPostmeta»»"
+            }
+          }
+        }
+      }
+    },
+    "/wpPosts": {
+      "get": {
+        "tags": [
+          "WpPostsController"
+        ],
+        "summary": "查询所有WpPosts",
+        "description": "查询所有WpPosts方法详情",
+        "operationId": "findAllUsingGET",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+        ],
+        "responses": {
+          "400": {
+            "description": "Invalid status value(无效的状态值)"
+                      },
+          "403": {
+            "description": "403 Forbidden(请求被拒绝)"
+                      },
+          "404": {
+            "description": "not found(没有找到相关资源)"
+                      },
+          "405": {
+            "description": "Invalid input(无效的输入)"
+                      },
+          "500": {
+            "description": "服务器内部错误"
+                      },
+          "200": {
+            "description": "查询所有WpPosts"
+            ,
+            "schema": {
+              "$ref": "#/definitions/Result«List«WpPosts»»"
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "WpPostsController"
+        ],
+        "summary": "添加WpPosts",
+        "description": "添加WpPosts方法详情",
+        "operationId": "addUsingPOST",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "添加WpPosts方法详情",
+            "required": true
+              ,
+              "schema": {
+                "$ref": "#/definitions/WpPosts"
+              }
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Invalid status value(无效的状态值)"
+                      },
+          "403": {
+            "description": "403 Forbidden(请求被拒绝)"
+                      },
+          "404": {
+            "description": "not found(没有找到相关资源)"
+                      },
+          "405": {
+            "description": "Invalid input(无效的输入)"
+                      },
+          "500": {
+            "description": "服务器内部错误"
+                      },
+          "200": {
+            "description": "添加WpPosts"
+            ,
+            "schema": {
+              "$ref": "#/definitions/Result"
+            }
+          }
+        }
+      }
+    },
+    "/wpPosts/{id}": {
+      "delete": {
+        "tags": [
+          "WpPostsController"
+        ],
+        "summary": "根据ID删除WpPosts",
+        "description": "根据ID删除WpPosts方法详情",
+        "operationId": "deleteUsingDELETE",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "description": "根据ID删除WpPosts方法详情",
+            "required": true
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Invalid status value(无效的状态值)"
+                      },
+          "403": {
+            "description": "403 Forbidden(请求被拒绝)"
+                      },
+          "404": {
+            "description": "not found(没有找到相关资源)"
+                      },
+          "405": {
+            "description": "Invalid input(无效的输入)"
+                      },
+          "500": {
+            "description": "服务器内部错误"
+                      },
+          "200": {
+            "description": "根据ID删除WpPosts"
+            ,
+            "schema": {
+              "$ref": "#/definitions/Result"
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "WpPostsController"
+        ],
+        "summary": "根据ID修改WpPosts",
+        "description": "根据ID修改WpPosts方法详情",
+        "operationId": "updateUsingPUT",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "description": "根据ID修改WpPosts方法详情",
+            "required": true
+          },
+          {
+            "in": "body",
+            "name": "WpPosts",
+            "description": "传入WpPosts的JSON对象",
+            "required": false
+              ,
+              "schema": {
+                "$ref": "#/definitions/WpPosts"
+              }
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Invalid status value(无效的状态值)"
+                      },
+          "403": {
+            "description": "403 Forbidden(请求被拒绝)"
+                      },
+          "404": {
+            "description": "not found(没有找到相关资源)"
+                      },
+          "405": {
+            "description": "Invalid input(无效的输入)"
+                      },
+          "500": {
+            "description": "服务器内部错误"
+                      },
+          "200": {
+            "description": "根据ID修改WpPosts"
+            ,
+            "schema": {
+              "$ref": "#/definitions/Result"
+            }
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "WpPostsController"
+        ],
+        "summary": "根据ID查询WpPosts",
+        "description": "根据ID查询WpPosts方法详情",
+        "operationId": "findByIdUsingGET",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "description": "根据ID修改WpPosts方法详情",
+            "required": true
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Invalid status value(无效的状态值)"
+                      },
+          "403": {
+            "description": "403 Forbidden(请求被拒绝)"
+                      },
+          "404": {
+            "description": "not found(没有找到相关资源)"
+                      },
+          "405": {
+            "description": "Invalid input(无效的输入)"
+                      },
+          "500": {
+            "description": "服务器内部错误"
+                      },
+          "200": {
+            "description": "根据ID修改WpPosts"
+            ,
+            "schema": {
+              "$ref": "#/definitions/Result«WpPosts»"
+            }
+          }
+        }
+      }
+    },
+    "/wpPosts/search": {
+      "post": {
+        "tags": [
+          "WpPostsController"
+        ],
+        "summary": "不带分页条件搜索WpPosts",
+        "description": "不带分页条件搜索WpPosts方法详情",
+        "operationId": "findListUsingPOST",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "WpPosts",
+            "description": "传入WpPosts的JSON对象",
+            "required": false
+              ,
+              "schema": {
+                "$ref": "#/definitions/WpPosts"
+              }
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Invalid status value(无效的状态值)"
+                      },
+          "403": {
+            "description": "403 Forbidden(请求被拒绝)"
+                      },
+          "404": {
+            "description": "not found(没有找到相关资源)"
+                      },
+          "405": {
+            "description": "Invalid input(无效的输入)"
+                      },
+          "500": {
+            "description": "服务器内部错误"
+                      },
+          "200": {
+            "description": "不带分页搜索WpPosts"
+            ,
+            "schema": {
+              "$ref": "#/definitions/Result«List«WpPosts»»"
+            }
+          }
+        }
+      }
+    },
+    "/wpPosts/search/{page}/{size}": {
+      "get": {
+        "tags": [
+          "WpPostsController"
+        ],
+        "summary": "分页列表查询WpPosts",
+        "description": "分页列表查询WpPosts方法详情",
+        "operationId": "findPageUsingGET",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "page",
+            "description": "当前页",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "size",
+            "description": "每页显示条数",
+            "required": true
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Invalid status value(无效的状态值)"
+                      },
+          "403": {
+            "description": "403 Forbidden(请求被拒绝)"
+                      },
+          "404": {
+            "description": "not found(没有找到相关资源)"
+                      },
+          "405": {
+            "description": "Invalid input(无效的输入)"
+                      },
+          "500": {
+            "description": "服务器内部错误"
+                      },
+          "200": {
+            "description": "不带分页搜索WpPosts"
+            ,
+            "schema": {
+              "$ref": "#/definitions/Result«List«WpPosts»»"
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "WpPostsController"
+        ],
+        "summary": "分页条件搜索WpPosts",
+        "description": "分页条件搜索WpPosts方法详情",
+        "operationId": "findPageUsingPOST",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "page",
+            "description": "当前页",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "size",
+            "description": "每页显示条数",
+            "required": true
+          },
+          {
+            "in": "body",
+            "name": "WpPosts",
+            "description": "传入WpPosts的JSON对象",
+            "required": false
+              ,
+              "schema": {
+                "$ref": "#/definitions/WpPosts"
+              }
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Invalid status value(无效的状态值)"
+                      },
+          "403": {
+            "description": "403 Forbidden(请求被拒绝)"
+                      },
+          "404": {
+            "description": "not found(没有找到相关资源)"
+                      },
+          "405": {
+            "description": "Invalid input(无效的输入)"
+                      },
+          "500": {
+            "description": "服务器内部错误"
+                      },
+          "200": {
+            "description": "分页条件搜索WpPosts"
+            ,
+            "schema": {
+              "$ref": "#/definitions/Result«List«WpPosts»»"
+            }
+          }
+        }
+      }
+    },
+    "/wpSakura": {
+      "get": {
+        "tags": [
+          "WpSakuraController"
+        ],
+        "summary": "查询所有WpSakura",
+        "description": "查询所有WpSakura方法详情",
+        "operationId": "findAllUsingGET",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+        ],
+        "responses": {
+          "400": {
+            "description": "Invalid status value(无效的状态值)"
+                      },
+          "403": {
+            "description": "403 Forbidden(请求被拒绝)"
+                      },
+          "404": {
+            "description": "not found(没有找到相关资源)"
+                      },
+          "405": {
+            "description": "Invalid input(无效的输入)"
+                      },
+          "500": {
+            "description": "服务器内部错误"
+                      },
+          "200": {
+            "description": "查询所有WpSakura"
+            ,
+            "schema": {
+              "$ref": "#/definitions/Result«List«WpSakura»»"
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "WpSakuraController"
+        ],
+        "summary": "添加WpSakura",
+        "description": "添加WpSakura方法详情",
+        "operationId": "addUsingPOST",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "添加WpSakura方法详情",
+            "required": true
+              ,
+              "schema": {
+                "$ref": "#/definitions/WpSakura"
+              }
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Invalid status value(无效的状态值)"
+                      },
+          "403": {
+            "description": "403 Forbidden(请求被拒绝)"
+                      },
+          "404": {
+            "description": "not found(没有找到相关资源)"
+                      },
+          "405": {
+            "description": "Invalid input(无效的输入)"
+                      },
+          "500": {
+            "description": "服务器内部错误"
+                      },
+          "200": {
+            "description": "添加WpSakura"
+            ,
+            "schema": {
+              "$ref": "#/definitions/Result"
+            }
+          }
+        }
+      }
+    },
+    "/wpSakura/{id}": {
+      "delete": {
+        "tags": [
+          "WpSakuraController"
+        ],
+        "summary": "根据ID删除WpSakura",
+        "description": "根据ID删除WpSakura方法详情",
+        "operationId": "deleteUsingDELETE",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "description": "根据ID删除WpSakura方法详情",
+            "required": true
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Invalid status value(无效的状态值)"
+                      },
+          "403": {
+            "description": "403 Forbidden(请求被拒绝)"
+                      },
+          "404": {
+            "description": "not found(没有找到相关资源)"
+                      },
+          "405": {
+            "description": "Invalid input(无效的输入)"
+                      },
+          "500": {
+            "description": "服务器内部错误"
+                      },
+          "200": {
+            "description": "根据ID删除WpSakura"
+            ,
+            "schema": {
+              "$ref": "#/definitions/Result"
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "WpSakuraController"
+        ],
+        "summary": "根据ID修改WpSakura",
+        "description": "根据ID修改WpSakura方法详情",
+        "operationId": "updateUsingPUT",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "description": "根据ID修改WpSakura方法详情",
+            "required": true
+          },
+          {
+            "in": "body",
+            "name": "WpSakura",
+            "description": "传入WpSakura的JSON对象",
+            "required": false
+              ,
+              "schema": {
+                "$ref": "#/definitions/WpSakura"
+              }
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Invalid status value(无效的状态值)"
+                      },
+          "403": {
+            "description": "403 Forbidden(请求被拒绝)"
+                      },
+          "404": {
+            "description": "not found(没有找到相关资源)"
+                      },
+          "405": {
+            "description": "Invalid input(无效的输入)"
+                      },
+          "500": {
+            "description": "服务器内部错误"
+                      },
+          "200": {
+            "description": "根据ID修改WpSakura"
+            ,
+            "schema": {
+              "$ref": "#/definitions/Result"
+            }
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "WpSakuraController"
+        ],
+        "summary": "根据ID查询WpSakura",
+        "description": "根据ID查询WpSakura方法详情",
+        "operationId": "findByIdUsingGET",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "description": "根据ID修改WpSakura方法详情",
+            "required": true
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Invalid status value(无效的状态值)"
+                      },
+          "403": {
+            "description": "403 Forbidden(请求被拒绝)"
+                      },
+          "404": {
+            "description": "not found(没有找到相关资源)"
+                      },
+          "405": {
+            "description": "Invalid input(无效的输入)"
+                      },
+          "500": {
+            "description": "服务器内部错误"
+                      },
+          "200": {
+            "description": "根据ID修改WpSakura"
+            ,
+            "schema": {
+              "$ref": "#/definitions/Result«WpSakura»"
+            }
+          }
+        }
+      }
+    },
+    "/wpSakura/search": {
+      "post": {
+        "tags": [
+          "WpSakuraController"
+        ],
+        "summary": "不带分页条件搜索WpSakura",
+        "description": "不带分页条件搜索WpSakura方法详情",
+        "operationId": "findListUsingPOST",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "WpSakura",
+            "description": "传入WpSakura的JSON对象",
+            "required": false
+              ,
+              "schema": {
+                "$ref": "#/definitions/WpSakura"
+              }
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Invalid status value(无效的状态值)"
+                      },
+          "403": {
+            "description": "403 Forbidden(请求被拒绝)"
+                      },
+          "404": {
+            "description": "not found(没有找到相关资源)"
+                      },
+          "405": {
+            "description": "Invalid input(无效的输入)"
+                      },
+          "500": {
+            "description": "服务器内部错误"
+                      },
+          "200": {
+            "description": "不带分页搜索WpSakura"
+            ,
+            "schema": {
+              "$ref": "#/definitions/Result«List«WpSakura»»"
+            }
+          }
+        }
+      }
+    },
+    "/wpSakura/search/{page}/{size}": {
+      "get": {
+        "tags": [
+          "WpSakuraController"
+        ],
+        "summary": "分页列表查询WpSakura",
+        "description": "分页列表查询WpSakura方法详情",
+        "operationId": "findPageUsingGET",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "page",
+            "description": "当前页",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "size",
+            "description": "每页显示条数",
+            "required": true
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Invalid status value(无效的状态值)"
+                      },
+          "403": {
+            "description": "403 Forbidden(请求被拒绝)"
+                      },
+          "404": {
+            "description": "not found(没有找到相关资源)"
+                      },
+          "405": {
+            "description": "Invalid input(无效的输入)"
+                      },
+          "500": {
+            "description": "服务器内部错误"
+                      },
+          "200": {
+            "description": "不带分页搜索WpSakura"
+            ,
+            "schema": {
+              "$ref": "#/definitions/Result«List«WpSakura»»"
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "WpSakuraController"
+        ],
+        "summary": "分页条件搜索WpSakura",
+        "description": "分页条件搜索WpSakura方法详情",
+        "operationId": "findPageUsingPOST",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "page",
+            "description": "当前页",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "size",
+            "description": "每页显示条数",
+            "required": true
+          },
+          {
+            "in": "body",
+            "name": "WpSakura",
+            "description": "传入WpSakura的JSON对象",
+            "required": false
+              ,
+              "schema": {
+                "$ref": "#/definitions/WpSakura"
+              }
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Invalid status value(无效的状态值)"
+                      },
+          "403": {
+            "description": "403 Forbidden(请求被拒绝)"
+                      },
+          "404": {
+            "description": "not found(没有找到相关资源)"
+                      },
+          "405": {
+            "description": "Invalid input(无效的输入)"
+                      },
+          "500": {
+            "description": "服务器内部错误"
+                      },
+          "200": {
+            "description": "分页条件搜索WpSakura"
+            ,
+            "schema": {
+              "$ref": "#/definitions/Result«List«WpSakura»»"
+            }
+          }
+        }
+      }
+    },
+    "/wpSakurairo": {
+      "get": {
+        "tags": [
+          "WpSakurairoController"
+        ],
+        "summary": "查询所有WpSakurairo",
+        "description": "查询所有WpSakurairo方法详情",
+        "operationId": "findAllUsingGET",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+        ],
+        "responses": {
+          "400": {
+            "description": "Invalid status value(无效的状态值)"
+                      },
+          "403": {
+            "description": "403 Forbidden(请求被拒绝)"
+                      },
+          "404": {
+            "description": "not found(没有找到相关资源)"
+                      },
+          "405": {
+            "description": "Invalid input(无效的输入)"
+                      },
+          "500": {
+            "description": "服务器内部错误"
+                      },
+          "200": {
+            "description": "查询所有WpSakurairo"
+            ,
+            "schema": {
+              "$ref": "#/definitions/Result«List«WpSakurairo»»"
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "WpSakurairoController"
+        ],
+        "summary": "添加WpSakurairo",
+        "description": "添加WpSakurairo方法详情",
+        "operationId": "addUsingPOST",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "添加WpSakurairo方法详情",
+            "required": true
+              ,
+              "schema": {
+                "$ref": "#/definitions/WpSakurairo"
+              }
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Invalid status value(无效的状态值)"
+                      },
+          "403": {
+            "description": "403 Forbidden(请求被拒绝)"
+                      },
+          "404": {
+            "description": "not found(没有找到相关资源)"
+                      },
+          "405": {
+            "description": "Invalid input(无效的输入)"
+                      },
+          "500": {
+            "description": "服务器内部错误"
+                      },
+          "200": {
+            "description": "添加WpSakurairo"
+            ,
+            "schema": {
+              "$ref": "#/definitions/Result"
+            }
+          }
+        }
+      }
+    },
+    "/wpSakurairo/{id}": {
+      "delete": {
+        "tags": [
+          "WpSakurairoController"
+        ],
+        "summary": "根据ID删除WpSakurairo",
+        "description": "根据ID删除WpSakurairo方法详情",
+        "operationId": "deleteUsingDELETE",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "description": "根据ID删除WpSakurairo方法详情",
+            "required": true
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Invalid status value(无效的状态值)"
+                      },
+          "403": {
+            "description": "403 Forbidden(请求被拒绝)"
+                      },
+          "404": {
+            "description": "not found(没有找到相关资源)"
+                      },
+          "405": {
+            "description": "Invalid input(无效的输入)"
+                      },
+          "500": {
+            "description": "服务器内部错误"
+                      },
+          "200": {
+            "description": "根据ID删除WpSakurairo"
+            ,
+            "schema": {
+              "$ref": "#/definitions/Result"
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "WpSakurairoController"
+        ],
+        "summary": "根据ID修改WpSakurairo",
+        "description": "根据ID修改WpSakurairo方法详情",
+        "operationId": "updateUsingPUT",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "description": "根据ID修改WpSakurairo方法详情",
+            "required": true
+          },
+          {
+            "in": "body",
+            "name": "WpSakurairo",
+            "description": "传入WpSakurairo的JSON对象",
+            "required": false
+              ,
+              "schema": {
+                "$ref": "#/definitions/WpSakurairo"
+              }
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Invalid status value(无效的状态值)"
+                      },
+          "403": {
+            "description": "403 Forbidden(请求被拒绝)"
+                      },
+          "404": {
+            "description": "not found(没有找到相关资源)"
+                      },
+          "405": {
+            "description": "Invalid input(无效的输入)"
+                      },
+          "500": {
+            "description": "服务器内部错误"
+                      },
+          "200": {
+            "description": "根据ID修改WpSakurairo"
+            ,
+            "schema": {
+              "$ref": "#/definitions/Result"
+            }
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "WpSakurairoController"
+        ],
+        "summary": "根据ID查询WpSakurairo",
+        "description": "根据ID查询WpSakurairo方法详情",
+        "operationId": "findByIdUsingGET",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "description": "根据ID修改WpSakurairo方法详情",
+            "required": true
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Invalid status value(无效的状态值)"
+                      },
+          "403": {
+            "description": "403 Forbidden(请求被拒绝)"
+                      },
+          "404": {
+            "description": "not found(没有找到相关资源)"
+                      },
+          "405": {
+            "description": "Invalid input(无效的输入)"
+                      },
+          "500": {
+            "description": "服务器内部错误"
+                      },
+          "200": {
+            "description": "根据ID修改WpSakurairo"
+            ,
+            "schema": {
+              "$ref": "#/definitions/Result«WpSakurairo»"
+            }
+          }
+        }
+      }
+    },
+    "/wpSakurairo/search": {
+      "post": {
+        "tags": [
+          "WpSakurairoController"
+        ],
+        "summary": "不带分页条件搜索WpSakurairo",
+        "description": "不带分页条件搜索WpSakurairo方法详情",
+        "operationId": "findListUsingPOST",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "WpSakurairo",
+            "description": "传入WpSakurairo的JSON对象",
+            "required": false
+              ,
+              "schema": {
+                "$ref": "#/definitions/WpSakurairo"
+              }
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Invalid status value(无效的状态值)"
+                      },
+          "403": {
+            "description": "403 Forbidden(请求被拒绝)"
+                      },
+          "404": {
+            "description": "not found(没有找到相关资源)"
+                      },
+          "405": {
+            "description": "Invalid input(无效的输入)"
+                      },
+          "500": {
+            "description": "服务器内部错误"
+                      },
+          "200": {
+            "description": "不带分页搜索WpSakurairo"
+            ,
+            "schema": {
+              "$ref": "#/definitions/Result«List«WpSakurairo»»"
+            }
+          }
+        }
+      }
+    },
+    "/wpSakurairo/search/{page}/{size}": {
+      "get": {
+        "tags": [
+          "WpSakurairoController"
+        ],
+        "summary": "分页列表查询WpSakurairo",
+        "description": "分页列表查询WpSakurairo方法详情",
+        "operationId": "findPageUsingGET",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "page",
+            "description": "当前页",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "size",
+            "description": "每页显示条数",
+            "required": true
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Invalid status value(无效的状态值)"
+                      },
+          "403": {
+            "description": "403 Forbidden(请求被拒绝)"
+                      },
+          "404": {
+            "description": "not found(没有找到相关资源)"
+                      },
+          "405": {
+            "description": "Invalid input(无效的输入)"
+                      },
+          "500": {
+            "description": "服务器内部错误"
+                      },
+          "200": {
+            "description": "不带分页搜索WpSakurairo"
+            ,
+            "schema": {
+              "$ref": "#/definitions/Result«List«WpSakurairo»»"
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "WpSakurairoController"
+        ],
+        "summary": "分页条件搜索WpSakurairo",
+        "description": "分页条件搜索WpSakurairo方法详情",
+        "operationId": "findPageUsingPOST",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "page",
+            "description": "当前页",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "size",
+            "description": "每页显示条数",
+            "required": true
+          },
+          {
+            "in": "body",
+            "name": "WpSakurairo",
+            "description": "传入WpSakurairo的JSON对象",
+            "required": false
+              ,
+              "schema": {
+                "$ref": "#/definitions/WpSakurairo"
+              }
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Invalid status value(无效的状态值)"
+                      },
+          "403": {
+            "description": "403 Forbidden(请求被拒绝)"
+                      },
+          "404": {
+            "description": "not found(没有找到相关资源)"
+                      },
+          "405": {
+            "description": "Invalid input(无效的输入)"
+                      },
+          "500": {
+            "description": "服务器内部错误"
+                      },
+          "200": {
+            "description": "分页条件搜索WpSakurairo"
+            ,
+            "schema": {
+              "$ref": "#/definitions/Result«List«WpSakurairo»»"
+            }
+          }
+        }
+      }
+    },
+    "/wpTermRelationships": {
+      "get": {
+        "tags": [
+          "WpTermRelationshipsController"
+        ],
+        "summary": "查询所有WpTermRelationships",
+        "description": "查询所有WpTermRelationships方法详情",
+        "operationId": "findAllUsingGET",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+        ],
+        "responses": {
+          "400": {
+            "description": "Invalid status value(无效的状态值)"
+                      },
+          "403": {
+            "description": "403 Forbidden(请求被拒绝)"
+                      },
+          "404": {
+            "description": "not found(没有找到相关资源)"
+                      },
+          "405": {
+            "description": "Invalid input(无效的输入)"
+                      },
+          "500": {
+            "description": "服务器内部错误"
+                      },
+          "200": {
+            "description": "查询所有WpTermRelationships"
+            ,
+            "schema": {
+              "$ref": "#/definitions/Result«List«WpTermRelationships»»"
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "WpTermRelationshipsController"
+        ],
+        "summary": "添加WpTermRelationships",
+        "description": "添加WpTermRelationships方法详情",
+        "operationId": "addUsingPOST",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "添加WpTermRelationships方法详情",
+            "required": true
+              ,
+              "schema": {
+                "$ref": "#/definitions/WpTermRelationships"
+              }
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Invalid status value(无效的状态值)"
+                      },
+          "403": {
+            "description": "403 Forbidden(请求被拒绝)"
+                      },
+          "404": {
+            "description": "not found(没有找到相关资源)"
+                      },
+          "405": {
+            "description": "Invalid input(无效的输入)"
+                      },
+          "500": {
+            "description": "服务器内部错误"
+                      },
+          "200": {
+            "description": "添加WpTermRelationships"
+            ,
+            "schema": {
+              "$ref": "#/definitions/Result"
+            }
+          }
+        }
+      }
+    },
+    "/wpTermRelationships/{id}": {
+      "delete": {
+        "tags": [
+          "WpTermRelationshipsController"
+        ],
+        "summary": "根据ID删除WpTermRelationships",
+        "description": "根据ID删除WpTermRelationships方法详情",
+        "operationId": "deleteUsingDELETE",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "description": "根据ID删除WpTermRelationships方法详情",
+            "required": true
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Invalid status value(无效的状态值)"
+                      },
+          "403": {
+            "description": "403 Forbidden(请求被拒绝)"
+                      },
+          "404": {
+            "description": "not found(没有找到相关资源)"
+                      },
+          "405": {
+            "description": "Invalid input(无效的输入)"
+                      },
+          "500": {
+            "description": "服务器内部错误"
+                      },
+          "200": {
+            "description": "根据ID删除WpTermRelationships"
+            ,
+            "schema": {
+              "$ref": "#/definitions/Result"
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "WpTermRelationshipsController"
+        ],
+        "summary": "根据ID修改WpTermRelationships",
+        "description": "根据ID修改WpTermRelationships方法详情",
+        "operationId": "updateUsingPUT",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "description": "根据ID修改WpTermRelationships方法详情",
+            "required": true
+          },
+          {
+            "in": "body",
+            "name": "WpTermRelationships",
+            "description": "传入WpTermRelationships的JSON对象",
+            "required": false
+              ,
+              "schema": {
+                "$ref": "#/definitions/WpTermRelationships"
+              }
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Invalid status value(无效的状态值)"
+                      },
+          "403": {
+            "description": "403 Forbidden(请求被拒绝)"
+                      },
+          "404": {
+            "description": "not found(没有找到相关资源)"
+                      },
+          "405": {
+            "description": "Invalid input(无效的输入)"
+                      },
+          "500": {
+            "description": "服务器内部错误"
+                      },
+          "200": {
+            "description": "根据ID修改WpTermRelationships"
+            ,
+            "schema": {
+              "$ref": "#/definitions/Result"
+            }
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "WpTermRelationshipsController"
+        ],
+        "summary": "根据ID查询WpTermRelationships",
+        "description": "根据ID查询WpTermRelationships方法详情",
+        "operationId": "findByIdUsingGET",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "description": "根据ID修改WpTermRelationships方法详情",
+            "required": true
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Invalid status value(无效的状态值)"
+                      },
+          "403": {
+            "description": "403 Forbidden(请求被拒绝)"
+                      },
+          "404": {
+            "description": "not found(没有找到相关资源)"
+                      },
+          "405": {
+            "description": "Invalid input(无效的输入)"
+                      },
+          "500": {
+            "description": "服务器内部错误"
+                      },
+          "200": {
+            "description": "根据ID修改WpTermRelationships"
+            ,
+            "schema": {
+              "$ref": "#/definitions/Result«WpTermRelationships»"
+            }
+          }
+        }
+      }
+    },
+    "/wpTermRelationships/search": {
+      "post": {
+        "tags": [
+          "WpTermRelationshipsController"
+        ],
+        "summary": "不带分页条件搜索WpTermRelationships",
+        "description": "不带分页条件搜索WpTermRelationships方法详情",
+        "operationId": "findListUsingPOST",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "WpTermRelationships",
+            "description": "传入WpTermRelationships的JSON对象",
+            "required": false
+              ,
+              "schema": {
+                "$ref": "#/definitions/WpTermRelationships"
+              }
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Invalid status value(无效的状态值)"
+                      },
+          "403": {
+            "description": "403 Forbidden(请求被拒绝)"
+                      },
+          "404": {
+            "description": "not found(没有找到相关资源)"
+                      },
+          "405": {
+            "description": "Invalid input(无效的输入)"
+                      },
+          "500": {
+            "description": "服务器内部错误"
+                      },
+          "200": {
+            "description": "不带分页搜索WpTermRelationships"
+            ,
+            "schema": {
+              "$ref": "#/definitions/Result«List«WpTermRelationships»»"
+            }
+          }
+        }
+      }
+    },
+    "/wpTermRelationships/search/{page}/{size}": {
+      "get": {
+        "tags": [
+          "WpTermRelationshipsController"
+        ],
+        "summary": "分页列表查询WpTermRelationships",
+        "description": "分页列表查询WpTermRelationships方法详情",
+        "operationId": "findPageUsingGET",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "page",
+            "description": "当前页",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "size",
+            "description": "每页显示条数",
+            "required": true
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Invalid status value(无效的状态值)"
+                      },
+          "403": {
+            "description": "403 Forbidden(请求被拒绝)"
+                      },
+          "404": {
+            "description": "not found(没有找到相关资源)"
+                      },
+          "405": {
+            "description": "Invalid input(无效的输入)"
+                      },
+          "500": {
+            "description": "服务器内部错误"
+                      },
+          "200": {
+            "description": "不带分页搜索WpTermRelationships"
+            ,
+            "schema": {
+              "$ref": "#/definitions/Result«List«WpTermRelationships»»"
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "WpTermRelationshipsController"
+        ],
+        "summary": "分页条件搜索WpTermRelationships",
+        "description": "分页条件搜索WpTermRelationships方法详情",
+        "operationId": "findPageUsingPOST",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "page",
+            "description": "当前页",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "size",
+            "description": "每页显示条数",
+            "required": true
+          },
+          {
+            "in": "body",
+            "name": "WpTermRelationships",
+            "description": "传入WpTermRelationships的JSON对象",
+            "required": false
+              ,
+              "schema": {
+                "$ref": "#/definitions/WpTermRelationships"
+              }
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Invalid status value(无效的状态值)"
+                      },
+          "403": {
+            "description": "403 Forbidden(请求被拒绝)"
+                      },
+          "404": {
+            "description": "not found(没有找到相关资源)"
+                      },
+          "405": {
+            "description": "Invalid input(无效的输入)"
+                      },
+          "500": {
+            "description": "服务器内部错误"
+                      },
+          "200": {
+            "description": "分页条件搜索WpTermRelationships"
+            ,
+            "schema": {
+              "$ref": "#/definitions/Result«List«WpTermRelationships»»"
+            }
+          }
+        }
+      }
+    },
+    "/wpTermTaxonomy": {
+      "get": {
+        "tags": [
+          "WpTermTaxonomyController"
+        ],
+        "summary": "查询所有WpTermTaxonomy",
+        "description": "查询所有WpTermTaxonomy方法详情",
+        "operationId": "findAllUsingGET",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+        ],
+        "responses": {
+          "400": {
+            "description": "Invalid status value(无效的状态值)"
+                      },
+          "403": {
+            "description": "403 Forbidden(请求被拒绝)"
+                      },
+          "404": {
+            "description": "not found(没有找到相关资源)"
+                      },
+          "405": {
+            "description": "Invalid input(无效的输入)"
+                      },
+          "500": {
+            "description": "服务器内部错误"
+                      },
+          "200": {
+            "description": "查询所有WpTermTaxonomy"
+            ,
+            "schema": {
+              "$ref": "#/definitions/Result«List«WpTermTaxonomy»»"
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "WpTermTaxonomyController"
+        ],
+        "summary": "添加WpTermTaxonomy",
+        "description": "添加WpTermTaxonomy方法详情",
+        "operationId": "addUsingPOST",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "添加WpTermTaxonomy方法详情",
+            "required": true
+              ,
+              "schema": {
+                "$ref": "#/definitions/WpTermTaxonomy"
+              }
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Invalid status value(无效的状态值)"
+                      },
+          "403": {
+            "description": "403 Forbidden(请求被拒绝)"
+                      },
+          "404": {
+            "description": "not found(没有找到相关资源)"
+                      },
+          "405": {
+            "description": "Invalid input(无效的输入)"
+                      },
+          "500": {
+            "description": "服务器内部错误"
+                      },
+          "200": {
+            "description": "添加WpTermTaxonomy"
+            ,
+            "schema": {
+              "$ref": "#/definitions/Result"
+            }
+          }
+        }
+      }
+    },
+    "/wpTermTaxonomy/{id}": {
+      "delete": {
+        "tags": [
+          "WpTermTaxonomyController"
+        ],
+        "summary": "根据ID删除WpTermTaxonomy",
+        "description": "根据ID删除WpTermTaxonomy方法详情",
+        "operationId": "deleteUsingDELETE",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "description": "根据ID删除WpTermTaxonomy方法详情",
+            "required": true
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Invalid status value(无效的状态值)"
+                      },
+          "403": {
+            "description": "403 Forbidden(请求被拒绝)"
+                      },
+          "404": {
+            "description": "not found(没有找到相关资源)"
+                      },
+          "405": {
+            "description": "Invalid input(无效的输入)"
+                      },
+          "500": {
+            "description": "服务器内部错误"
+                      },
+          "200": {
+            "description": "根据ID删除WpTermTaxonomy"
+            ,
+            "schema": {
+              "$ref": "#/definitions/Result"
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "WpTermTaxonomyController"
+        ],
+        "summary": "根据ID修改WpTermTaxonomy",
+        "description": "根据ID修改WpTermTaxonomy方法详情",
+        "operationId": "updateUsingPUT",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "description": "根据ID修改WpTermTaxonomy方法详情",
+            "required": true
+          },
+          {
+            "in": "body",
+            "name": "WpTermTaxonomy",
+            "description": "传入WpTermTaxonomy的JSON对象",
+            "required": false
+              ,
+              "schema": {
+                "$ref": "#/definitions/WpTermTaxonomy"
+              }
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Invalid status value(无效的状态值)"
+                      },
+          "403": {
+            "description": "403 Forbidden(请求被拒绝)"
+                      },
+          "404": {
+            "description": "not found(没有找到相关资源)"
+                      },
+          "405": {
+            "description": "Invalid input(无效的输入)"
+                      },
+          "500": {
+            "description": "服务器内部错误"
+                      },
+          "200": {
+            "description": "根据ID修改WpTermTaxonomy"
+            ,
+            "schema": {
+              "$ref": "#/definitions/Result"
+            }
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "WpTermTaxonomyController"
+        ],
+        "summary": "根据ID查询WpTermTaxonomy",
+        "description": "根据ID查询WpTermTaxonomy方法详情",
+        "operationId": "findByIdUsingGET",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "description": "根据ID修改WpTermTaxonomy方法详情",
+            "required": true
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Invalid status value(无效的状态值)"
+                      },
+          "403": {
+            "description": "403 Forbidden(请求被拒绝)"
+                      },
+          "404": {
+            "description": "not found(没有找到相关资源)"
+                      },
+          "405": {
+            "description": "Invalid input(无效的输入)"
+                      },
+          "500": {
+            "description": "服务器内部错误"
+                      },
+          "200": {
+            "description": "根据ID修改WpTermTaxonomy"
+            ,
+            "schema": {
+              "$ref": "#/definitions/Result«WpTermTaxonomy»"
+            }
+          }
+        }
+      }
+    },
+    "/wpTermTaxonomy/search": {
+      "post": {
+        "tags": [
+          "WpTermTaxonomyController"
+        ],
+        "summary": "不带分页条件搜索WpTermTaxonomy",
+        "description": "不带分页条件搜索WpTermTaxonomy方法详情",
+        "operationId": "findListUsingPOST",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "WpTermTaxonomy",
+            "description": "传入WpTermTaxonomy的JSON对象",
+            "required": false
+              ,
+              "schema": {
+                "$ref": "#/definitions/WpTermTaxonomy"
+              }
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Invalid status value(无效的状态值)"
+                      },
+          "403": {
+            "description": "403 Forbidden(请求被拒绝)"
+                      },
+          "404": {
+            "description": "not found(没有找到相关资源)"
+                      },
+          "405": {
+            "description": "Invalid input(无效的输入)"
+                      },
+          "500": {
+            "description": "服务器内部错误"
+                      },
+          "200": {
+            "description": "不带分页搜索WpTermTaxonomy"
+            ,
+            "schema": {
+              "$ref": "#/definitions/Result«List«WpTermTaxonomy»»"
+            }
+          }
+        }
+      }
+    },
+    "/wpTermTaxonomy/search/{page}/{size}": {
+      "get": {
+        "tags": [
+          "WpTermTaxonomyController"
+        ],
+        "summary": "分页列表查询WpTermTaxonomy",
+        "description": "分页列表查询WpTermTaxonomy方法详情",
+        "operationId": "findPageUsingGET",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "page",
+            "description": "当前页",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "size",
+            "description": "每页显示条数",
+            "required": true
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Invalid status value(无效的状态值)"
+                      },
+          "403": {
+            "description": "403 Forbidden(请求被拒绝)"
+                      },
+          "404": {
+            "description": "not found(没有找到相关资源)"
+                      },
+          "405": {
+            "description": "Invalid input(无效的输入)"
+                      },
+          "500": {
+            "description": "服务器内部错误"
+                      },
+          "200": {
+            "description": "不带分页搜索WpTermTaxonomy"
+            ,
+            "schema": {
+              "$ref": "#/definitions/Result«List«WpTermTaxonomy»»"
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "WpTermTaxonomyController"
+        ],
+        "summary": "分页条件搜索WpTermTaxonomy",
+        "description": "分页条件搜索WpTermTaxonomy方法详情",
+        "operationId": "findPageUsingPOST",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "page",
+            "description": "当前页",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "size",
+            "description": "每页显示条数",
+            "required": true
+          },
+          {
+            "in": "body",
+            "name": "WpTermTaxonomy",
+            "description": "传入WpTermTaxonomy的JSON对象",
+            "required": false
+              ,
+              "schema": {
+                "$ref": "#/definitions/WpTermTaxonomy"
+              }
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Invalid status value(无效的状态值)"
+                      },
+          "403": {
+            "description": "403 Forbidden(请求被拒绝)"
+                      },
+          "404": {
+            "description": "not found(没有找到相关资源)"
+                      },
+          "405": {
+            "description": "Invalid input(无效的输入)"
+                      },
+          "500": {
+            "description": "服务器内部错误"
+                      },
+          "200": {
+            "description": "分页条件搜索WpTermTaxonomy"
+            ,
+            "schema": {
+              "$ref": "#/definitions/Result«List«WpTermTaxonomy»»"
+            }
+          }
+        }
+      }
+    },
+    "/wpTermmeta": {
+      "get": {
+        "tags": [
+          "WpTermmetaController"
+        ],
+        "summary": "查询所有WpTermmeta",
+        "description": "查询所有WpTermmeta方法详情",
+        "operationId": "findAllUsingGET",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+        ],
+        "responses": {
+          "400": {
+            "description": "Invalid status value(无效的状态值)"
+                      },
+          "403": {
+            "description": "403 Forbidden(请求被拒绝)"
+                      },
+          "404": {
+            "description": "not found(没有找到相关资源)"
+                      },
+          "405": {
+            "description": "Invalid input(无效的输入)"
+                      },
+          "500": {
+            "description": "服务器内部错误"
+                      },
+          "200": {
+            "description": "查询所有WpTermmeta"
+            ,
+            "schema": {
+              "$ref": "#/definitions/Result«List«WpTermmeta»»"
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "WpTermmetaController"
+        ],
+        "summary": "添加WpTermmeta",
+        "description": "添加WpTermmeta方法详情",
+        "operationId": "addUsingPOST",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "添加WpTermmeta方法详情",
+            "required": true
+              ,
+              "schema": {
+                "$ref": "#/definitions/WpTermmeta"
+              }
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Invalid status value(无效的状态值)"
+                      },
+          "403": {
+            "description": "403 Forbidden(请求被拒绝)"
+                      },
+          "404": {
+            "description": "not found(没有找到相关资源)"
+                      },
+          "405": {
+            "description": "Invalid input(无效的输入)"
+                      },
+          "500": {
+            "description": "服务器内部错误"
+                      },
+          "200": {
+            "description": "添加WpTermmeta"
+            ,
+            "schema": {
+              "$ref": "#/definitions/Result"
+            }
+          }
+        }
+      }
+    },
+    "/wpTermmeta/{id}": {
+      "delete": {
+        "tags": [
+          "WpTermmetaController"
+        ],
+        "summary": "根据ID删除WpTermmeta",
+        "description": "根据ID删除WpTermmeta方法详情",
+        "operationId": "deleteUsingDELETE",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "description": "根据ID删除WpTermmeta方法详情",
+            "required": true
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Invalid status value(无效的状态值)"
+                      },
+          "403": {
+            "description": "403 Forbidden(请求被拒绝)"
+                      },
+          "404": {
+            "description": "not found(没有找到相关资源)"
+                      },
+          "405": {
+            "description": "Invalid input(无效的输入)"
+                      },
+          "500": {
+            "description": "服务器内部错误"
+                      },
+          "200": {
+            "description": "根据ID删除WpTermmeta"
+            ,
+            "schema": {
+              "$ref": "#/definitions/Result"
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "WpTermmetaController"
+        ],
+        "summary": "根据ID修改WpTermmeta",
+        "description": "根据ID修改WpTermmeta方法详情",
+        "operationId": "updateUsingPUT",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "description": "根据ID修改WpTermmeta方法详情",
+            "required": true
+          },
+          {
+            "in": "body",
+            "name": "WpTermmeta",
+            "description": "传入WpTermmeta的JSON对象",
+            "required": false
+              ,
+              "schema": {
+                "$ref": "#/definitions/WpTermmeta"
+              }
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Invalid status value(无效的状态值)"
+                      },
+          "403": {
+            "description": "403 Forbidden(请求被拒绝)"
+                      },
+          "404": {
+            "description": "not found(没有找到相关资源)"
+                      },
+          "405": {
+            "description": "Invalid input(无效的输入)"
+                      },
+          "500": {
+            "description": "服务器内部错误"
+                      },
+          "200": {
+            "description": "根据ID修改WpTermmeta"
+            ,
+            "schema": {
+              "$ref": "#/definitions/Result"
+            }
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "WpTermmetaController"
+        ],
+        "summary": "根据ID查询WpTermmeta",
+        "description": "根据ID查询WpTermmeta方法详情",
+        "operationId": "findByIdUsingGET",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "description": "根据ID修改WpTermmeta方法详情",
+            "required": true
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Invalid status value(无效的状态值)"
+                      },
+          "403": {
+            "description": "403 Forbidden(请求被拒绝)"
+                      },
+          "404": {
+            "description": "not found(没有找到相关资源)"
+                      },
+          "405": {
+            "description": "Invalid input(无效的输入)"
+                      },
+          "500": {
+            "description": "服务器内部错误"
+                      },
+          "200": {
+            "description": "根据ID修改WpTermmeta"
+            ,
+            "schema": {
+              "$ref": "#/definitions/Result«WpTermmeta»"
+            }
+          }
+        }
+      }
+    },
+    "/wpTermmeta/search": {
+      "post": {
+        "tags": [
+          "WpTermmetaController"
+        ],
+        "summary": "不带分页条件搜索WpTermmeta",
+        "description": "不带分页条件搜索WpTermmeta方法详情",
+        "operationId": "findListUsingPOST",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "WpTermmeta",
+            "description": "传入WpTermmeta的JSON对象",
+            "required": false
+              ,
+              "schema": {
+                "$ref": "#/definitions/WpTermmeta"
+              }
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Invalid status value(无效的状态值)"
+                      },
+          "403": {
+            "description": "403 Forbidden(请求被拒绝)"
+                      },
+          "404": {
+            "description": "not found(没有找到相关资源)"
+                      },
+          "405": {
+            "description": "Invalid input(无效的输入)"
+                      },
+          "500": {
+            "description": "服务器内部错误"
+                      },
+          "200": {
+            "description": "不带分页搜索WpTermmeta"
+            ,
+            "schema": {
+              "$ref": "#/definitions/Result«List«WpTermmeta»»"
+            }
+          }
+        }
+      }
+    },
+    "/wpTermmeta/search/{page}/{size}": {
+      "get": {
+        "tags": [
+          "WpTermmetaController"
+        ],
+        "summary": "分页列表查询WpTermmeta",
+        "description": "分页列表查询WpTermmeta方法详情",
+        "operationId": "findPageUsingGET",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "page",
+            "description": "当前页",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "size",
+            "description": "每页显示条数",
+            "required": true
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Invalid status value(无效的状态值)"
+                      },
+          "403": {
+            "description": "403 Forbidden(请求被拒绝)"
+                      },
+          "404": {
+            "description": "not found(没有找到相关资源)"
+                      },
+          "405": {
+            "description": "Invalid input(无效的输入)"
+                      },
+          "500": {
+            "description": "服务器内部错误"
+                      },
+          "200": {
+            "description": "不带分页搜索WpTermmeta"
+            ,
+            "schema": {
+              "$ref": "#/definitions/Result«List«WpTermmeta»»"
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "WpTermmetaController"
+        ],
+        "summary": "分页条件搜索WpTermmeta",
+        "description": "分页条件搜索WpTermmeta方法详情",
+        "operationId": "findPageUsingPOST",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "page",
+            "description": "当前页",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "size",
+            "description": "每页显示条数",
+            "required": true
+          },
+          {
+            "in": "body",
+            "name": "WpTermmeta",
+            "description": "传入WpTermmeta的JSON对象",
+            "required": false
+              ,
+              "schema": {
+                "$ref": "#/definitions/WpTermmeta"
+              }
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Invalid status value(无效的状态值)"
+                      },
+          "403": {
+            "description": "403 Forbidden(请求被拒绝)"
+                      },
+          "404": {
+            "description": "not found(没有找到相关资源)"
+                      },
+          "405": {
+            "description": "Invalid input(无效的输入)"
+                      },
+          "500": {
+            "description": "服务器内部错误"
+                      },
+          "200": {
+            "description": "分页条件搜索WpTermmeta"
+            ,
+            "schema": {
+              "$ref": "#/definitions/Result«List«WpTermmeta»»"
+            }
+          }
+        }
+      }
+    },
+    "/wpTerms": {
+      "get": {
+        "tags": [
+          "WpTermsController"
+        ],
+        "summary": "查询所有WpTerms",
+        "description": "查询所有WpTerms方法详情",
+        "operationId": "findAllUsingGET",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+        ],
+        "responses": {
+          "400": {
+            "description": "Invalid status value(无效的状态值)"
+                      },
+          "403": {
+            "description": "403 Forbidden(请求被拒绝)"
+                      },
+          "404": {
+            "description": "not found(没有找到相关资源)"
+                      },
+          "405": {
+            "description": "Invalid input(无效的输入)"
+                      },
+          "500": {
+            "description": "服务器内部错误"
+                      },
+          "200": {
+            "description": "查询所有WpTerms"
+            ,
+            "schema": {
+              "$ref": "#/definitions/Result«List«WpTerms»»"
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "WpTermsController"
+        ],
+        "summary": "添加WpTerms",
+        "description": "添加WpTerms方法详情",
+        "operationId": "addUsingPOST",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "添加WpTerms方法详情",
+            "required": true
+              ,
+              "schema": {
+                "$ref": "#/definitions/WpTerms"
+              }
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Invalid status value(无效的状态值)"
+                      },
+          "403": {
+            "description": "403 Forbidden(请求被拒绝)"
+                      },
+          "404": {
+            "description": "not found(没有找到相关资源)"
+                      },
+          "405": {
+            "description": "Invalid input(无效的输入)"
+                      },
+          "500": {
+            "description": "服务器内部错误"
+                      },
+          "200": {
+            "description": "添加WpTerms"
+            ,
+            "schema": {
+              "$ref": "#/definitions/Result"
+            }
+          }
+        }
+      }
+    },
+    "/wpTerms/{id}": {
+      "delete": {
+        "tags": [
+          "WpTermsController"
+        ],
+        "summary": "根据ID删除WpTerms",
+        "description": "根据ID删除WpTerms方法详情",
+        "operationId": "deleteUsingDELETE",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "description": "根据ID删除WpTerms方法详情",
+            "required": true
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Invalid status value(无效的状态值)"
+                      },
+          "403": {
+            "description": "403 Forbidden(请求被拒绝)"
+                      },
+          "404": {
+            "description": "not found(没有找到相关资源)"
+                      },
+          "405": {
+            "description": "Invalid input(无效的输入)"
+                      },
+          "500": {
+            "description": "服务器内部错误"
+                      },
+          "200": {
+            "description": "根据ID删除WpTerms"
+            ,
+            "schema": {
+              "$ref": "#/definitions/Result"
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "WpTermsController"
+        ],
+        "summary": "根据ID修改WpTerms",
+        "description": "根据ID修改WpTerms方法详情",
+        "operationId": "updateUsingPUT",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "description": "根据ID修改WpTerms方法详情",
+            "required": true
+          },
+          {
+            "in": "body",
+            "name": "WpTerms",
+            "description": "传入WpTerms的JSON对象",
+            "required": false
+              ,
+              "schema": {
+                "$ref": "#/definitions/WpTerms"
+              }
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Invalid status value(无效的状态值)"
+                      },
+          "403": {
+            "description": "403 Forbidden(请求被拒绝)"
+                      },
+          "404": {
+            "description": "not found(没有找到相关资源)"
+                      },
+          "405": {
+            "description": "Invalid input(无效的输入)"
+                      },
+          "500": {
+            "description": "服务器内部错误"
+                      },
+          "200": {
+            "description": "根据ID修改WpTerms"
+            ,
+            "schema": {
+              "$ref": "#/definitions/Result"
+            }
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "WpTermsController"
+        ],
+        "summary": "根据ID查询WpTerms",
+        "description": "根据ID查询WpTerms方法详情",
+        "operationId": "findByIdUsingGET",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "description": "根据ID修改WpTerms方法详情",
+            "required": true
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Invalid status value(无效的状态值)"
+                      },
+          "403": {
+            "description": "403 Forbidden(请求被拒绝)"
+                      },
+          "404": {
+            "description": "not found(没有找到相关资源)"
+                      },
+          "405": {
+            "description": "Invalid input(无效的输入)"
+                      },
+          "500": {
+            "description": "服务器内部错误"
+                      },
+          "200": {
+            "description": "根据ID修改WpTerms"
+            ,
+            "schema": {
+              "$ref": "#/definitions/Result«WpTerms»"
+            }
+          }
+        }
+      }
+    },
+    "/wpTerms/search": {
+      "post": {
+        "tags": [
+          "WpTermsController"
+        ],
+        "summary": "不带分页条件搜索WpTerms",
+        "description": "不带分页条件搜索WpTerms方法详情",
+        "operationId": "findListUsingPOST",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "WpTerms",
+            "description": "传入WpTerms的JSON对象",
+            "required": false
+              ,
+              "schema": {
+                "$ref": "#/definitions/WpTerms"
+              }
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Invalid status value(无效的状态值)"
+                      },
+          "403": {
+            "description": "403 Forbidden(请求被拒绝)"
+                      },
+          "404": {
+            "description": "not found(没有找到相关资源)"
+                      },
+          "405": {
+            "description": "Invalid input(无效的输入)"
+                      },
+          "500": {
+            "description": "服务器内部错误"
+                      },
+          "200": {
+            "description": "不带分页搜索WpTerms"
+            ,
+            "schema": {
+              "$ref": "#/definitions/Result«List«WpTerms»»"
+            }
+          }
+        }
+      }
+    },
+    "/wpTerms/search/{page}/{size}": {
+      "get": {
+        "tags": [
+          "WpTermsController"
+        ],
+        "summary": "分页列表查询WpTerms",
+        "description": "分页列表查询WpTerms方法详情",
+        "operationId": "findPageUsingGET",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "page",
+            "description": "当前页",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "size",
+            "description": "每页显示条数",
+            "required": true
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Invalid status value(无效的状态值)"
+                      },
+          "403": {
+            "description": "403 Forbidden(请求被拒绝)"
+                      },
+          "404": {
+            "description": "not found(没有找到相关资源)"
+                      },
+          "405": {
+            "description": "Invalid input(无效的输入)"
+                      },
+          "500": {
+            "description": "服务器内部错误"
+                      },
+          "200": {
+            "description": "不带分页搜索WpTerms"
+            ,
+            "schema": {
+              "$ref": "#/definitions/Result«List«WpTerms»»"
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "WpTermsController"
+        ],
+        "summary": "分页条件搜索WpTerms",
+        "description": "分页条件搜索WpTerms方法详情",
+        "operationId": "findPageUsingPOST",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "page",
+            "description": "当前页",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "size",
+            "description": "每页显示条数",
+            "required": true
+          },
+          {
+            "in": "body",
+            "name": "WpTerms",
+            "description": "传入WpTerms的JSON对象",
+            "required": false
+              ,
+              "schema": {
+                "$ref": "#/definitions/WpTerms"
+              }
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Invalid status value(无效的状态值)"
+                      },
+          "403": {
+            "description": "403 Forbidden(请求被拒绝)"
+                      },
+          "404": {
+            "description": "not found(没有找到相关资源)"
+                      },
+          "405": {
+            "description": "Invalid input(无效的输入)"
+                      },
+          "500": {
+            "description": "服务器内部错误"
+                      },
+          "200": {
+            "description": "分页条件搜索WpTerms"
+            ,
+            "schema": {
+              "$ref": "#/definitions/Result«List«WpTerms»»"
+            }
+          }
+        }
+      }
+    },
+    "/wpUsermeta": {
+      "get": {
+        "tags": [
+          "WpUsermetaController"
+        ],
+        "summary": "查询所有WpUsermeta",
+        "description": "查询所有WpUsermeta方法详情",
+        "operationId": "findAllUsingGET",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+        ],
+        "responses": {
+          "400": {
+            "description": "Invalid status value(无效的状态值)"
+                      },
+          "403": {
+            "description": "403 Forbidden(请求被拒绝)"
+                      },
+          "404": {
+            "description": "not found(没有找到相关资源)"
+                      },
+          "405": {
+            "description": "Invalid input(无效的输入)"
+                      },
+          "500": {
+            "description": "服务器内部错误"
+                      },
+          "200": {
+            "description": "查询所有WpUsermeta"
+            ,
+            "schema": {
+              "$ref": "#/definitions/Result«List«WpUsermeta»»"
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "WpUsermetaController"
+        ],
+        "summary": "添加WpUsermeta",
+        "description": "添加WpUsermeta方法详情",
+        "operationId": "addUsingPOST",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "添加WpUsermeta方法详情",
+            "required": true
+              ,
+              "schema": {
+                "$ref": "#/definitions/WpUsermeta"
+              }
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Invalid status value(无效的状态值)"
+                      },
+          "403": {
+            "description": "403 Forbidden(请求被拒绝)"
+                      },
+          "404": {
+            "description": "not found(没有找到相关资源)"
+                      },
+          "405": {
+            "description": "Invalid input(无效的输入)"
+                      },
+          "500": {
+            "description": "服务器内部错误"
+                      },
+          "200": {
+            "description": "添加WpUsermeta"
+            ,
+            "schema": {
+              "$ref": "#/definitions/Result"
+            }
+          }
+        }
+      }
+    },
+    "/wpUsermeta/{id}": {
+      "delete": {
+        "tags": [
+          "WpUsermetaController"
+        ],
+        "summary": "根据ID删除WpUsermeta",
+        "description": "根据ID删除WpUsermeta方法详情",
+        "operationId": "deleteUsingDELETE",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "description": "根据ID删除WpUsermeta方法详情",
+            "required": true
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Invalid status value(无效的状态值)"
+                      },
+          "403": {
+            "description": "403 Forbidden(请求被拒绝)"
+                      },
+          "404": {
+            "description": "not found(没有找到相关资源)"
+                      },
+          "405": {
+            "description": "Invalid input(无效的输入)"
+                      },
+          "500": {
+            "description": "服务器内部错误"
+                      },
+          "200": {
+            "description": "根据ID删除WpUsermeta"
+            ,
+            "schema": {
+              "$ref": "#/definitions/Result"
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "WpUsermetaController"
+        ],
+        "summary": "根据ID修改WpUsermeta",
+        "description": "根据ID修改WpUsermeta方法详情",
+        "operationId": "updateUsingPUT",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "description": "根据ID修改WpUsermeta方法详情",
+            "required": true
+          },
+          {
+            "in": "body",
+            "name": "WpUsermeta",
+            "description": "传入WpUsermeta的JSON对象",
+            "required": false
+              ,
+              "schema": {
+                "$ref": "#/definitions/WpUsermeta"
+              }
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Invalid status value(无效的状态值)"
+                      },
+          "403": {
+            "description": "403 Forbidden(请求被拒绝)"
+                      },
+          "404": {
+            "description": "not found(没有找到相关资源)"
+                      },
+          "405": {
+            "description": "Invalid input(无效的输入)"
+                      },
+          "500": {
+            "description": "服务器内部错误"
+                      },
+          "200": {
+            "description": "根据ID修改WpUsermeta"
+            ,
+            "schema": {
+              "$ref": "#/definitions/Result"
+            }
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "WpUsermetaController"
+        ],
+        "summary": "根据ID查询WpUsermeta",
+        "description": "根据ID查询WpUsermeta方法详情",
+        "operationId": "findByIdUsingGET",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "description": "根据ID修改WpUsermeta方法详情",
+            "required": true
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Invalid status value(无效的状态值)"
+                      },
+          "403": {
+            "description": "403 Forbidden(请求被拒绝)"
+                      },
+          "404": {
+            "description": "not found(没有找到相关资源)"
+                      },
+          "405": {
+            "description": "Invalid input(无效的输入)"
+                      },
+          "500": {
+            "description": "服务器内部错误"
+                      },
+          "200": {
+            "description": "根据ID修改WpUsermeta"
+            ,
+            "schema": {
+              "$ref": "#/definitions/Result«WpUsermeta»"
+            }
+          }
+        }
+      }
+    },
+    "/wpUsermeta/search": {
+      "post": {
+        "tags": [
+          "WpUsermetaController"
+        ],
+        "summary": "不带分页条件搜索WpUsermeta",
+        "description": "不带分页条件搜索WpUsermeta方法详情",
+        "operationId": "findListUsingPOST",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "WpUsermeta",
+            "description": "传入WpUsermeta的JSON对象",
+            "required": false
+              ,
+              "schema": {
+                "$ref": "#/definitions/WpUsermeta"
+              }
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Invalid status value(无效的状态值)"
+                      },
+          "403": {
+            "description": "403 Forbidden(请求被拒绝)"
+                      },
+          "404": {
+            "description": "not found(没有找到相关资源)"
+                      },
+          "405": {
+            "description": "Invalid input(无效的输入)"
+                      },
+          "500": {
+            "description": "服务器内部错误"
+                      },
+          "200": {
+            "description": "不带分页搜索WpUsermeta"
+            ,
+            "schema": {
+              "$ref": "#/definitions/Result«List«WpUsermeta»»"
+            }
+          }
+        }
+      }
+    },
+    "/wpUsermeta/search/{page}/{size}": {
+      "get": {
+        "tags": [
+          "WpUsermetaController"
+        ],
+        "summary": "分页列表查询WpUsermeta",
+        "description": "分页列表查询WpUsermeta方法详情",
+        "operationId": "findPageUsingGET",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "page",
+            "description": "当前页",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "size",
+            "description": "每页显示条数",
+            "required": true
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Invalid status value(无效的状态值)"
+                      },
+          "403": {
+            "description": "403 Forbidden(请求被拒绝)"
+                      },
+          "404": {
+            "description": "not found(没有找到相关资源)"
+                      },
+          "405": {
+            "description": "Invalid input(无效的输入)"
+                      },
+          "500": {
+            "description": "服务器内部错误"
+                      },
+          "200": {
+            "description": "不带分页搜索WpUsermeta"
+            ,
+            "schema": {
+              "$ref": "#/definitions/Result«List«WpUsermeta»»"
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "WpUsermetaController"
+        ],
+        "summary": "分页条件搜索WpUsermeta",
+        "description": "分页条件搜索WpUsermeta方法详情",
+        "operationId": "findPageUsingPOST",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "page",
+            "description": "当前页",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "size",
+            "description": "每页显示条数",
+            "required": true
+          },
+          {
+            "in": "body",
+            "name": "WpUsermeta",
+            "description": "传入WpUsermeta的JSON对象",
+            "required": false
+              ,
+              "schema": {
+                "$ref": "#/definitions/WpUsermeta"
+              }
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Invalid status value(无效的状态值)"
+                      },
+          "403": {
+            "description": "403 Forbidden(请求被拒绝)"
+                      },
+          "404": {
+            "description": "not found(没有找到相关资源)"
+                      },
+          "405": {
+            "description": "Invalid input(无效的输入)"
+                      },
+          "500": {
+            "description": "服务器内部错误"
+                      },
+          "200": {
+            "description": "分页条件搜索WpUsermeta"
+            ,
+            "schema": {
+              "$ref": "#/definitions/Result«List«WpUsermeta»»"
+            }
+          }
+        }
+      }
+    },
+    "/wpUsers": {
+      "get": {
+        "tags": [
+          "WpUsersController"
+        ],
+        "summary": "查询所有WpUsers",
+        "description": "查询所有WpUsers方法详情",
+        "operationId": "findAllUsingGET",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+        ],
+        "responses": {
+          "400": {
+            "description": "Invalid status value(无效的状态值)"
+                      },
+          "403": {
+            "description": "403 Forbidden(请求被拒绝)"
+                      },
+          "404": {
+            "description": "not found(没有找到相关资源)"
+                      },
+          "405": {
+            "description": "Invalid input(无效的输入)"
+                      },
+          "500": {
+            "description": "服务器内部错误"
+                      },
+          "200": {
+            "description": "查询所有WpUsers"
+            ,
+            "schema": {
+              "$ref": "#/definitions/Result«List«WpUsers»»"
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "WpUsersController"
+        ],
+        "summary": "添加WpUsers",
+        "description": "添加WpUsers方法详情",
+        "operationId": "addUsingPOST",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "添加WpUsers方法详情",
+            "required": true
+              ,
+              "schema": {
+                "$ref": "#/definitions/WpUsers"
+              }
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Invalid status value(无效的状态值)"
+                      },
+          "403": {
+            "description": "403 Forbidden(请求被拒绝)"
+                      },
+          "404": {
+            "description": "not found(没有找到相关资源)"
+                      },
+          "405": {
+            "description": "Invalid input(无效的输入)"
+                      },
+          "500": {
+            "description": "服务器内部错误"
+                      },
+          "200": {
+            "description": "添加WpUsers"
+            ,
+            "schema": {
+              "$ref": "#/definitions/Result"
+            }
+          }
+        }
+      }
+    },
+    "/wpUsers/{id}": {
+      "delete": {
+        "tags": [
+          "WpUsersController"
+        ],
+        "summary": "根据ID删除WpUsers",
+        "description": "根据ID删除WpUsers方法详情",
+        "operationId": "deleteUsingDELETE",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "description": "根据ID删除WpUsers方法详情",
+            "required": true
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Invalid status value(无效的状态值)"
+                      },
+          "403": {
+            "description": "403 Forbidden(请求被拒绝)"
+                      },
+          "404": {
+            "description": "not found(没有找到相关资源)"
+                      },
+          "405": {
+            "description": "Invalid input(无效的输入)"
+                      },
+          "500": {
+            "description": "服务器内部错误"
+                      },
+          "200": {
+            "description": "根据ID删除WpUsers"
+            ,
+            "schema": {
+              "$ref": "#/definitions/Result"
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "WpUsersController"
+        ],
+        "summary": "根据ID修改WpUsers",
+        "description": "根据ID修改WpUsers方法详情",
+        "operationId": "updateUsingPUT",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "description": "根据ID修改WpUsers方法详情",
+            "required": true
+          },
+          {
+            "in": "body",
+            "name": "WpUsers",
+            "description": "传入WpUsers的JSON对象",
+            "required": false
+              ,
+              "schema": {
+                "$ref": "#/definitions/WpUsers"
+              }
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Invalid status value(无效的状态值)"
+                      },
+          "403": {
+            "description": "403 Forbidden(请求被拒绝)"
+                      },
+          "404": {
+            "description": "not found(没有找到相关资源)"
+                      },
+          "405": {
+            "description": "Invalid input(无效的输入)"
+                      },
+          "500": {
+            "description": "服务器内部错误"
+                      },
+          "200": {
+            "description": "根据ID修改WpUsers"
+            ,
+            "schema": {
+              "$ref": "#/definitions/Result"
+            }
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "WpUsersController"
+        ],
+        "summary": "根据ID查询WpUsers",
+        "description": "根据ID查询WpUsers方法详情",
+        "operationId": "findByIdUsingGET",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "description": "根据ID修改WpUsers方法详情",
+            "required": true
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Invalid status value(无效的状态值)"
+                      },
+          "403": {
+            "description": "403 Forbidden(请求被拒绝)"
+                      },
+          "404": {
+            "description": "not found(没有找到相关资源)"
+                      },
+          "405": {
+            "description": "Invalid input(无效的输入)"
+                      },
+          "500": {
+            "description": "服务器内部错误"
+                      },
+          "200": {
+            "description": "根据ID修改WpUsers"
+            ,
+            "schema": {
+              "$ref": "#/definitions/Result«WpUsers»"
+            }
+          }
+        }
+      }
+    },
+    "/wpUsers/search": {
+      "post": {
+        "tags": [
+          "WpUsersController"
+        ],
+        "summary": "不带分页条件搜索WpUsers",
+        "description": "不带分页条件搜索WpUsers方法详情",
+        "operationId": "findListUsingPOST",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "WpUsers",
+            "description": "传入WpUsers的JSON对象",
+            "required": false
+              ,
+              "schema": {
+                "$ref": "#/definitions/WpUsers"
+              }
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Invalid status value(无效的状态值)"
+                      },
+          "403": {
+            "description": "403 Forbidden(请求被拒绝)"
+                      },
+          "404": {
+            "description": "not found(没有找到相关资源)"
+                      },
+          "405": {
+            "description": "Invalid input(无效的输入)"
+                      },
+          "500": {
+            "description": "服务器内部错误"
+                      },
+          "200": {
+            "description": "不带分页搜索WpUsers"
+            ,
+            "schema": {
+              "$ref": "#/definitions/Result«List«WpUsers»»"
+            }
+          }
+        }
+      }
+    },
+    "/wpUsers/search/{page}/{size}": {
+      "get": {
+        "tags": [
+          "WpUsersController"
+        ],
+        "summary": "分页列表查询WpUsers",
+        "description": "分页列表查询WpUsers方法详情",
+        "operationId": "findPageUsingGET",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "page",
+            "description": "当前页",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "size",
+            "description": "每页显示条数",
+            "required": true
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Invalid status value(无效的状态值)"
+                      },
+          "403": {
+            "description": "403 Forbidden(请求被拒绝)"
+                      },
+          "404": {
+            "description": "not found(没有找到相关资源)"
+                      },
+          "405": {
+            "description": "Invalid input(无效的输入)"
+                      },
+          "500": {
+            "description": "服务器内部错误"
+                      },
+          "200": {
+            "description": "不带分页搜索WpUsers"
+            ,
+            "schema": {
+              "$ref": "#/definitions/Result«List«WpUsers»»"
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "WpUsersController"
+        ],
+        "summary": "分页条件搜索WpUsers",
+        "description": "分页条件搜索WpUsers方法详情",
+        "operationId": "findPageUsingPOST",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "page",
+            "description": "当前页",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "size",
+            "description": "每页显示条数",
+            "required": true
+          },
+          {
+            "in": "body",
+            "name": "WpUsers",
+            "description": "传入WpUsers的JSON对象",
+            "required": false
+              ,
+              "schema": {
+                "$ref": "#/definitions/WpUsers"
+              }
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Invalid status value(无效的状态值)"
+                      },
+          "403": {
+            "description": "403 Forbidden(请求被拒绝)"
+                      },
+          "404": {
+            "description": "not found(没有找到相关资源)"
+                      },
+          "405": {
+            "description": "Invalid input(无效的输入)"
+                      },
+          "500": {
+            "description": "服务器内部错误"
+                      },
+          "200": {
+            "description": "分页条件搜索WpUsers"
+            ,
+            "schema": {
+              "$ref": "#/definitions/Result«List«WpUsers»»"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "Result": {
+      "type": "object",
+      "required": [
+        "code",
+        "data",
+        "flag",
+        "message"
+      ],
+      "properties": {
+        "code": {
+          "type": "integer",
+          "format": "int32",
+          "description": "返回状态码,20000:成功,20001:失败,20002:用户名或密码错误,20003:权限不足,20004:远程调用失败,20005:重复操作,20006:没有对应的数据"
+        },
+        "data": {
+          "type": "object",
+          "description": "逻辑数据"
+        },
+        "flag": {
+          "type": "boolean",
+          "example": false,
+          "description": "执行是否成功,true:成功,false:失败"
+        },
+        "message": {
+          "type": "string",
+          "description": "提示信息"
+        }
+      },
+      "description": "Result"
+    },
+    "Result«List«WpCommentmeta»»": {
+      "type": "object",
+      "required": [
+        "code",
+        "data",
+        "flag",
+        "message"
+      ],
+      "properties": {
+        "code": {
+          "type": "integer",
+          "format": "int32",
+          "description": "返回状态码,20000:成功,20001:失败,20002:用户名或密码错误,20003:权限不足,20004:远程调用失败,20005:重复操作,20006:没有对应的数据"
+        },
+        "data": {
+          "type": "array",
+          "description": "逻辑数据",
+          "items": {
+            "$ref": "#/definitions/WpCommentmeta"
+          }
+        },
+        "flag": {
+          "type": "boolean",
+          "example": false,
+          "description": "执行是否成功,true:成功,false:失败"
+        },
+        "message": {
+          "type": "string",
+          "description": "提示信息"
+        }
+      },
+      "description": "Result"
+    },
+    "Result«WpCommentmeta»": {
+      "type": "object",
+      "required": [
+        "code",
+        "data",
+        "flag",
+        "message"
+      ],
+      "properties": {
+        "code": {
+          "type": "integer",
+          "format": "int32",
+          "description": "返回状态码,20000:成功,20001:失败,20002:用户名或密码错误,20003:权限不足,20004:远程调用失败,20005:重复操作,20006:没有对应的数据"
+        },
+        "data": {
+          "description": "逻辑数据",
+          "$ref": "#/definitions/WpCommentmeta"
+        },
+        "flag": {
+          "type": "boolean",
+          "example": false,
+          "description": "执行是否成功,true:成功,false:失败"
+        },
+        "message": {
+          "type": "string",
+          "description": "提示信息"
+        }
+      },
+      "description": "Result"
+    },
+    "WpCommentmeta": {
+      "type": "object",
+      "properties": {
+        "metaId": {
+          "type": "long",
+          "description": ""
+        },
+        "commentId": {
+          "type": "long",
+          "description": ""
+        },
+        "metaKey": {
+          "type": "string",
+          "description": ""
+        },
+        "metaValue": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "description": "WpCommentmeta"
+    },
+    "Result«List«WpComments»»": {
+      "type": "object",
+      "required": [
+        "code",
+        "data",
+        "flag",
+        "message"
+      ],
+      "properties": {
+        "code": {
+          "type": "integer",
+          "format": "int32",
+          "description": "返回状态码,20000:成功,20001:失败,20002:用户名或密码错误,20003:权限不足,20004:远程调用失败,20005:重复操作,20006:没有对应的数据"
+        },
+        "data": {
+          "type": "array",
+          "description": "逻辑数据",
+          "items": {
+            "$ref": "#/definitions/WpComments"
+          }
+        },
+        "flag": {
+          "type": "boolean",
+          "example": false,
+          "description": "执行是否成功,true:成功,false:失败"
+        },
+        "message": {
+          "type": "string",
+          "description": "提示信息"
+        }
+      },
+      "description": "Result"
+    },
+    "Result«WpComments»": {
+      "type": "object",
+      "required": [
+        "code",
+        "data",
+        "flag",
+        "message"
+      ],
+      "properties": {
+        "code": {
+          "type": "integer",
+          "format": "int32",
+          "description": "返回状态码,20000:成功,20001:失败,20002:用户名或密码错误,20003:权限不足,20004:远程调用失败,20005:重复操作,20006:没有对应的数据"
+        },
+        "data": {
+          "description": "逻辑数据",
+          "$ref": "#/definitions/WpComments"
+        },
+        "flag": {
+          "type": "boolean",
+          "example": false,
+          "description": "执行是否成功,true:成功,false:失败"
+        },
+        "message": {
+          "type": "string",
+          "description": "提示信息"
+        }
+      },
+      "description": "Result"
+    },
+    "WpComments": {
+      "type": "object",
+      "properties": {
+        "commentID": {
+          "type": "long",
+          "description": ""
+        },
+        "commentPostID": {
+          "type": "long",
+          "description": "文章ID"
+        },
+        "commentAuthor": {
+          "type": "string",
+          "description": "评论用户"
+        },
+        "commentAuthorEmail": {
+          "type": "string",
+          "description": "评论邮箱"
+        },
+        "commentAuthorUrl": {
+          "type": "string",
+          "description": "评论url"
+        },
+        "commentAuthorIP": {
+          "type": "string",
+          "description": "评论ip"
+        },
+        "commentDate": {
+          "type": "date",
+          "description": "评论时间"
+        },
+        "commentDateGmt": {
+          "type": "date",
+          "description": "评论格林尼治时间"
+        },
+        "commentContent": {
+          "type": "string",
+          "description": "评论内容"
+        },
+        "commentKarma": {
+          "type": "integer",
+          "format": "int32",
+          "description": "评论"
+        },
+        "commentApproved": {
+          "type": "string",
+          "description": "评论核准"
+        },
+        "commentAgent": {
+          "type": "string",
+          "description": "评论设备"
+        },
+        "commentType": {
+          "type": "string",
+          "description": "评论类型"
+        },
+        "commentParent": {
+          "type": "long",
+          "description": "评论"
+        },
+        "userId": {
+          "type": "long",
+          "description": "评论"
+        },
+        "commentMarkdown": {
+          "type": "string",
+          "description": "评论markdown"
+        }
+      },
+      "description": "WpComments"
+    },
+    "Result«List«WpLinks»»": {
+      "type": "object",
+      "required": [
+        "code",
+        "data",
+        "flag",
+        "message"
+      ],
+      "properties": {
+        "code": {
+          "type": "integer",
+          "format": "int32",
+          "description": "返回状态码,20000:成功,20001:失败,20002:用户名或密码错误,20003:权限不足,20004:远程调用失败,20005:重复操作,20006:没有对应的数据"
+        },
+        "data": {
+          "type": "array",
+          "description": "逻辑数据",
+          "items": {
+            "$ref": "#/definitions/WpLinks"
+          }
+        },
+        "flag": {
+          "type": "boolean",
+          "example": false,
+          "description": "执行是否成功,true:成功,false:失败"
+        },
+        "message": {
+          "type": "string",
+          "description": "提示信息"
+        }
+      },
+      "description": "Result"
+    },
+    "Result«WpLinks»": {
+      "type": "object",
+      "required": [
+        "code",
+        "data",
+        "flag",
+        "message"
+      ],
+      "properties": {
+        "code": {
+          "type": "integer",
+          "format": "int32",
+          "description": "返回状态码,20000:成功,20001:失败,20002:用户名或密码错误,20003:权限不足,20004:远程调用失败,20005:重复操作,20006:没有对应的数据"
+        },
+        "data": {
+          "description": "逻辑数据",
+          "$ref": "#/definitions/WpLinks"
+        },
+        "flag": {
+          "type": "boolean",
+          "example": false,
+          "description": "执行是否成功,true:成功,false:失败"
+        },
+        "message": {
+          "type": "string",
+          "description": "提示信息"
+        }
+      },
+      "description": "Result"
+    },
+    "WpLinks": {
+      "type": "object",
+      "properties": {
+        "linkId": {
+          "type": "long",
+          "description": ""
+        },
+        "linkUrl": {
+          "type": "string",
+          "description": ""
+        },
+        "linkName": {
+          "type": "string",
+          "description": ""
+        },
+        "linkImage": {
+          "type": "string",
+          "description": ""
+        },
+        "linkTarget": {
+          "type": "string",
+          "description": ""
+        },
+        "linkDescription": {
+          "type": "string",
+          "description": ""
+        },
+        "linkVisible": {
+          "type": "string",
+          "description": ""
+        },
+        "linkOwner": {
+          "type": "long",
+          "description": ""
+        },
+        "linkRating": {
+          "type": "integer",
+          "format": "int32",
+          "description": ""
+        },
+        "linkUpdated": {
+          "type": "date",
+          "description": ""
+        },
+        "linkRel": {
+          "type": "string",
+          "description": ""
+        },
+        "linkNotes": {
+          "type": "string",
+          "description": ""
+        },
+        "linkRss": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "description": "WpLinks"
+    },
+    "Result«List«WpOptions»»": {
+      "type": "object",
+      "required": [
+        "code",
+        "data",
+        "flag",
+        "message"
+      ],
+      "properties": {
+        "code": {
+          "type": "integer",
+          "format": "int32",
+          "description": "返回状态码,20000:成功,20001:失败,20002:用户名或密码错误,20003:权限不足,20004:远程调用失败,20005:重复操作,20006:没有对应的数据"
+        },
+        "data": {
+          "type": "array",
+          "description": "逻辑数据",
+          "items": {
+            "$ref": "#/definitions/WpOptions"
+          }
+        },
+        "flag": {
+          "type": "boolean",
+          "example": false,
+          "description": "执行是否成功,true:成功,false:失败"
+        },
+        "message": {
+          "type": "string",
+          "description": "提示信息"
+        }
+      },
+      "description": "Result"
+    },
+    "Result«WpOptions»": {
+      "type": "object",
+      "required": [
+        "code",
+        "data",
+        "flag",
+        "message"
+      ],
+      "properties": {
+        "code": {
+          "type": "integer",
+          "format": "int32",
+          "description": "返回状态码,20000:成功,20001:失败,20002:用户名或密码错误,20003:权限不足,20004:远程调用失败,20005:重复操作,20006:没有对应的数据"
+        },
+        "data": {
+          "description": "逻辑数据",
+          "$ref": "#/definitions/WpOptions"
+        },
+        "flag": {
+          "type": "boolean",
+          "example": false,
+          "description": "执行是否成功,true:成功,false:失败"
+        },
+        "message": {
+          "type": "string",
+          "description": "提示信息"
+        }
+      },
+      "description": "Result"
+    },
+    "WpOptions": {
+      "type": "object",
+      "properties": {
+        "optionId": {
+          "type": "long",
+          "description": ""
+        },
+        "optionName": {
+          "type": "string",
+          "description": ""
+        },
+        "optionValue": {
+          "type": "string",
+          "description": ""
+        },
+        "autoload": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "description": "WpOptions"
+    },
+    "Result«List«WpPostmeta»»": {
+      "type": "object",
+      "required": [
+        "code",
+        "data",
+        "flag",
+        "message"
+      ],
+      "properties": {
+        "code": {
+          "type": "integer",
+          "format": "int32",
+          "description": "返回状态码,20000:成功,20001:失败,20002:用户名或密码错误,20003:权限不足,20004:远程调用失败,20005:重复操作,20006:没有对应的数据"
+        },
+        "data": {
+          "type": "array",
+          "description": "逻辑数据",
+          "items": {
+            "$ref": "#/definitions/WpPostmeta"
+          }
+        },
+        "flag": {
+          "type": "boolean",
+          "example": false,
+          "description": "执行是否成功,true:成功,false:失败"
+        },
+        "message": {
+          "type": "string",
+          "description": "提示信息"
+        }
+      },
+      "description": "Result"
+    },
+    "Result«WpPostmeta»": {
+      "type": "object",
+      "required": [
+        "code",
+        "data",
+        "flag",
+        "message"
+      ],
+      "properties": {
+        "code": {
+          "type": "integer",
+          "format": "int32",
+          "description": "返回状态码,20000:成功,20001:失败,20002:用户名或密码错误,20003:权限不足,20004:远程调用失败,20005:重复操作,20006:没有对应的数据"
+        },
+        "data": {
+          "description": "逻辑数据",
+          "$ref": "#/definitions/WpPostmeta"
+        },
+        "flag": {
+          "type": "boolean",
+          "example": false,
+          "description": "执行是否成功,true:成功,false:失败"
+        },
+        "message": {
+          "type": "string",
+          "description": "提示信息"
+        }
+      },
+      "description": "Result"
+    },
+    "WpPostmeta": {
+      "type": "object",
+      "properties": {
+        "metaId": {
+          "type": "long",
+          "description": ""
+        },
+        "postId": {
+          "type": "long",
+          "description": ""
+        },
+        "metaKey": {
+          "type": "string",
+          "description": ""
+        },
+        "metaValue": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "description": "WpPostmeta"
+    },
+    "Result«List«WpPosts»»": {
+      "type": "object",
+      "required": [
+        "code",
+        "data",
+        "flag",
+        "message"
+      ],
+      "properties": {
+        "code": {
+          "type": "integer",
+          "format": "int32",
+          "description": "返回状态码,20000:成功,20001:失败,20002:用户名或密码错误,20003:权限不足,20004:远程调用失败,20005:重复操作,20006:没有对应的数据"
+        },
+        "data": {
+          "type": "array",
+          "description": "逻辑数据",
+          "items": {
+            "$ref": "#/definitions/WpPosts"
+          }
+        },
+        "flag": {
+          "type": "boolean",
+          "example": false,
+          "description": "执行是否成功,true:成功,false:失败"
+        },
+        "message": {
+          "type": "string",
+          "description": "提示信息"
+        }
+      },
+      "description": "Result"
+    },
+    "Result«WpPosts»": {
+      "type": "object",
+      "required": [
+        "code",
+        "data",
+        "flag",
+        "message"
+      ],
+      "properties": {
+        "code": {
+          "type": "integer",
+          "format": "int32",
+          "description": "返回状态码,20000:成功,20001:失败,20002:用户名或密码错误,20003:权限不足,20004:远程调用失败,20005:重复操作,20006:没有对应的数据"
+        },
+        "data": {
+          "description": "逻辑数据",
+          "$ref": "#/definitions/WpPosts"
+        },
+        "flag": {
+          "type": "boolean",
+          "example": false,
+          "description": "执行是否成功,true:成功,false:失败"
+        },
+        "message": {
+          "type": "string",
+          "description": "提示信息"
+        }
+      },
+      "description": "Result"
+    },
+    "WpPosts": {
+      "type": "object",
+      "properties": {
+        "ID": {
+          "type": "long",
+          "description": ""
+        },
+        "postAuthor": {
+          "type": "long",
+          "description": ""
+        },
+        "postDate": {
+          "type": "date",
+          "description": ""
+        },
+        "postDateGmt": {
+          "type": "date",
+          "description": ""
+        },
+        "postContent": {
+          "type": "string",
+          "description": ""
+        },
+        "postTitle": {
+          "type": "string",
+          "description": ""
+        },
+        "postExcerpt": {
+          "type": "string",
+          "description": ""
+        },
+        "postStatus": {
+          "type": "string",
+          "description": ""
+        },
+        "commentStatus": {
+          "type": "string",
+          "description": ""
+        },
+        "pingStatus": {
+          "type": "string",
+          "description": ""
+        },
+        "postPassword": {
+          "type": "string",
+          "description": ""
+        },
+        "postName": {
+          "type": "string",
+          "description": ""
+        },
+        "toPing": {
+          "type": "string",
+          "description": ""
+        },
+        "pinged": {
+          "type": "string",
+          "description": ""
+        },
+        "postModified": {
+          "type": "date",
+          "description": ""
+        },
+        "postModifiedGmt": {
+          "type": "date",
+          "description": ""
+        },
+        "postContentFiltered": {
+          "type": "string",
+          "description": ""
+        },
+        "postParent": {
+          "type": "long",
+          "description": ""
+        },
+        "guid": {
+          "type": "string",
+          "description": ""
+        },
+        "menuOrder": {
+          "type": "integer",
+          "format": "int32",
+          "description": ""
+        },
+        "postType": {
+          "type": "string",
+          "description": ""
+        },
+        "postMimeType": {
+          "type": "string",
+          "description": ""
+        },
+        "commentCount": {
+          "type": "long",
+          "description": ""
+        }
+      },
+      "description": "WpPosts"
+    },
+    "Result«List«WpSakura»»": {
+      "type": "object",
+      "required": [
+        "code",
+        "data",
+        "flag",
+        "message"
+      ],
+      "properties": {
+        "code": {
+          "type": "integer",
+          "format": "int32",
+          "description": "返回状态码,20000:成功,20001:失败,20002:用户名或密码错误,20003:权限不足,20004:远程调用失败,20005:重复操作,20006:没有对应的数据"
+        },
+        "data": {
+          "type": "array",
+          "description": "逻辑数据",
+          "items": {
+            "$ref": "#/definitions/WpSakura"
+          }
+        },
+        "flag": {
+          "type": "boolean",
+          "example": false,
+          "description": "执行是否成功,true:成功,false:失败"
+        },
+        "message": {
+          "type": "string",
+          "description": "提示信息"
+        }
+      },
+      "description": "Result"
+    },
+    "Result«WpSakura»": {
+      "type": "object",
+      "required": [
+        "code",
+        "data",
+        "flag",
+        "message"
+      ],
+      "properties": {
+        "code": {
+          "type": "integer",
+          "format": "int32",
+          "description": "返回状态码,20000:成功,20001:失败,20002:用户名或密码错误,20003:权限不足,20004:远程调用失败,20005:重复操作,20006:没有对应的数据"
+        },
+        "data": {
+          "description": "逻辑数据",
+          "$ref": "#/definitions/WpSakura"
+        },
+        "flag": {
+          "type": "boolean",
+          "example": false,
+          "description": "执行是否成功,true:成功,false:失败"
+        },
+        "message": {
+          "type": "string",
+          "description": "提示信息"
+        }
+      },
+      "description": "Result"
+    },
+    "WpSakura": {
+      "type": "object",
+      "properties": {
+        "mateKey": {
+          "type": "string",
+          "description": ""
+        },
+        "mateValue": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "description": "WpSakura"
+    },
+    "Result«List«WpSakurairo»»": {
+      "type": "object",
+      "required": [
+        "code",
+        "data",
+        "flag",
+        "message"
+      ],
+      "properties": {
+        "code": {
+          "type": "integer",
+          "format": "int32",
+          "description": "返回状态码,20000:成功,20001:失败,20002:用户名或密码错误,20003:权限不足,20004:远程调用失败,20005:重复操作,20006:没有对应的数据"
+        },
+        "data": {
+          "type": "array",
+          "description": "逻辑数据",
+          "items": {
+            "$ref": "#/definitions/WpSakurairo"
+          }
+        },
+        "flag": {
+          "type": "boolean",
+          "example": false,
+          "description": "执行是否成功,true:成功,false:失败"
+        },
+        "message": {
+          "type": "string",
+          "description": "提示信息"
+        }
+      },
+      "description": "Result"
+    },
+    "Result«WpSakurairo»": {
+      "type": "object",
+      "required": [
+        "code",
+        "data",
+        "flag",
+        "message"
+      ],
+      "properties": {
+        "code": {
+          "type": "integer",
+          "format": "int32",
+          "description": "返回状态码,20000:成功,20001:失败,20002:用户名或密码错误,20003:权限不足,20004:远程调用失败,20005:重复操作,20006:没有对应的数据"
+        },
+        "data": {
+          "description": "逻辑数据",
+          "$ref": "#/definitions/WpSakurairo"
+        },
+        "flag": {
+          "type": "boolean",
+          "example": false,
+          "description": "执行是否成功,true:成功,false:失败"
+        },
+        "message": {
+          "type": "string",
+          "description": "提示信息"
+        }
+      },
+      "description": "Result"
+    },
+    "WpSakurairo": {
+      "type": "object",
+      "properties": {
+        "mateKey": {
+          "type": "string",
+          "description": ""
+        },
+        "mateValue": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "description": "WpSakurairo"
+    },
+    "Result«List«WpTermRelationships»»": {
+      "type": "object",
+      "required": [
+        "code",
+        "data",
+        "flag",
+        "message"
+      ],
+      "properties": {
+        "code": {
+          "type": "integer",
+          "format": "int32",
+          "description": "返回状态码,20000:成功,20001:失败,20002:用户名或密码错误,20003:权限不足,20004:远程调用失败,20005:重复操作,20006:没有对应的数据"
+        },
+        "data": {
+          "type": "array",
+          "description": "逻辑数据",
+          "items": {
+            "$ref": "#/definitions/WpTermRelationships"
+          }
+        },
+        "flag": {
+          "type": "boolean",
+          "example": false,
+          "description": "执行是否成功,true:成功,false:失败"
+        },
+        "message": {
+          "type": "string",
+          "description": "提示信息"
+        }
+      },
+      "description": "Result"
+    },
+    "Result«WpTermRelationships»": {
+      "type": "object",
+      "required": [
+        "code",
+        "data",
+        "flag",
+        "message"
+      ],
+      "properties": {
+        "code": {
+          "type": "integer",
+          "format": "int32",
+          "description": "返回状态码,20000:成功,20001:失败,20002:用户名或密码错误,20003:权限不足,20004:远程调用失败,20005:重复操作,20006:没有对应的数据"
+        },
+        "data": {
+          "description": "逻辑数据",
+          "$ref": "#/definitions/WpTermRelationships"
+        },
+        "flag": {
+          "type": "boolean",
+          "example": false,
+          "description": "执行是否成功,true:成功,false:失败"
+        },
+        "message": {
+          "type": "string",
+          "description": "提示信息"
+        }
+      },
+      "description": "Result"
+    },
+    "WpTermRelationships": {
+      "type": "object",
+      "properties": {
+        "objectId": {
+          "type": "long",
+          "description": ""
+        },
+        "termTaxonomyId": {
+          "type": "long",
+          "description": ""
+        },
+        "termOrder": {
+          "type": "integer",
+          "format": "int32",
+          "description": ""
+        }
+      },
+      "description": "WpTermRelationships"
+    },
+    "Result«List«WpTermTaxonomy»»": {
+      "type": "object",
+      "required": [
+        "code",
+        "data",
+        "flag",
+        "message"
+      ],
+      "properties": {
+        "code": {
+          "type": "integer",
+          "format": "int32",
+          "description": "返回状态码,20000:成功,20001:失败,20002:用户名或密码错误,20003:权限不足,20004:远程调用失败,20005:重复操作,20006:没有对应的数据"
+        },
+        "data": {
+          "type": "array",
+          "description": "逻辑数据",
+          "items": {
+            "$ref": "#/definitions/WpTermTaxonomy"
+          }
+        },
+        "flag": {
+          "type": "boolean",
+          "example": false,
+          "description": "执行是否成功,true:成功,false:失败"
+        },
+        "message": {
+          "type": "string",
+          "description": "提示信息"
+        }
+      },
+      "description": "Result"
+    },
+    "Result«WpTermTaxonomy»": {
+      "type": "object",
+      "required": [
+        "code",
+        "data",
+        "flag",
+        "message"
+      ],
+      "properties": {
+        "code": {
+          "type": "integer",
+          "format": "int32",
+          "description": "返回状态码,20000:成功,20001:失败,20002:用户名或密码错误,20003:权限不足,20004:远程调用失败,20005:重复操作,20006:没有对应的数据"
+        },
+        "data": {
+          "description": "逻辑数据",
+          "$ref": "#/definitions/WpTermTaxonomy"
+        },
+        "flag": {
+          "type": "boolean",
+          "example": false,
+          "description": "执行是否成功,true:成功,false:失败"
+        },
+        "message": {
+          "type": "string",
+          "description": "提示信息"
+        }
+      },
+      "description": "Result"
+    },
+    "WpTermTaxonomy": {
+      "type": "object",
+      "properties": {
+        "termTaxonomyId": {
+          "type": "long",
+          "description": ""
+        },
+        "termId": {
+          "type": "long",
+          "description": ""
+        },
+        "taxonomy": {
+          "type": "string",
+          "description": ""
+        },
+        "description": {
+          "type": "string",
+          "description": ""
+        },
+        "parent": {
+          "type": "long",
+          "description": ""
+        },
+        "count": {
+          "type": "long",
+          "description": ""
+        }
+      },
+      "description": "WpTermTaxonomy"
+    },
+    "Result«List«WpTermmeta»»": {
+      "type": "object",
+      "required": [
+        "code",
+        "data",
+        "flag",
+        "message"
+      ],
+      "properties": {
+        "code": {
+          "type": "integer",
+          "format": "int32",
+          "description": "返回状态码,20000:成功,20001:失败,20002:用户名或密码错误,20003:权限不足,20004:远程调用失败,20005:重复操作,20006:没有对应的数据"
+        },
+        "data": {
+          "type": "array",
+          "description": "逻辑数据",
+          "items": {
+            "$ref": "#/definitions/WpTermmeta"
+          }
+        },
+        "flag": {
+          "type": "boolean",
+          "example": false,
+          "description": "执行是否成功,true:成功,false:失败"
+        },
+        "message": {
+          "type": "string",
+          "description": "提示信息"
+        }
+      },
+      "description": "Result"
+    },
+    "Result«WpTermmeta»": {
+      "type": "object",
+      "required": [
+        "code",
+        "data",
+        "flag",
+        "message"
+      ],
+      "properties": {
+        "code": {
+          "type": "integer",
+          "format": "int32",
+          "description": "返回状态码,20000:成功,20001:失败,20002:用户名或密码错误,20003:权限不足,20004:远程调用失败,20005:重复操作,20006:没有对应的数据"
+        },
+        "data": {
+          "description": "逻辑数据",
+          "$ref": "#/definitions/WpTermmeta"
+        },
+        "flag": {
+          "type": "boolean",
+          "example": false,
+          "description": "执行是否成功,true:成功,false:失败"
+        },
+        "message": {
+          "type": "string",
+          "description": "提示信息"
+        }
+      },
+      "description": "Result"
+    },
+    "WpTermmeta": {
+      "type": "object",
+      "properties": {
+        "metaId": {
+          "type": "long",
+          "description": ""
+        },
+        "termId": {
+          "type": "long",
+          "description": ""
+        },
+        "metaKey": {
+          "type": "string",
+          "description": ""
+        },
+        "metaValue": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "description": "WpTermmeta"
+    },
+    "Result«List«WpTerms»»": {
+      "type": "object",
+      "required": [
+        "code",
+        "data",
+        "flag",
+        "message"
+      ],
+      "properties": {
+        "code": {
+          "type": "integer",
+          "format": "int32",
+          "description": "返回状态码,20000:成功,20001:失败,20002:用户名或密码错误,20003:权限不足,20004:远程调用失败,20005:重复操作,20006:没有对应的数据"
+        },
+        "data": {
+          "type": "array",
+          "description": "逻辑数据",
+          "items": {
+            "$ref": "#/definitions/WpTerms"
+          }
+        },
+        "flag": {
+          "type": "boolean",
+          "example": false,
+          "description": "执行是否成功,true:成功,false:失败"
+        },
+        "message": {
+          "type": "string",
+          "description": "提示信息"
+        }
+      },
+      "description": "Result"
+    },
+    "Result«WpTerms»": {
+      "type": "object",
+      "required": [
+        "code",
+        "data",
+        "flag",
+        "message"
+      ],
+      "properties": {
+        "code": {
+          "type": "integer",
+          "format": "int32",
+          "description": "返回状态码,20000:成功,20001:失败,20002:用户名或密码错误,20003:权限不足,20004:远程调用失败,20005:重复操作,20006:没有对应的数据"
+        },
+        "data": {
+          "description": "逻辑数据",
+          "$ref": "#/definitions/WpTerms"
+        },
+        "flag": {
+          "type": "boolean",
+          "example": false,
+          "description": "执行是否成功,true:成功,false:失败"
+        },
+        "message": {
+          "type": "string",
+          "description": "提示信息"
+        }
+      },
+      "description": "Result"
+    },
+    "WpTerms": {
+      "type": "object",
+      "properties": {
+        "termId": {
+          "type": "long",
+          "description": ""
+        },
+        "name": {
+          "type": "string",
+          "description": ""
+        },
+        "slug": {
+          "type": "string",
+          "description": ""
+        },
+        "termGroup": {
+          "type": "long",
+          "description": ""
+        }
+      },
+      "description": "WpTerms"
+    },
+    "Result«List«WpUsermeta»»": {
+      "type": "object",
+      "required": [
+        "code",
+        "data",
+        "flag",
+        "message"
+      ],
+      "properties": {
+        "code": {
+          "type": "integer",
+          "format": "int32",
+          "description": "返回状态码,20000:成功,20001:失败,20002:用户名或密码错误,20003:权限不足,20004:远程调用失败,20005:重复操作,20006:没有对应的数据"
+        },
+        "data": {
+          "type": "array",
+          "description": "逻辑数据",
+          "items": {
+            "$ref": "#/definitions/WpUsermeta"
+          }
+        },
+        "flag": {
+          "type": "boolean",
+          "example": false,
+          "description": "执行是否成功,true:成功,false:失败"
+        },
+        "message": {
+          "type": "string",
+          "description": "提示信息"
+        }
+      },
+      "description": "Result"
+    },
+    "Result«WpUsermeta»": {
+      "type": "object",
+      "required": [
+        "code",
+        "data",
+        "flag",
+        "message"
+      ],
+      "properties": {
+        "code": {
+          "type": "integer",
+          "format": "int32",
+          "description": "返回状态码,20000:成功,20001:失败,20002:用户名或密码错误,20003:权限不足,20004:远程调用失败,20005:重复操作,20006:没有对应的数据"
+        },
+        "data": {
+          "description": "逻辑数据",
+          "$ref": "#/definitions/WpUsermeta"
+        },
+        "flag": {
+          "type": "boolean",
+          "example": false,
+          "description": "执行是否成功,true:成功,false:失败"
+        },
+        "message": {
+          "type": "string",
+          "description": "提示信息"
+        }
+      },
+      "description": "Result"
+    },
+    "WpUsermeta": {
+      "type": "object",
+      "properties": {
+        "umetaId": {
+          "type": "long",
+          "description": ""
+        },
+        "userId": {
+          "type": "long",
+          "description": ""
+        },
+        "metaKey": {
+          "type": "string",
+          "description": ""
+        },
+        "metaValue": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "description": "WpUsermeta"
+    },
+    "Result«List«WpUsers»»": {
+      "type": "object",
+      "required": [
+        "code",
+        "data",
+        "flag",
+        "message"
+      ],
+      "properties": {
+        "code": {
+          "type": "integer",
+          "format": "int32",
+          "description": "返回状态码,20000:成功,20001:失败,20002:用户名或密码错误,20003:权限不足,20004:远程调用失败,20005:重复操作,20006:没有对应的数据"
+        },
+        "data": {
+          "type": "array",
+          "description": "逻辑数据",
+          "items": {
+            "$ref": "#/definitions/WpUsers"
+          }
+        },
+        "flag": {
+          "type": "boolean",
+          "example": false,
+          "description": "执行是否成功,true:成功,false:失败"
+        },
+        "message": {
+          "type": "string",
+          "description": "提示信息"
+        }
+      },
+      "description": "Result"
+    },
+    "Result«WpUsers»": {
+      "type": "object",
+      "required": [
+        "code",
+        "data",
+        "flag",
+        "message"
+      ],
+      "properties": {
+        "code": {
+          "type": "integer",
+          "format": "int32",
+          "description": "返回状态码,20000:成功,20001:失败,20002:用户名或密码错误,20003:权限不足,20004:远程调用失败,20005:重复操作,20006:没有对应的数据"
+        },
+        "data": {
+          "description": "逻辑数据",
+          "$ref": "#/definitions/WpUsers"
+        },
+        "flag": {
+          "type": "boolean",
+          "example": false,
+          "description": "执行是否成功,true:成功,false:失败"
+        },
+        "message": {
+          "type": "string",
+          "description": "提示信息"
+        }
+      },
+      "description": "Result"
+    },
+    "WpUsers": {
+      "type": "object",
+      "properties": {
+        "ID": {
+          "type": "long",
+          "description": ""
+        },
+        "userLogin": {
+          "type": "string",
+          "description": ""
+        },
+        "userPass": {
+          "type": "string",
+          "description": ""
+        },
+        "userNicename": {
+          "type": "string",
+          "description": ""
+        },
+        "userEmail": {
+          "type": "string",
+          "description": ""
+        },
+        "userUrl": {
+          "type": "string",
+          "description": ""
+        },
+        "userRegistered": {
+          "type": "date",
+          "description": ""
+        },
+        "userActivationKey": {
+          "type": "string",
+          "description": ""
+        },
+        "userStatus": {
+          "type": "integer",
+          "format": "int32",
+          "description": ""
+        },
+        "displayName": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "description": "WpUsers"
+    }
+  },
+  "externalDocs": {
+    "description": "博客系统",
+    "url": "https://github.com/shenkunlin/code-template.git"
+  }
+}
