@@ -1,13 +1,22 @@
 package com.zhang.blogadmin.service.impl;
+import com.zhang.blogadmin.mapper.WpPermissionMapper;
 import com.zhang.blogadmin.mapper.WpUsersMapper;
+import com.zhang.blogadmin.pojo.WpPermission;
 import com.zhang.blogadmin.pojo.WpUsers;
 import com.zhang.blogadmin.service.WpUsersService;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
+import org.springframework.security.core.userdetails.User;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 import tk.mybatis.mapper.entity.Example;
+
+import java.util.ArrayList;
 import java.util.List;
 /****
  * @Author:xiaotao
@@ -19,6 +28,7 @@ public class WpUsersServiceImpl implements WpUsersService {
 
     @Autowired
     private WpUsersMapper wpUsersMapper;
+
 
 
     /**
@@ -80,12 +90,12 @@ public class WpUsersServiceImpl implements WpUsersService {
                     criteria.andEqualTo("ID",wpUsers.getID());
             }
             // 
-            if(!StringUtils.isEmpty(wpUsers.getUserLogin())){
-                    criteria.andEqualTo("userLogin",wpUsers.getUserLogin());
+            if(!StringUtils.isEmpty(wpUsers.getUsername())){
+                    criteria.andEqualTo("userLogin",wpUsers.getUsername());
             }
             // 
-            if(!StringUtils.isEmpty(wpUsers.getUserPass())){
-                    criteria.andEqualTo("userPass",wpUsers.getUserPass());
+            if(!StringUtils.isEmpty(wpUsers.getPassword())){
+                    criteria.andEqualTo("userPass",wpUsers.getPassword());
             }
             // 
             if(!StringUtils.isEmpty(wpUsers.getUserNicename())){
@@ -138,6 +148,19 @@ public class WpUsersServiceImpl implements WpUsersService {
     }
 
     /**
+     * 根据条件修改WpUsers
+     * @param wpUsers
+     */
+    @Override
+    public void updateById(WpUsers wpUsers, Long id){
+        Example example=new Example(WpUsers.class);
+        Example.Criteria criteria = example.createCriteria();
+        // where
+        criteria.andEqualTo("ID", id);
+        wpUsersMapper.updateByExampleSelective(wpUsers, example);
+    }
+
+    /**
      * 增加WpUsers
      * @param wpUsers
      */
@@ -164,4 +187,11 @@ public class WpUsersServiceImpl implements WpUsersService {
     public List<WpUsers> findAll() {
         return wpUsersMapper.selectAll();
     }
+
+    @Override
+    public WpUsers login(String userName, String passMd5) {
+        WpUsers wpUsers = new WpUsers(userName, passMd5);
+        return wpUsersMapper.selectOne(wpUsers);
+    }
+
 }

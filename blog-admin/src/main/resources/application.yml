@@ -6,4 +6,3 @@ spring:
       exclude: WEB-INF/**
   profiles:
     active: dev
-

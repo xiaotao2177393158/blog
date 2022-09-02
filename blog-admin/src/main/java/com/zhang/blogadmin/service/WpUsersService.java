@@ -1,6 +1,8 @@
 package com.zhang.blogadmin.service;
 import com.zhang.blogadmin.pojo.WpUsers;
 import com.github.pagehelper.PageInfo;
+import org.springframework.security.core.userdetails.UserDetails;
+
 import java.util.List;
 /****
  * @Author:xiaotao
@@ -45,6 +47,8 @@ public interface WpUsersService {
      */
     void update(WpUsers wpUsers);
 
+    void updateById(WpUsers wpUsers, Long id);
+
     /***
      * 新增WpUsers
      * @param wpUsers
@@ -63,4 +67,6 @@ public interface WpUsersService {
      * @return
      */
     List<WpUsers> findAll();
+
+    WpUsers login(String userName, String passMd5);
 }

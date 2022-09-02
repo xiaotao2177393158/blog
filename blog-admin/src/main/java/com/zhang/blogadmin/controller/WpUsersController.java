@@ -1,18 +1,27 @@
 package com.zhang.blogadmin.controller;
+import com.zhang.blogadmin.config.Config;
+import com.zhang.blogadmin.pojo.WpRoles;
+import com.zhang.blogadmin.pojo.WpUserRole;
 import com.zhang.blogadmin.pojo.WpUsers;
+import com.zhang.blogadmin.service.WpRolesService;
+import com.zhang.blogadmin.service.WpUserRoleService;
 import com.zhang.blogadmin.service.WpUsersService;
 import com.github.pagehelper.PageInfo;
+import com.zhang.blogadmin.utils.MD5Util;
 import com.zhang.blogadmin.utils.Result;
 import com.zhang.blogadmin.utils.StatusCode;
 import io.swagger.annotations.*;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.Date;
 import java.util.List;
 
 /****
  * @Author:xiaotao
  * @Description:
- * @Date 2019/6/14 0:18
+ * @Date
  *****/
 @Api(value = "WpUsersController")
 @RestController
@@ -22,6 +31,119 @@ public class WpUsersController {
 
     @Autowired
     private WpUsersService wpUsersService;
+
+    @Autowired
+    private WpUserRoleService userRoleService;
+
+    // 密码加密方式
+    @Autowired
+    private PasswordEncoder passwordEncoder;
+
+
+    /**
+     * 添加用户.这里我们采用表单形式传参,传参形式如下:
+     * http://localhost:8080/user/register?username=test&password=123
+     */
+    @ApiOperation(value = "用户注册",notes = "用户注册",tags = {"WpUsersController"})
+    @ApiImplicitParams({
+            @ApiImplicitParam(paramType = "path", name = "username", value = "用户名", required = true, dataType = "String"),
+            @ApiImplicitParam(paramType = "path", name = "password", value = "密码", required = true, dataType = "String")
+    })
+    @PostMapping(value = "/register/{username}/{password}" )
+    public Result<PageInfo> registerUser(@PathVariable String username, @PathVariable String password){
+        WpUsers user = new WpUsers();
+        user.setUsername(username);
+        //对密码进行加密
+        user.setPassword(passwordEncoder.encode(password));
+        user.setUserRegistered(new Date());
+
+        user.setUserStatus(0);
+        user.setAccountNotLocked(true);
+        user.setEnabled(true);
+        user.setCredentialsNotExpired(true);
+        user.setNotExpired(true);
+
+        wpUsersService.add(user);
+
+        System.out.println(user.getID());
+
+        // 默认注册的为普通用户
+        WpUserRole userRole = new WpUserRole();
+        userRole.setUID(user.getID());
+        userRole.setRID(1L);
+        userRoleService.add(userRole);
+
+        return new Result(true, StatusCode.OK, "注册成功");
+    }
+
+
+    /**
+     * @Description: login
+     * @Param:
+     * @return:
+     * @Author: xiaotao
+     * @Date: 2022/8/30`
+     */
+    @ApiOperation(value = "用户登录",notes = "用户登录",tags = {"WpUsersController"})
+    @ApiImplicitParams({
+            @ApiImplicitParam(paramType = "path", name = "userName", value = "用户名", required = true, dataType = "String"),
+            @ApiImplicitParam(paramType = "path", name = "password", value = "密码", required = true, dataType = "String")
+    })
+    @PostMapping(value = "/login/{userName}/{password}" )
+    public Result<PageInfo> login(@PathVariable String userName, @PathVariable String password) {
+        String passMd5 = MD5Util.inputPassTODBPass(password, Config.SALT);
+        WpUsers user = wpUsersService.login(userName, passMd5);
+            if (user == null) {
+            return new Result<>(false,StatusCode.LOGINERROR, "登录失败");
+        }
+        user.setPassword(null);
+        // 写入当前会话的账号id
+//        StpUtil.login(user.getID());
+        return new Result(true,StatusCode.OK,"登录成功",user);
+    }
+
+    /**
+     * @Description: 用户退出登录
+     * @Param: 
+     * @return: 
+     * @Author: xiaotao
+     * @Date: 2022/8/31
+     */
+    @ApiOperation(value = "用户退出登录",notes = "用户退出登录",tags = {"WpUsersController"})
+    @DeleteMapping("/logout")
+    public Result logout() {
+        // 当前会话注销登录
+//        StpUtil.logout();
+        return new Result(true, StatusCode.OK, "退出成功");
+    }
+
+    /**
+     * @Description: 修改密码
+     * @Param:
+     * @return:
+     * @Author: xiaotao
+     * @Date: 2022/8/31
+     */
+    @ApiOperation(value = "用户修改密码",notes = "用户修改密码",tags = {"WpUsersController"})
+    @ApiImplicitParams({
+            @ApiImplicitParam(paramType = "path", name = "id", value = "用户id", required = true, dataType = "Long"),
+            @ApiImplicitParam(paramType = "path", name = "oldPass", value = "原密码", required = true, dataType = "String"),
+            @ApiImplicitParam(paramType = "path", name = "newPass", value = "新密码", required = true, dataType = "String")
+    })
+    @PutMapping("/password/{id}/{oldPass}/{newPass}")
+    public Result password(@PathVariable Long id, @PathVariable String oldPass, @PathVariable String newPass) {
+        // 判断旧密码是否正确
+        WpUsers wpUsers = wpUsersService.findById(id);
+        String passMd5 = MD5Util.inputPassTODBPass(oldPass, Config.SALT);
+        if(!wpUsers.getPassword().equals(passMd5)) {
+            return new Result<>(false,StatusCode.OLDPASSERROR, "旧密码错误");
+        }
+        // 修改密码
+        WpUsers wpUsers1 = new WpUsers();
+        wpUsers1.setPassword(MD5Util.inputPassTODBPass(newPass, Config.SALT));
+        wpUsersService.updateById(wpUsers1, id);
+        return new Result(true,StatusCode.OK,"修改成功");
+    }
 
     /***
      * WpUsers分页条件搜索实现
@@ -105,6 +227,23 @@ public class WpUsersController {
     }
 
     /***
+     * 根据条件修改WpUsers数据
+     * @param wpUsers
+     * @param id
+     * @return
+     */
+    @ApiOperation(value = "WpUsers根据ID修改部分数据",notes = "根据ID修改WpUsers方法详情",tags = {"WpUsersController"})
+    @ApiImplicitParam(paramType = "path", name = "id", value = "主键ID", required = true, dataType = "Long")
+    @PutMapping(value="one/{id}")
+    public Result updateById(@RequestBody @ApiParam(name = "WpUsers对象",value = "传入JSON数据",required = false) WpUsers wpUsers,@PathVariable Long id){
+        //设置主键值
+//        wpUsers.setID(id);
+        //调用WpUsersService实现修改WpUsers
+        wpUsersService.updateById(wpUsers, id);
+        return new Result(true,StatusCode.OK,"修改成功");
+    }
+
+    /***
      * 新增WpUsers数据
      * @param wpUsers
      * @return
@@ -113,6 +252,7 @@ public class WpUsersController {
     @PostMapping
     public Result add(@RequestBody  @ApiParam(name = "WpUsers对象",value = "传入JSON数据",required = true) WpUsers wpUsers){
         //调用WpUsersService实现添加WpUsers
+        wpUsers.setUserRegistered(new Date());
         wpUsersService.add(wpUsers);
         return new Result(true,StatusCode.OK,"添加成功");
     }
