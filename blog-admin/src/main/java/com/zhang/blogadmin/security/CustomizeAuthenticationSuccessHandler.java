@@ -40,12 +40,15 @@ public class CustomizeAuthenticationSuccessHandler implements AuthenticationSucc
         WpUsers sysUser = wpUsersMapper.selectOne(wpUsers);
         // 根据用户的id和account生成token并返回
         String jwtToken = JwtUtils.getJwtToken(sysUser.getID().toString(), sysUser.getUsername());
-        Map<String,String> results = new HashMap<>();
-        results.put("token",jwtToken);
+        Map<String,Object> results = new HashMap<>();
+        results.put("token", jwtToken);
+        results.put("flag", true);
+        results.put("code", 208);
+        results.put("message", "登录成功");
 
         //处理编码方式，防止中文乱码的情况
         httpServletResponse.setContentType("text/json;charset=utf-8");
         // 把Json数据放入HttpServletResponse中返回给前台
-        httpServletResponse.getWriter().write(JSON.toJSONString(new Result(true, StatusCode.SUCCESS_login, "登录成功", results)));
+        httpServletResponse.getWriter().write(JSON.toJSONString(results));
     }
 }

@@ -1,5 +1,6 @@
 package com.zhang.blogadmin.controller;
 import com.zhang.blogadmin.config.Config;
+import com.zhang.blogadmin.mapper.WpUsersMapper;
 import com.zhang.blogadmin.pojo.WpRoles;
 import com.zhang.blogadmin.pojo.WpUserRole;
 import com.zhang.blogadmin.pojo.WpUsers;
@@ -7,6 +8,7 @@ import com.zhang.blogadmin.service.WpRolesService;
 import com.zhang.blogadmin.service.WpUserRoleService;
 import com.zhang.blogadmin.service.WpUsersService;
 import com.github.pagehelper.PageInfo;
+import com.zhang.blogadmin.utils.JwtUtils;
 import com.zhang.blogadmin.utils.MD5Util;
 import com.zhang.blogadmin.utils.Result;
 import com.zhang.blogadmin.utils.StatusCode;
@@ -16,7 +18,9 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /****
  * @Author:xiaotao
@@ -39,6 +43,9 @@ public class WpUsersController {
     @Autowired
     private PasswordEncoder passwordEncoder;
 
+    @Autowired
+    private WpUsersMapper wpUsersMapper;
+
 
     /**
      * 添加用户.这里我们采用表单形式传参,传参形式如下:
@@ -55,6 +62,7 @@ public class WpUsersController {
         user.setUsername(username);
         //对密码进行加密
         user.setPassword(passwordEncoder.encode(password));
+
         user.setUserRegistered(new Date());
 
         user.setUserStatus(0);
@@ -76,7 +84,6 @@ public class WpUsersController {
         return new Result(true, StatusCode.OK, "注册成功");
     }
 
-
     /**
      * @Description: login
      * @Param:
@@ -89,17 +96,25 @@ public class WpUsersController {
             @ApiImplicitParam(paramType = "path", name = "userName", value = "用户名", required = true, dataType = "String"),
             @ApiImplicitParam(paramType = "path", name = "password", value = "密码", required = true, dataType = "String")
     })
-    @PostMapping(value = "/login/{userName}/{password}" )
-    public Result<PageInfo> login(@PathVariable String userName, @PathVariable String password) {
-        String passMd5 = MD5Util.inputPassTODBPass(password, Config.SALT);
-        WpUsers user = wpUsersService.login(userName, passMd5);
-            if (user == null) {
-            return new Result<>(false,StatusCode.LOGINERROR, "登录失败");
+    @PostMapping(value = "/toLogin" )
+    public Result<PageInfo> login(@RequestParam String username, @RequestParam String password) {
+        WpUsers wpUsers = new WpUsers();
+        wpUsers.setUsername(username);
+        WpUsers sysUser = wpUsersMapper.selectOne(wpUsers);
+        if (sysUser == null) {
+            return new Result<>(false,StatusCode.USER_ACCOUNT_DISABLE, "用户名不存在");
         }
-        user.setPassword(null);
-        // 写入当前会话的账号id
-//        StpUtil.login(user.getID());
-        return new Result(true,StatusCode.OK,"登录成功",user);
+        if (!passwordEncoder.matches(password, sysUser.getPassword())) {
+            return new Result<>(false,StatusCode.USER_CREDENTIALS_ERROR, "密码错误");
+        }
+
+        // 根据用户的id和account生成token并返回
+        String jwtToken = JwtUtils.getJwtToken(sysUser.getID().toString(), sysUser.getUsername());
+        Map<String,String> results = new HashMap<>();
+        results.put("token",jwtToken);
+
+
+        return new Result(true,StatusCode.OK,"登录成功", results);
     }
 
     /**

@@ -11,6 +11,8 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * @author xiaotao
@@ -22,7 +24,12 @@ import java.io.IOException;
 public class CustomizeLogoutSuccessHandler implements LogoutSuccessHandler {
     @Override
     public void onLogoutSuccess(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, Authentication authentication) throws IOException, ServletException {
+        Map<String,Object> results = new HashMap<>();
+        results.put("flag", true);
+        results.put("code", StatusCode.SUCCESS_logout);
+        results.put("message", "退出成功");
+
         httpServletResponse.setContentType("text/json;charset=utf-8");
-        httpServletResponse.getWriter().write(JSON.toJSONString(new Result(true, StatusCode.SUCCESS_logout, "退出登录")));
+        httpServletResponse.getWriter().write(JSON.toJSONString(JSON.toJSONString(results)));
     }
 }

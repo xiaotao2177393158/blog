@@ -31,7 +31,7 @@ public class CustomizeAuthenticationFailureHandler implements AuthenticationFail
             result = new Result(false, StatusCode.REMOTEERROR, "账号过期");
         } else if (e instanceof BadCredentialsException) {
             //密码错误
-            result = new Result(false, StatusCode.USER_CREDENTIALS_ERROR, "密码错误");
+            result = new Result(false, StatusCode.USER_CREDENTIALS_ERROR, "用户名或密码错误");
         } else if (e instanceof CredentialsExpiredException) {
             //密码过期
             result = new Result(false, StatusCode.USER_CREDENTIALS_EXPIRED, "密码过期");

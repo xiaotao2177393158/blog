@@ -36,10 +36,11 @@ public class SecurityUserServiceImpl implements SecurityUserService {
      * 根据用户名查找数据库，判断是否存在这个用户
      * */
     @Override
-    public UserDetails loadUserByUsername(String username) {
+    public UserDetails loadUserByUsername(String username)  throws UsernameNotFoundException  {
         WpUsers wpUsers = new WpUsers();
         wpUsers.setUsername(username);
         WpUsers sysUser = wpUsersMapper.selectOne(wpUsers);
+        System.out.println(sysUser);
         if(StringUtils.isEmpty(sysUser)){
             throw new UsernameNotFoundException("根据用户名找不到该用户的信息！");
         }
