@@ -5,8 +5,8 @@
             备案号：滇ICP备2021007136号-1
         </div>
         <div class="right">
-            <a target="_blank" href="https://github.com/newbee-ltd/vue3-admin"
-                >vue3-admin Version 3.0.0</a
+            <a target="_blank" href="https://github.com/xiaotao2177393158/blog"
+                >blog Version 1.0.0</a
             >
         </div>
     </div>

@@ -30,6 +30,6 @@ public class CustomizeLogoutSuccessHandler implements LogoutSuccessHandler {
         results.put("message", "退出成功");
 
         httpServletResponse.setContentType("text/json;charset=utf-8");
-        httpServletResponse.getWriter().write(JSON.toJSONString(JSON.toJSONString(results)));
+        httpServletResponse.getWriter().write(JSON.toJSONString(results));
     }
 }

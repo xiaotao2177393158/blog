@@ -17,10 +17,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import javax.servlet.http.HttpServletRequest;
+import java.util.*;
 
 /****
  * @Author:xiaotao
@@ -56,10 +54,11 @@ public class WpUsersController {
             @ApiImplicitParam(paramType = "path", name = "username", value = "用户名", required = true, dataType = "String"),
             @ApiImplicitParam(paramType = "path", name = "password", value = "密码", required = true, dataType = "String")
     })
-    @PostMapping(value = "/register/{username}/{password}" )
-    public Result<PageInfo> registerUser(@PathVariable String username, @PathVariable String password){
+    @PostMapping(value = "/register" )
+    public Result<PageInfo> registerUser(@RequestParam String username, @RequestParam String password){
         WpUsers user = new WpUsers();
         user.setUsername(username);
+        user.setUserNicename(username);
         //对密码进行加密
         user.setPassword(passwordEncoder.encode(password));
 
@@ -85,51 +84,30 @@ public class WpUsersController {
     }
 
     /**
-     * @Description: login
+     * @Description: 启用禁用账户
      * @Param:
      * @return:
      * @Author: xiaotao
-     * @Date: 2022/8/30`
-     */
-    @ApiOperation(value = "用户登录",notes = "用户登录",tags = {"WpUsersController"})
-    @ApiImplicitParams({
-            @ApiImplicitParam(paramType = "path", name = "userName", value = "用户名", required = true, dataType = "String"),
-            @ApiImplicitParam(paramType = "path", name = "password", value = "密码", required = true, dataType = "String")
-    })
-    @PostMapping(value = "/toLogin" )
-    public Result<PageInfo> login(@RequestParam String username, @RequestParam String password) {
-        WpUsers wpUsers = new WpUsers();
-        wpUsers.setUsername(username);
-        WpUsers sysUser = wpUsersMapper.selectOne(wpUsers);
-        if (sysUser == null) {
-            return new Result<>(false,StatusCode.USER_ACCOUNT_DISABLE, "用户名不存在");
-        }
-        if (!passwordEncoder.matches(password, sysUser.getPassword())) {
-            return new Result<>(false,StatusCode.USER_CREDENTIALS_ERROR, "密码错误");
-        }
-
-        // 根据用户的id和account生成token并返回
-        String jwtToken = JwtUtils.getJwtToken(sysUser.getID().toString(), sysUser.getUsername());
-        Map<String,String> results = new HashMap<>();
-        results.put("token",jwtToken);
-
-
-        return new Result(true,StatusCode.OK,"登录成功", results);
-    }
-
-    /**
-     * @Description: 用户退出登录
-     * @Param: 
-     * @return: 
-     * @Author: xiaotao
      * @Date: 2022/8/31
      */
-    @ApiOperation(value = "用户退出登录",notes = "用户退出登录",tags = {"WpUsersController"})
-    @DeleteMapping("/logout")
-    public Result logout() {
-        // 当前会话注销登录
-//        StpUtil.logout();
-        return new Result(true, StatusCode.OK, "退出成功");
+    @ApiOperation(value = "启用禁用账户",notes = "启用禁用账户",tags = {"WpUsersController"})
+    @PutMapping("/users/{num}")
+    public Result logout(@PathVariable int num, @RequestParam Map<String, Long> ids) {
+        Boolean flag = true;
+        if(num == 1) {
+            flag = false;
+        }
+        WpUsers wpUsers = new WpUsers();
+        wpUsers.setAccountNotLocked(flag);
+
+        if(ids.size() > 0) {
+            for (String key : ids.keySet()) {
+                Long id = Long.valueOf(String.valueOf(ids.get(key)));
+                System.out.println(id);
+                wpUsersService.updateById(wpUsers, id);
+            }
+        }
+        return new Result(true, StatusCode.OK, "操作成功");
     }
 
     /**
@@ -149,13 +127,12 @@ public class WpUsersController {
     public Result password(@PathVariable Long id, @PathVariable String oldPass, @PathVariable String newPass) {
         // 判断旧密码是否正确
         WpUsers wpUsers = wpUsersService.findById(id);
-        String passMd5 = MD5Util.inputPassTODBPass(oldPass, Config.SALT);
-        if(!wpUsers.getPassword().equals(passMd5)) {
+        if (!passwordEncoder.matches(oldPass, wpUsers.getPassword())) {
             return new Result<>(false,StatusCode.OLDPASSERROR, "旧密码错误");
         }
         // 修改密码
         WpUsers wpUsers1 = new WpUsers();
-        wpUsers1.setPassword(MD5Util.inputPassTODBPass(newPass, Config.SALT));
+        wpUsers1.setPassword(passwordEncoder.encode(newPass));
         wpUsersService.updateById(wpUsers1, id);
         return new Result(true,StatusCode.OK,"修改成功");
     }
@@ -163,7 +140,7 @@ public class WpUsersController {
     /***
      * WpUsers分页条件搜索实现
      * @param wpUsers
-     * @param page
+     * @param page  
      * @param size
      * @return
      */
@@ -283,6 +260,20 @@ public class WpUsersController {
     public Result<WpUsers> findById(@PathVariable Long id){
         //调用WpUsersService实现根据主键查询WpUsers
         WpUsers wpUsers = wpUsersService.findById(id);
+        return new Result<WpUsers>(true,StatusCode.OK,"查询成功",wpUsers);
+    }
+
+    /***
+     * 根据token查询WpUsers 用户名，昵称
+     * @return
+     */
+    @ApiOperation(value = "WpUsers根据token查询",notes = "根据token查询WpUsers方法详情",tags = {"WpUsersController"})
+    @GetMapping("/getUserInfo")
+    public Result<WpUsers> getUserInfo(HttpServletRequest header){
+        Long id = Long.valueOf(JwtUtils.getMemberIdByJwtToken(header));
+        //调用WpUsersService实现根据主键查询WpUsers
+        WpUsers wpUsers = wpUsersService.findById(id);
+        wpUsers.setPassword("");
         return new Result<WpUsers>(true,StatusCode.OK,"查询成功",wpUsers);
     }
 

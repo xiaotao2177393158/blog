@@ -8,6 +8,9 @@ package com.zhang.blogadmin.config;
  */
 public class Config {
     public final static String SALT = "SMS_249662489_MAIL";
+    public final static String ACCESS_KEY  = "i360EJ_iYZCy9DVLC3850uqzYS6FtTdTfg_9_64q";
+    public final static String SECRET_KEY  = "3s1IJWvWrYmDI0z89pPRZHlDLzHDGO-ggtR1ASg7";
+    public final static String BUCKET  = "xiaotao-code";
 }
 
 

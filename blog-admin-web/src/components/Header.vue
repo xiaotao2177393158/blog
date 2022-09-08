@@ -19,7 +19,7 @@
                     </div>
                 </template>
                 <div class="nickname">
-                    <p>登录名：{{ (userInfo && userInfo.userLogin) || "" }}</p>
+                    <p>登录名：{{ (userInfo && userInfo.username) || "" }}</p>
                     <p>昵称：{{ (userInfo && userInfo.userNicename) || "" }}</p>
                     <el-tag
                         size="small"
@@ -39,7 +39,6 @@ import { onMounted, reactive, toRefs } from "vue";
 import { useRouter } from "vue-router";
 import axios from "@/utils/axios";
 import { localRemove, pathMap } from "@/utils";
-import { localGet } from "../utils";
 export default {
     name: "Header",
     setup() {
@@ -51,13 +50,17 @@ export default {
         });
         onMounted(() => {
             const pathname = window.location.hash.split("/")[1] || "";
-            if (!["login"].includes(pathname)) {
+            if (
+                !["login"].includes(pathname) &&
+                !["register"].includes(pathname)
+            ) {
                 getUserInfo();
             }
         });
         const getUserInfo = async () => {
-            const userInfo = localGet("token");
-            state.userInfo = userInfo;
+            axios.get(`/wpUsers/getUserInfo`).then((res) => {
+                state.userInfo = res.data;
+            });
         };
         const logout = () => {
             axios.post("/logout").then(() => {

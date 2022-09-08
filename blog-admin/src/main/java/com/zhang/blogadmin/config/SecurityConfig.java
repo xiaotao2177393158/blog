@@ -67,7 +67,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Autowired
     private JwtAuthenticationTokenFilter jwtAuthenticationTokenFilter;
 
-    /**
+    /**   小 双双双 双
      * 对请求进行鉴权的配置
      * @param http
      * @throws Exception
@@ -77,11 +77,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
         http.cors()
                 .and().csrf().disable();
-
-        // 没有权限默认会到登录页面  需要开启登录的页面 会走默认的页面  http://localhost:8080/login
-        // loginPage("/toLogin") : 定制自己的登录页面
-        // 框架默认使用的是 username  password 要使用 不同的可以加上下面的属性
-//        http.formLogin().loginPage("/login").usernameParameter("userName").passwordParameter("password").loginProcessingUrl("/login");
 
         http.authorizeRequests().
                 withObjectPostProcessor(new ObjectPostProcessor<FilterSecurityInterceptor>() {
@@ -126,12 +121,11 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     /**
      * 默认开启密码加密，前端传入的密码Security会在加密后和数据库中的密文进行比对，一致的话就登录成功
+     * 默认开启密码加密，前端传入的密码Security会在加密后和
      * 所以必须提供一个加密对象，供security加密前端明文密码使用
-     * @return
      */
     @Bean
     public PasswordEncoder passwordEncoder() {
-
         return new BCryptPasswordEncoder();
     }
 

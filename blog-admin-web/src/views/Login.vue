@@ -90,9 +90,9 @@ export default {
                 if (valid) {
                     let param = new URLSearchParams();
                     param.append("username", state.ruleForm.username);
-                    param.append("password", state.ruleForm.password);
+                    param.append("password", md5(state.ruleForm.password));
                     axios.post("/login", param).then((res) => {
-                        localSet("token", res);
+                        localSet("token", res.data.token);
                         window.location.href = "/";
                     });
                 } else {

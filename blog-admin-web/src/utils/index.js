@@ -41,9 +41,10 @@ export const pathMap = {
   category: "分类管理",
   level2: "分类二级管理",
   level3: "分类三级管理",
-  good: "商品管理",
+  posts: "文章管理",
   guest: "会员管理",
   order: "订单管理",
   order_detail: "订单详情",
-  account: "修改账户",
+  account: "修改账户信息",
+  mdEdit: "发布文章",
 };

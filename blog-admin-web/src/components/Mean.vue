@@ -6,7 +6,7 @@
                     src="https://s.weituibao.com/1582958061265/mlogo.png"
                     alt="logo"
                 />
-                <span>vue3 admin</span>
+                <span>blog后台管理</span>
             </div>
         </div>
         <div class="line" />
@@ -25,8 +25,8 @@
                     <el-menu-item index="/dashboard"
                         ><i class="el-icon-odometer" />控制面板</el-menu-item
                     >
-                    <el-menu-item index="/add"
-                        ><i class="el-icon-plus" />添加商品</el-menu-item
+                    <el-menu-item index="/mdEdit"
+                        ><i class="el-icon-plus" />发布文章</el-menu-item
                     >
                 </el-menu-item-group>
             </el-submenu>
@@ -57,8 +57,8 @@
                     <el-menu-item index="/category"
                         ><i class="el-icon-menu" />分类管理</el-menu-item
                     >
-                    <el-menu-item index="/good"
-                        ><i class="el-icon-s-goods" />商品管理</el-menu-item
+                    <el-menu-item index="/posts"
+                        ><i class="el-icon-s-goods" />文章管理</el-menu-item
                     >
                     <el-menu-item index="/guest"
                         ><i class="el-icon-user-solid" />会员管理</el-menu-item

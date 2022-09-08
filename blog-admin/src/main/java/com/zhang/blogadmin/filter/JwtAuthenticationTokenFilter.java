@@ -40,7 +40,7 @@ public class JwtAuthenticationTokenFilter extends OncePerRequestFilter {
 
         System.out.println("自定义JWT过滤器获得用户名为"+account);
 
-        // 当token中的username不为空时进行验证token是否是有效的token
+        // 当token中的username不为空时进行验证token是否是有效的token vh
         if (!account.equals("") && SecurityContextHolder.getContext().getAuthentication() == null) {
             // token中username不为空，并且Context中的认证为空，进行token验证
 

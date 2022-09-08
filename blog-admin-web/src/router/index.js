@@ -28,8 +28,13 @@ const router = createRouter({
     {
       path: "/add",
       name: "add",
+      component: () => import(/* webpackChunkName: "add" */ "../views/Add.vue"),
+    },
+    {
+      path: "/mdEdit",
+      name: "mdEdit",
       component: () =>
-        import(/* webpackChunkName: "add" */ "../views/AddGood.vue"),
+        import(/* webpackChunkName: "add" */ "../views/PostArticle.vue"),
     },
     {
       path: "/swiper",
@@ -76,10 +81,10 @@ const router = createRouter({
       ],
     },
     {
-      path: "/good",
-      name: "good",
+      path: "/posts",
+      name: "posts",
       component: () =>
-        import(/* webpackChunkName: "new" */ "../views/Good.vue"),
+        import(/* webpackChunkName: "new" */ "../views/Posts.vue"),
     },
     {
       path: "/guest",

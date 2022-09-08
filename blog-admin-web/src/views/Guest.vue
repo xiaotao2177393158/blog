@@ -5,6 +5,7 @@
                 <el-button
                     type="primary"
                     size="small"
+                    disabled
                     icon="el-icon-plus"
                     @click="handleSolve"
                     >解除禁用</el-button
@@ -12,6 +13,7 @@
                 <el-button
                     type="danger"
                     size="small"
+                    disabled
                     icon="el-icon-delete"
                     @click="handleForbid"
                     >禁用账户</el-button
@@ -26,41 +28,48 @@
             style="width: 100%"
             @selection-change="handleSelectionChange"
         >
-            <el-table-column type="selection" width="55"> </el-table-column>
+            <el-table-column type="selection"> </el-table-column>
             <el-table-column prop="userNicename" label="昵称">
             </el-table-column>
-            <el-table-column prop="userLogin" label="登录名"> </el-table-column>
+            <el-table-column prop="username" label="登录名"> </el-table-column>
+            <el-table-column prop="userEmail" label="邮箱"> </el-table-column>
+            <el-table-column prop="userUrl" label="url"> </el-table-column>
             <el-table-column label="身份状态">
                 <template #default="scope">
                     <span
                         :style="
-                            scope.row.userStatus == 0
+                            scope.row.accountNotLocked
                                 ? 'color: green;'
                                 : 'color: red;'
                         "
                     >
-                        {{ scope.row.userStatus == 0 ? "正常" : "禁用" }}
+                        {{ scope.row.accountNotLocked ? "正常" : "禁用" }}
                     </span>
                 </template>
             </el-table-column>
             <el-table-column prop="userRegistered" label="注册时间">
             </el-table-column>
-            <el-table-column label="操作" width="100">
+            <el-table-column label="操作">
                 <template #default="scope">
-                    <a
-                        style="cursor: pointer; margin-right: 10px"
-                        @confirm="handleSolve(scope.row)"
-                        >解除禁用</a
-                    >
-                    <br />
                     <el-popconfirm
+                        v-if="scope.row.accountNotLocked"
                         title="确定禁用吗？"
                         @confirm="handleForbid(scope.row)"
                     >
                         <template #reference>
-                            <a style="cursor: pointer">禁用账户</a>
+                            <el-button type="danger" size="small" plain
+                                >禁用账户</el-button
+                            >
                         </template>
                     </el-popconfirm>
+                    <el-button
+                        @click="handleSolve(scope.row)"
+                        type="primary"
+                        size="small"
+                        v-else
+                        plain
+                        >启用账户</el-button
+                    >
                 </template>
             </el-table-column>
         </el-table>
@@ -95,16 +104,16 @@ export default {
         onMounted(() => {
             getGuestList();
         });
-        // 获取轮播图列表
+        // 获取用户列表
         const getGuestList = () => {
             state.loading = true;
             axios
                 .get(`/wpUsers/search/${state.currentPage}/${state.pageSize}`)
                 .then((res) => {
-                    console.log(res);
-                    state.tableData = res.list;
-                    state.total = res.total;
-                    state.currentPage = res.pageNum;
+                    console.log(res.data);
+                    state.tableData = res.data.list;
+                    state.total = res.data.total;
+                    state.currentPage = res.data.pageNum;
                     state.loading = false;
                 });
         };
@@ -121,28 +130,30 @@ export default {
                 ElMessage.error("请选择项");
                 return;
             }
-            axios
-                .put(`/users/0`, {
-                    ids: state.multipleSelection.map((item) => item.userId),
-                })
-                .then(() => {
-                    ElMessage.success("解除成功");
-                    getGuestList();
-                });
+            let param = new URLSearchParams();
+            param.append(
+                "ids",
+                state.multipleSelection.map((item) => item.id)
+            );
+            axios.put(`/wpUsers/users/0`, param).then(() => {
+                ElMessage.success("解除成功");
+                getGuestList();
+            });
         };
         const handleForbid = () => {
             if (!state.multipleSelection.length) {
                 ElMessage.error("请选择项");
                 return;
             }
-            axios
-                .put(`/users/1`, {
-                    ids: state.multipleSelection.map((item) => item.userId),
-                })
-                .then(() => {
-                    ElMessage.success("禁用成功");
-                    getGuestList();
-                });
+            let param = new URLSearchParams();
+            param.append(
+                "ids",
+                state.multipleSelection.map((item) => item.id)
+            );
+            axios.put(`/wpUsers/users/1`, param).then(() => {
+                ElMessage.success("禁用成功");
+                getGuestList();
+            });
         };
         return {
             ...toRefs(state),

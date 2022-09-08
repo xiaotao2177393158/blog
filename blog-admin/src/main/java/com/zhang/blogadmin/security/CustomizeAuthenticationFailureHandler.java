@@ -40,7 +40,7 @@ public class CustomizeAuthenticationFailureHandler implements AuthenticationFail
             result = new Result(false, StatusCode.USER_ACCOUNT_DISABLE, "账号不可用");
         } else if (e instanceof LockedException) {
             //账号锁定
-            result = new Result(false, StatusCode.USER_ACCOUNT_LOCKED, "账号锁定");
+            result = new Result(false, StatusCode.USER_ACCOUNT_LOCKED, "账号锁定，请联系管理员");
         } else if (e instanceof InternalAuthenticationServiceException) {
             //用户不存在
             result = new Result(false, StatusCode.USER_ACCOUNT_NOT_EXIST, "用户不存在");

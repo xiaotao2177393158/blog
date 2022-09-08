@@ -86,15 +86,14 @@ export default {
         const submitForm = () => {
             loginForm.value.validate((valid) => {
                 if (valid) {
-                    axios
-                        .post(
-                            `/wpUsers/register/${state.ruleForm.username}/${state.ruleForm.password}`
-                        )
-                        .then((res) => {
-                            console.log(res.code);
-                            localSet("token", res);
-                            window.location.href = "/#/login";
-                        });
+                    let param = new URLSearchParams();
+                    param.append("username", state.ruleForm.username);
+                    param.append("password", md5(state.ruleForm.password));
+                    axios.post(`/wpUsers/register`, param).then((res) => {
+                        console.log(res.code);
+                        localSet("token", res);
+                        window.location.href = "/#/login";
+                    });
                 } else {
                     console.log("error submit!!");
                     return false;

@@ -21,6 +21,18 @@
                     v-model="nameForm.nickName"
                 ></el-input>
             </el-form-item>
+            <el-form-item label="邮箱：" prop="userEmail">
+                <el-input
+                    style="width: 200px"
+                    v-model="nameForm.email"
+                ></el-input>
+            </el-form-item>
+            <el-form-item label="url：" prop="url">
+                <el-input
+                    style="width: 200px"
+                    v-model="nameForm.url"
+                ></el-input>
+            </el-form-item>
             <el-form-item>
                 <el-button type="danger" @click="submitName"
                     >确认修改</el-button
@@ -39,12 +51,14 @@
         >
             <el-form-item label="原密码：" prop="oldpass">
                 <el-input
+                    type="password"
                     style="width: 200px"
                     v-model="passForm.oldpass"
                 ></el-input>
             </el-form-item>
             <el-form-item label="新密码：" prop="newpass">
                 <el-input
+                    type="password"
                     style="width: 200px"
                     v-model="passForm.newpass"
                 ></el-input>
@@ -62,7 +76,7 @@
 import { onMounted, reactive, ref, toRefs } from "vue";
 import axios from "@/utils/axios";
 import { ElMessage } from "element-plus";
-import { localGet } from "../utils";
+import { localRemove } from "@/utils";
 import md5 from "js-md5";
 export default {
     name: "Account",
@@ -74,6 +88,8 @@ export default {
             nameForm: {
                 loginName: "",
                 nickName: "",
+                email: "",
+                url: "",
             },
             passForm: {
                 oldpass: "",
@@ -111,18 +127,27 @@ export default {
             },
         });
         onMounted(() => {
-            const userInfo = localGet("token");
-            state.user = userInfo;
-            state.nameForm.loginName = userInfo.userLogin;
-            state.nameForm.nickName = userInfo.userNicename;
+            getUserInfo();
         });
+        const getUserInfo = async () => {
+            axios.get(`/wpUsers/getUserInfo`).then((res) => {
+                console.log(res.data);
+                state.user = res.data;
+                state.nameForm.loginName = res.data.username;
+                state.nameForm.nickName = res.data.userNicename;
+                state.nameForm.email = res.data.userEmail;
+                state.nameForm.url = res.data.userUrl;
+            });
+        };
         const submitName = () => {
             nameRef.value.validate((vaild) => {
                 if (vaild) {
                     axios
                         .put(`/wpUsers/one/${state.user.id}`, {
-                            loginUserName: state.nameForm.loginName,
-                            nickName: state.nameForm.nickName,
+                            username: state.nameForm.loginName,
+                            userNicename: state.nameForm.nickName,
+                            userEmail: state.nameForm.email,
+                            userUrl: state.nameForm.url,
                         })
                         .then(() => {
                             ElMessage.success("修改成功");
@@ -136,12 +161,13 @@ export default {
                 if (vaild) {
                     axios
                         .put(
-                            `/wpUsers/password/${state.user.id}/
-                            ${md5(state.passForm.oldpass)}/
-                            ${md5(state.passForm.newpass)}`
+                            `/wpUsers/password/${state.user.id}/${md5(
+                                state.passForm.oldpass
+                            )}/${md5(state.passForm.newpass)}`
                         )
                         .then(() => {
-                            ElMessage.success("修改成功");
+                            ElMessage.success("密码修改成功");
+                            localRemove("token");
                             window.location.reload();
                         });
                 }

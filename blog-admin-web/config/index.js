@@ -1,13 +1,12 @@
 export default {
   development: {
-    baseUrl: "/api", // 测试接口域名
+    baseUrl: "//127.0.0.1:8080", // 测试接口域名
+    // baseUrl: "/api", // 测试接口域名
   },
   beta: {
-    // baseUrl: "//backend-api-02.newbee.ltd/manage-api/v1", // 测试接口域名
     baseUrl: "//node.xiaotao.cloud", // 测试接口域名
   },
   release: {
-    // baseUrl: "//backend-api-02.newbee.ltd/manage-api/v1", // 正式接口域名
     baseUrl: "//node.xiaotao.cloud", // 测试接口域名
   },
 };

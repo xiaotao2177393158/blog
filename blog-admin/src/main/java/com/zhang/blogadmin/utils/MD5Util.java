@@ -34,7 +34,6 @@ public class MD5Util {
         return md5(str);
     }
     /**
-     *
      * @param inputPass
      * @param salt
      * @return

@@ -8,6 +8,7 @@
     "serve": "vite preview"
   },
   "dependencies": {
+    "@kangc/v-md-editor": "^2.3.15",
     "@sentry/browser": "^6.3.1",
     "@sentry/tracing": "^6.3.1",
     "axios": "^0.21.1",
@@ -15,6 +16,7 @@
     "js-md5": "^0.7.3",
     "pushstate-server": "^3.1.0",
     "qs": "^6.11.0",
+    "vite-plugin-prismjs": "^0.0.8",
     "vue": "^3.0.5",
     "vue-router": "^4.0.4",
     "wangeditor": "^4.6.10"

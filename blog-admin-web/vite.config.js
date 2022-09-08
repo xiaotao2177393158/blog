@@ -2,6 +2,7 @@ import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
 import vitePluginImport from "vite-plugin-babel-import";
 import path from "path";
+import prismjs from "vite-plugin-prismjs";
 
 const baseUrl = {
   development: "./",
@@ -23,6 +24,9 @@ export default ({ mode }) =>
           },
         },
       ]),
+      prismjs({
+        languages: ["js", "json", "java", "bash"],
+      }),
     ],
     base: baseUrl[mode],
     resolve: {
