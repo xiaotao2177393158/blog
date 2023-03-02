@@ -12,15 +12,22 @@ import com.qiniu.util.Auth;
 import com.zhang.blogadmin.config.Config;
 
 /**
- * @author zhubayi
+ * @author xiaotao
  * 七牛云工具类
  */
 public class QiniuUtils {
     public static final String accessKey = Config.ACCESS_KEY;
     public static final String secretKey = Config.SECRET_KEY;
     public static final String bucket = Config.BUCKET;
-    //上传文件
-    public static DefaultPutRet upload2Qiniu(String filePath,String fileName){
+
+    /**
+     * @Description: 上传文件
+     * @Param:
+     * @return:
+     * @Author: xiaotao
+     * @Date: 2022/9/12
+     */
+    public static DefaultPutRet upload2Qiniu(String filePath,String fileName) {
         //构造一个带指定Zone对象的配置类
         Configuration cfg = new Configuration(Region.huanan());
         UploadManager uploadManager = new UploadManager(cfg);
@@ -42,8 +49,15 @@ public class QiniuUtils {
             return null;
         }
     }
-    //上传文件
-    public static DefaultPutRet upload2Qiniu(byte[] bytes, String fileName){
+
+    /**
+     * @Description: 上传文件
+     * @Param:
+     * @return:
+     * @Author: xiaotao
+     * @Date: 2022/9/12
+     */
+    public static DefaultPutRet upload2Qiniu(byte[] bytes, String fileName) {
         //构造一个带指定Zone对象的配置类
         Configuration cfg = new Configuration(Region.huanan());
         //...其他参数参考类注释
@@ -70,8 +84,14 @@ public class QiniuUtils {
         }
     }
 
-    //删除文件
-    public static void deleteFileFromQiniu(String fileName){
+    /**
+     * @Description: 删除文件
+     * @Param:
+     * @return:
+     * @Author: xiaotao
+     * @Date: 2022/9/12
+     */
+    public static void deleteFileFromQiniu(String fileName) {
         //构造一个带指定Zone对象的配置类
         Configuration cfg = new Configuration(Region.huanan());
         String key = fileName;

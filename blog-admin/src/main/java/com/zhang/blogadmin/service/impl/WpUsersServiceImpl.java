@@ -6,6 +6,7 @@ import com.zhang.blogadmin.pojo.WpUsers;
 import com.zhang.blogadmin.service.WpUsersService;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
+import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -30,18 +31,18 @@ public class WpUsersServiceImpl implements WpUsersService {
     private WpUsersMapper wpUsersMapper;
 
 
-
     /**
      * WpUsers条件+分页查询
+     *
      * @param wpUsers 查询条件
-     * @param page 页码
-     * @param size 页大小
+     * @param page    页码
+     * @param size    页大小
      * @return 分页结果
      */
     @Override
-    public PageInfo<WpUsers> findPage(WpUsers wpUsers, int page, int size){
+    public PageInfo<WpUsers> findPage(WpUsers wpUsers, int page, int size) {
         //分页
-        PageHelper.startPage(page,size);
+        PageHelper.startPage(page, size);
         //搜索条件构建
         Example example = createExample(wpUsers);
         //执行搜索
@@ -50,25 +51,27 @@ public class WpUsersServiceImpl implements WpUsersService {
 
     /**
      * WpUsers分页查询
+     *
      * @param page
      * @param size
      * @return
      */
     @Override
-    public PageInfo<WpUsers> findPage(int page, int size){
+    public PageInfo<WpUsers> findPage(int page, int size) {
         //静态分页
-        PageHelper.startPage(page,size);
+        PageHelper.startPage(page, size);
         //分页查询
         return new PageInfo<WpUsers>(wpUsersMapper.selectAll());
     }
 
     /**
      * WpUsers条件查询
+     *
      * @param wpUsers
      * @return
      */
     @Override
-    public List<WpUsers> findList(WpUsers wpUsers){
+    public List<WpUsers> findList(WpUsers wpUsers) {
         //构建查询条件
         Example example = createExample(wpUsers);
         //根据构建的条件查询数据
@@ -78,52 +81,49 @@ public class WpUsersServiceImpl implements WpUsersService {
 
     /**
      * WpUsers构建查询对象
+     *
      * @param wpUsers
      * @return
      */
-    public Example createExample(WpUsers wpUsers){
-        Example example=new Example(WpUsers.class);
+    public Example createExample(WpUsers wpUsers) {
+        Example example = new Example(WpUsers.class);
         Example.Criteria criteria = example.createCriteria();
-        if(wpUsers!=null){
+        if (wpUsers != null) {
             // 
-            if(!StringUtils.isEmpty(wpUsers.getID())){
-                    criteria.andEqualTo("ID",wpUsers.getID());
+            if (!StringUtils.isEmpty(wpUsers.getID())) {
+                criteria.andEqualTo("ID", wpUsers.getID());
             }
             // 
-            if(!StringUtils.isEmpty(wpUsers.getUsername())){
-                    criteria.andEqualTo("userLogin",wpUsers.getUsername());
+            if (!StringUtils.isEmpty(wpUsers.getUsername())) {
+                criteria.andEqualTo("userLogin", wpUsers.getUsername());
             }
             // 
-            if(!StringUtils.isEmpty(wpUsers.getPassword())){
-                    criteria.andEqualTo("userPass",wpUsers.getPassword());
+            if (!StringUtils.isEmpty(wpUsers.getPassword())) {
+                criteria.andEqualTo("userPass", wpUsers.getPassword());
             }
             // 
-            if(!StringUtils.isEmpty(wpUsers.getUserNicename())){
-                    criteria.andLike("userNicename","%"+wpUsers.getUserNicename()+"%");
+            if (!StringUtils.isEmpty(wpUsers.getUserNicename())) {
+                criteria.andLike("userNicename", "%" + wpUsers.getUserNicename() + "%");
             }
             // 
-            if(!StringUtils.isEmpty(wpUsers.getUserEmail())){
-                    criteria.andEqualTo("userEmail",wpUsers.getUserEmail());
+            if (!StringUtils.isEmpty(wpUsers.getUserEmail())) {
+                criteria.andEqualTo("userEmail", wpUsers.getUserEmail());
             }
             // 
-            if(!StringUtils.isEmpty(wpUsers.getUserUrl())){
-                    criteria.andEqualTo("userUrl",wpUsers.getUserUrl());
+            if (!StringUtils.isEmpty(wpUsers.getUserUrl())) {
+                criteria.andEqualTo("userUrl", wpUsers.getUserUrl());
             }
             // 
-            if(!StringUtils.isEmpty(wpUsers.getUserRegistered())){
-                    criteria.andEqualTo("userRegistered",wpUsers.getUserRegistered());
+            if (!StringUtils.isEmpty(wpUsers.getUserRegistered())) {
+                criteria.andEqualTo("userRegistered", wpUsers.getUserRegistered());
+            }
+            //
+            if (!StringUtils.isEmpty(wpUsers.getUserStatus())) {
+                criteria.andEqualTo("userStatus", wpUsers.getUserStatus());
             }
             // 
-            if(!StringUtils.isEmpty(wpUsers.getUserActivationKey())){
-                    criteria.andEqualTo("userActivationKey",wpUsers.getUserActivationKey());
-            }
-            // 
-            if(!StringUtils.isEmpty(wpUsers.getUserStatus())){
-                    criteria.andEqualTo("userStatus",wpUsers.getUserStatus());
-            }
-            // 
-            if(!StringUtils.isEmpty(wpUsers.getDisplayName())){
-                    criteria.andEqualTo("displayName",wpUsers.getDisplayName());
+            if (!StringUtils.isEmpty(wpUsers.getDisplayName())) {
+                criteria.andEqualTo("displayName", wpUsers.getDisplayName());
             }
         }
         return example;
@@ -131,29 +131,32 @@ public class WpUsersServiceImpl implements WpUsersService {
 
     /**
      * 删除
+     *
      * @param id
      */
     @Override
-    public void delete(Long id){
+    public void delete(Long id) {
         wpUsersMapper.deleteByPrimaryKey(id);
     }
 
     /**
      * 修改WpUsers
+     *
      * @param wpUsers
      */
     @Override
-    public void update(WpUsers wpUsers){
+    public void update(WpUsers wpUsers) {
         wpUsersMapper.updateByPrimaryKey(wpUsers);
     }
 
     /**
      * 根据条件修改WpUsers
+     *
      * @param wpUsers
      */
     @Override
-    public void updateById(WpUsers wpUsers, Long id){
-        Example example=new Example(WpUsers.class);
+    public void updateById(WpUsers wpUsers, Long id) {
+        Example example = new Example(WpUsers.class);
         Example.Criteria criteria = example.createCriteria();
         // where
         criteria.andEqualTo("ID", id);
@@ -162,25 +165,28 @@ public class WpUsersServiceImpl implements WpUsersService {
 
     /**
      * 增加WpUsers
+     *
      * @param wpUsers
      */
     @Override
-    public void add(WpUsers wpUsers){
+    public void add(WpUsers wpUsers) {
         wpUsersMapper.insert(wpUsers);
     }
 
     /**
      * 根据ID查询WpUsers
+     *
      * @param id
      * @return
      */
     @Override
-    public WpUsers findById(Long id){
-        return  wpUsersMapper.selectByPrimaryKey(id);
+    public WpUsers findById(Long id) {
+        return wpUsersMapper.selectByPrimaryKey(id);
     }
 
     /**
      * 查询WpUsers全部数据
+     *
      * @return
      */
     @Override
@@ -192,6 +198,16 @@ public class WpUsersServiceImpl implements WpUsersService {
     public WpUsers login(String userName, String passMd5) {
         WpUsers wpUsers = new WpUsers(userName, passMd5);
         return wpUsersMapper.selectOne(wpUsers);
+    }
+
+    @Test
+    public void test() {
+
+        int[][]  arr = {{5,7},{12,14}};
+        System.out.println(arr[0][0]);
+        System.out.println(arr[0][1]);
+        System.out.println(arr[1][0]);
+        System.out.println(arr[1][1]);
     }
 
 }

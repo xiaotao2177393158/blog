@@ -4,7 +4,11 @@ import org.apache.commons.codec.digest.DigestUtils;
 import org.springframework.stereotype.Component;
 
 /**
- * MD5加密
+ * @Description: MD5加密
+ * @Param:
+ * @return:
+ * @Author: xiaotao
+ * @Date: 2022/9/13
  */
 @Component
 public class MD5Util {
@@ -19,8 +23,9 @@ public class MD5Util {
      * @param inputPass
      * @return
      */
-    public static String inputPasToFromPass(String inputPass){
+    public static String inputPasToFromPass(String inputPass) {
         String str = "" +salt.charAt(0) + salt.charAt(2) + inputPass + salt.charAt(5) + salt.charAt(4);
+        System.out.println(str);
         return md5(str);
     }
     /**
@@ -29,16 +34,17 @@ public class MD5Util {
      * @param salt
      * @return
      */
-    public static String formPassToDBPass(String formPass,String salt){
+    public static String formPassToDBPass(String formPass,String salt) {
         String str = "" +salt.charAt(0) + salt.charAt(2) + formPass + salt.charAt(5) + salt.charAt(4);
         return md5(str);
     }
+
     /**
      * @param inputPass
      * @param salt
      * @return
      */
-    public static String inputPassTODBPass(String inputPass,String salt){
+    public static String inputPassTODBPass(String inputPass,String salt) {
         String fromPass = inputPasToFromPass(inputPass);
         String dbPass = formPassToDBPass(fromPass, salt);
         return dbPass;

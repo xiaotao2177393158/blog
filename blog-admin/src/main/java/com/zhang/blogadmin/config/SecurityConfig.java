@@ -67,7 +67,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Autowired
     private JwtAuthenticationTokenFilter jwtAuthenticationTokenFilter;
 
-    /**   小 双双双 双
+    /**
      * 对请求进行鉴权的配置
      * @param http
      * @throws Exception
@@ -103,7 +103,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                     .logout()
                     .permitAll()   //允许所有用户
                     .logoutSuccessHandler(logoutSuccessHandler)  //登出成功处理逻辑
-                    .deleteCookies("JSESSIONID")   //登出之后删除cookie
+                    .deleteCookies("JSESSIONID")   //登出之后删除cookieG
                 .and()
                     .sessionManagement()    //会话管理
                     .maximumSessions(1)     //同一账号同时登录最大用户数

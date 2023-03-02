@@ -47,4 +47,5 @@ export const pathMap = {
   order_detail: "订单详情",
   account: "修改账户信息",
   mdEdit: "发布文章",
+  preview: "浏览文章",
 };

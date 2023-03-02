@@ -31,6 +31,7 @@ import {
   ElCheckbox,
   ElInputNumber,
   ElDatePicker,
+  ElTree,
 } from "element-plus";
 import * as Sentry from "@sentry/browser";
 import { Integrations } from "@sentry/tracing";
@@ -40,6 +41,10 @@ import router from "./router/index";
 // md
 import VMdEditor from "@kangc/v-md-editor/lib/codemirror-editor";
 import "@kangc/v-md-editor/lib/style/codemirror-editor.css";
+
+// 这是预览时引用的
+import VMdPreview from "@kangc/v-md-editor/lib/preview";
+import "@kangc/v-md-editor/lib/style/preview.css";
 
 // 主题   markdown 解析 markdown-it
 import "@kangc/v-md-editor/lib/style/base-editor.css";
@@ -111,6 +116,10 @@ VMdEditor.use(vuepressTheme, {
   },
 });
 
+VMdPreview.use(vuepressTheme, {
+  Prism,
+});
+
 VMdEditor.use(createLineNumbertPlugin());
 VMdEditor.use(createCopyCodePlugin());
 VMdEditor.use(createEmojiPlugin());
@@ -118,6 +127,14 @@ VMdEditor.use(createTodoListPlugin());
 VMdEditor.use(createAlignPlugin());
 VMdEditor.use(createKatexPlugin());
 VMdEditor.use(createMermaidPlugin());
+
+VMdPreview.use(createLineNumbertPlugin());
+VMdPreview.use(createCopyCodePlugin());
+VMdPreview.use(createEmojiPlugin());
+VMdPreview.use(createTodoListPlugin());
+VMdPreview.use(createAlignPlugin());
+VMdPreview.use(createKatexPlugin());
+VMdPreview.use(createMermaidPlugin());
 
 // 修改后的主题样式必须放在最后面
 import "../theme/index.css";
@@ -166,6 +183,7 @@ app.use(router);
 
 app
   .use(VMdEditor)
+  .use(VMdPreview)
   .use(ElButton)
   .use(ElContainer)
   .use(ElAside)
@@ -195,6 +213,7 @@ app
   .use(ElRadio)
   .use(ElCascader)
   .use(ElCheckbox)
+  .use(ElTree)
   .use(ElDatePicker)
   .use(ElInputNumber);
 

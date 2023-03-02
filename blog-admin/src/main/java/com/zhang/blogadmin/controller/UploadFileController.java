@@ -11,9 +11,6 @@ import io.swagger.annotations.ApiOperation;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
-import java.util.Date;
-import java.util.UUID;
-
 /**
  * Created with IntelliJ IDEA.
  *
@@ -35,8 +32,8 @@ public class UploadFileController {
      */
     @ApiOperation(value = "图片上传",notes = "图片上传",tags = {"UploadFileController"})
     @PostMapping(value = "/img" )
-    public Result<PageInfo> findPage(@RequestParam MultipartFile file){
-        try{
+    public Result<PageInfo> findPage(@RequestParam MultipartFile file) {
+        try {
             //获取原始文件名
             String originalFilename = file.getOriginalFilename();
             int lastIndexOf = originalFilename.lastIndexOf(".");
@@ -48,7 +45,7 @@ public class UploadFileController {
             DefaultPutRet defaultPutRet = QiniuUtils.upload2Qiniu(file.getBytes(), fileName);
             //图片上传成功
             return new Result(true, StatusCode.OK,"上传成功",defaultPutRet);
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
             //图片上传失败
             return new Result(false,StatusCode.ERROR, "上传失败");

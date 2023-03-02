@@ -3,7 +3,7 @@
         <div class="box" style="width: 75%">
             <el-input
                 type="text"
-                style="width: 50vw; margin: 1vw"
+                class="box2"
                 v-model="form.name"
                 placeholder="添加标题"
                 name=""
@@ -12,18 +12,22 @@
             <el-date-picker
                 v-model="form.date"
                 type="datetime"
-                placeholder="Select date and time"
+                placeholder="发布时间"
             />
             <!-- markdown 编辑区 -->
             <mdEdit></mdEdit>
         </div>
-        <div class="box" style="margin-left: 1vw">
+        <div class="box box3">
             <div class="box1">
                 <h4>发布</h4>
-                <hr style="border: 1px #ddd9d9 dashed" />
+                <hr class="box5" />
                 <el-form-item>
                     <el-button size="small" plain>保存草稿</el-button>
-                    <el-button size="small" plain style="margin-left: 12vw"
+                    <el-button
+                        size="small"
+                        @click="preview"
+                        plain
+                        style="margin-left: 12vw"
                         >预览</el-button
                     >
                 </el-form-item>
@@ -52,13 +56,9 @@
                         />
                     </el-select>
                 </el-form-item>
-                <hr style="border: 1px #ddd9d9 dashed" />
+                <hr class="box5" />
 
-                <el-button
-                    type="success"
-                    size="small"
-                    plain
-                    style="border-radius: 0.7vw; margin-left: 16vw"
+                <el-button type="success" size="small" plain class="box4"
                     >发布</el-button
                 >
             </div>
@@ -111,7 +111,13 @@ export default {
                 label: "其他",
             },
         ];
-        return { form, options, value };
+
+        // 预览
+        const preview = () => {
+            window.open("/#/preview");
+        };
+
+        return { form, options, value, preview };
     },
     components: { MdEdit },
 };
@@ -128,5 +134,24 @@ export default {
     box-shadow: 0px 5px 12px 0px rgba(0, 0, 0, 0.4);
     padding: 0.5vw;
     box-sizing: border-box;
+}
+
+.box2 {
+    width: 50vw;
+    margin: 1vw;
+}
+
+.box3 {
+    margin-right: 0.5vw;
+    float: right;
+}
+
+.box4 {
+    border-radius: 0.7vw;
+    margin-left: 16vw;
+}
+
+.box5 {
+    border: 1px #ddd9d9 dashed;
 }
 </style>

@@ -1,7 +1,7 @@
 <template>
     <v-md-editor
         v-model="text"
-        height="30vw"
+        height="40vw"
         :autofocus="true"
         :include-level="[1, 2, 3, 4]"
         :left-toolbar="leftBar"
@@ -56,11 +56,13 @@ $$\sum_{i=1}^n a_i=0$$
                 formData.append("file", files[i]);
                 console.log(files[i]);
                 //你自己的上传文件接口
-                await axios.post(`/upload/img`, formData).then((res) => {
+                  await axios.post(`/upload/img`, formData).then((res) => {
                     console.log(res);
                     insertImage({
                         url: "https://qiniu.xiaotao.cloud/" + res.data.key,
                         desc: files[i].name,
+                        width: "30vw",
+                        height: "auto",
                     });
                 });
             }

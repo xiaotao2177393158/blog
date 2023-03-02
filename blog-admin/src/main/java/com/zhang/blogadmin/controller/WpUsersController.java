@@ -37,7 +37,9 @@ public class WpUsersController {
     @Autowired
     private WpUserRoleService userRoleService;
 
-    // 密码加密方式
+    /**
+     *     密码加密方式
+     */
     @Autowired
     private PasswordEncoder passwordEncoder;
 

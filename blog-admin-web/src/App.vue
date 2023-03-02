@@ -32,7 +32,7 @@ export default {
     },
     setup() {
         console.log("App");
-        const noMenu = ["/login", "/register"];
+        const noMenu = ["/login", "/register", "/preview"];
         const router = useRouter();
         const state = reactive({
             defaultOpen: ["1", "2", "3", "4"],
